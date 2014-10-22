@@ -9,7 +9,7 @@
 #define NCH 2
 #define SAMPLERATE 44100
 #define BPS 16
-#define ticks 8
+#define ticks 9
 
 using namespace pd;
 

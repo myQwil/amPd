@@ -1814,3 +1814,13 @@
 	"m_pd.h"
 	<stdio.h>
 
+1414008289 source:c:\users\michael\documents\github\in_pd\src\in_pd.cpp
+	"in_pd.h"
+
+1414008455 c:\users\michael\documents\github\in_pd\src\in_pd.h
+	<windows.h>
+	"PdBase.hpp"
+	"winamp.h"
+
+1413695161 c:\users\michael\documents\github\in_pd\src\winamp.h
+

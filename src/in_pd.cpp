@@ -88,19 +88,12 @@ int IsOurFile(const char *fn) { return 0; }
 
 int GetLength() { return 100000; }
 int GetOutputTime() { return mod.outMod->GetOutputTime(); }
-
-
-void SetOutputTime(int time_in_ms) {
-	pos = time_in_ms;
-}
+void SetOutputTime(int time_in_ms) { pos = time_in_ms; }
 void SetVolume(int volume) { mod.outMod->SetVolume(volume); }
 void SetPan(int pan) { mod.outMod->SetPan(pan); }
-
-
 void Pause() { paused=1; mod.outMod->Pause(1); }
 void UnPause() { paused=0; mod.outMod->Pause(0); }
 int IsPaused() { return paused; }
-
 
 void GetFileInfo(const char *filename, char *title, int *length_in_ms) {
     if (!filename || !*filename) { // currently playing file
