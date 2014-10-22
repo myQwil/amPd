@@ -21,6 +21,7 @@ char lastfn[MAX_PATH];	// currently playing file
 int file_length;// file length, in bytes
 int pos;		// time in milliseconds.
 int paused;		// are we paused?
+int bufSize;    // size of buffer
 
 short* inBuf; // interleaved input audio buffer
 short* outBuf;

@@ -74,6 +74,10 @@ void Init() {
 	filter_tilde_setup();
 	tanh_tilde_setup();
 
+	bufSize = NCH*ticks*PdBase::blockSize()*2;
+	inBuf = new short[bufSize];
+    outBuf = new short[bufSize];
+
     libpd.addToSearchPath("C:\\Program Files (x86)\\Common Files\\Pd");
     libpd.computeAudio(true);
 }
@@ -124,8 +128,6 @@ void GetFileInfo(const char *filename, char *title, int *length_in_ms) {
 
 void DecodeThread() {
 	int done=0; // set to TRUE if decoding has finished
-	int blkSize = PdBase::blockSize();
-	int bufSize = NCH*ticks*blkSize*2;
 	while (!killDecodeThread)
 	{
 		if (done) // done was set to TRUE during decoding, signaling eof
@@ -140,9 +142,6 @@ void DecodeThread() {
 			Sleep(10);		// give a little CPU time back to the system.
 		}
 		else if (mod.outMod->CanWrite() >= (bufSize<<(mod.dsp_isactive()?1:0))) {
-			inBuf = new short[bufSize];
-			outBuf = new short[bufSize];
-
 			libpd.processShort(ticks, inBuf, outBuf);
 
 			pos = mod.outMod->GetWrittenTime();
