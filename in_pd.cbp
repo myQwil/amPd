@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="in_pd" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="src\;libpd\;libpd\cpp\;libpd\libpd_wrapper\;libpd\libpd_wrapper\util\;libpd\pure-data\;libpd\pure-data\extra\;libpd\pure-data\src\;libpd\pure-data\extra\bonk~\;libpd\pure-data\extra\choice\;libpd\pure-data\extra\fiddle~\;libpd\pure-data\extra\loop~\;libpd\pure-data\extra\lrshift~\;libpd\pure-data\extra\pique\;libpd\pure-data\extra\sigmund~\;libpd\pure-data\extra\stdout\;src\gui\;libpd\pure-data\extra\expr~\;libpd\pure-data\extra\zexy\;libpd\pure-data\extra\markex\;libpd\pure-data\extra\cyclone\;libpd\pure-data\extra\miwi\;libpd\pure-data\extra\iemlib\;libpd\pure-data\extra\ekext\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="C:/Program Files (x86)/Winamp/Plugins/in_pd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option host_application="C:/Program Files (x86)/Winamp/winamp.exe" />
+				<Option run_host_application_in_terminal="0" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/in_pd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wno-multichar" />
+			<Add option="-DHAVE_UNISTD_H" />
+			<Add option="-DUSEAPI_DUMMY" />
+			<Add option="-DMSW" />
+			<Add option="-DPD" />
+			<Add option="-DPD_INTERNAL" />
+			<Add option="-DWINVER=0x0502" />
+			<Add directory="src" />
+			<Add directory="libpd/cpp" />
+			<Add directory="libpd/libpd_wrapper" />
+			<Add directory="libpd/libpd_wrapper/util" />
+			<Add directory="libpd/pure-data/src" />
+			<Add directory="libpd/pure-data/extra" />
+			<Add directory="libpd/pure-data/extra/bonk~" />
+			<Add directory="libpd/pure-data/extra/choice" />
+			<Add directory="libpd/pure-data/extra/cyclone" />
+			<Add directory="libpd/pure-data/extra/expr~" />
+			<Add directory="libpd/pure-data/extra/fiddle~" />
+			<Add directory="libpd/pure-data/extra/iemlib" />
+			<Add directory="libpd/pure-data/extra/loop~" />
+			<Add directory="libpd/pure-data/extra/lrshift~" />
+			<Add directory="libpd/pure-data/extra/markex" />
+			<Add directory="libpd/pure-data/extra/miwi" />
+			<Add directory="libpd/pure-data/extra/pique" />
+			<Add directory="libpd/pure-data/extra/sigmund~" />
+			<Add directory="libpd/pure-data/extra/stdout" />
+			<Add directory="libpd/pure-data/extra/zexy" />
+		</Compiler>
+		<Linker>
+			<Add option="-lpthread" />
+			<Add library="setupapi" />
+			<Add library="wsock32" />
+		</Linker>
+		<Unit filename="libpd/cpp/PdBase.cpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/cpp/PdBase.hpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/cpp/PdMidiReceiver.hpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/cpp/PdReceiver.hpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/cpp/PdTypes.cpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/cpp/PdTypes.hpp">
+			<Option virtualFolder="libpd/cpp/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/s_libpdmidi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/libpd_wrapper/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/util/z_print_util.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/libpd_wrapper/util/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/util/z_print_util.h">
+			<Option virtualFolder="libpd/libpd_wrapper/util/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/x_libpdreceive.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/libpd_wrapper/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/x_libpdreceive.h">
+			<Option virtualFolder="libpd/libpd_wrapper/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/z_libpd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/libpd_wrapper/" />
+		</Unit>
+		<Unit filename="libpd/libpd_wrapper/z_libpd.h">
+			<Option virtualFolder="libpd/libpd_wrapper/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/bonk~/bonk~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/bonk~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/choice/choice.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/choice/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/counter.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/fitter.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/fitter.h">
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/loud.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/loud.h">
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/shared.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/shared.h">
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/sic.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/sic.h">
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/cyclone/tanh~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/cyclone/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/ekext/cup.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/ekext/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/ekext/cupd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/ekext/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/expr~/fts_to_pd.h">
+			<Option virtualFolder="libpd/pure-data/extra/expr~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/expr~/vexp.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/expr~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/expr~/vexp.h">
+			<Option virtualFolder="libpd/pure-data/extra/expr~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/expr~/vexp_fun.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/expr~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/expr~/vexp_if.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/expr~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/fiddle~/fiddle~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/fiddle~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/iemlib/filter~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/iemlib/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/iemlib/iemlib.h">
+			<Option virtualFolder="libpd/pure-data/extra/iemlib/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/iemlib/init.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/iemlib/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/loop~/loop~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/loop~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/lrshift~/lrshift~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/lrshift~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/markex/vector+.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/markex/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/markex/vector-.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/markex/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/miwi/graid.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/miwi/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/miwi/grand.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/miwi/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/miwi/muse.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/miwi/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/miwi/rand.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/miwi/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/miwi/randv.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/miwi/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/pique/pique.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/pique/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/sigmund~/sigmund~.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/sigmund~/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/stdout/stdout.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/stdout/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/0x3c0x7e.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/0x3e0x7e.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/demultiplex.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/makesymbol.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/zexy.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/zexy.h">
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/zexySIMD.h">
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/extra/zexy/zexyconf.h">
+			<Option virtualFolder="libpd/pure-data/extra/zexy/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_arithmetic.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_array.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_ctl.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_dac.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_delay.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_fft.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_fft_mayer.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_fftroutine.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_filter.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_global.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_math.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_misc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_osc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_resample.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_soundfile.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/d_ugen.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_all_guis.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_all_guis.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_array.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_bang.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_canvas.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_canvas.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_editor.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_graph.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_guiconnect.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_hdial.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_hslider.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_io.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_mycanvas.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_numbox.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_readwrite.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_rtext.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_scalar.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_template.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_text.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_toggle.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_traversal.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_vdial.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_vslider.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/g_vumeter.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_atom.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_binbuf.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_class.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_conf.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_fixed.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_glob.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_imp.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_memory.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_obj.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_pd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_pd.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/m_sched.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_audio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_audio_dummy.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_file.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_inter.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_loader.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_path.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_print.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_stuff.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_utf8.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/s_utf8.h">
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_acoustics.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_arithmetic.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_connective.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_gui.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_interface.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_list.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_midi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_misc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_net.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_qlist.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="libpd/pure-data/src/x_time.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="libpd/pure-data/src/" />
+		</Unit>
+		<Unit filename="src/in_pd.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/in_pd.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/winamp.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
