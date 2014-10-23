@@ -1,0 +1,18 @@
+#N canvas 809 648 490 249 10;
+#X obj 184 158 dac~;
+#X obj 137 47 catch~ L;
+#X obj 240 47 catch~ R;
+#X obj 148 115 *~;
+#X obj 240 115 *~;
+#X obj 198 70 inlet;
+#X obj 102 151 outlet~;
+#X obj 278 147 outlet~;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 2 0 7 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 4 1;
+#X connect 5 0 3 1;
+#X coords 0 249 1 248 85 60 0;

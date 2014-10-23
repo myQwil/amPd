@@ -1,0 +1,50 @@
+#N canvas 684 282 528 341 10;
+#X text 207 11 PATTERN;
+#X obj 167 165 bng 15 100 10 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 148 165 bng 15 100 10 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 354 273 5 0 0 0 - - -, f 5;
+#X obj 90 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 61 81 select 1;
+#X obj 129 81 metro 1000;
+#X floatatom 214 82 5 0 0 0 - - -, f 5;
+#X text 256 81 tempo for the downbeat;
+#X floatatom 269 105 5 0 0 0 - - -, f 5;
+#X floatatom 281 122 5 0 0 0 - - -, f 5;
+#X obj 156 141 pattern 1000 4 1;
+#X floatatom 357 236 5 0 0 0 - - -, f 5;
+#X text 349 253 equals;
+#X text 353 215 1000 divided by;
+#X floatatom 265 271 5 0 0 0 - - -, f 5;
+#X text 269 256 counter;
+#X obj 129 165 bng 15 100 10 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 92 225 acrt 1;
+#X text 131 27 pairs up with metro to create rhythmic patterns on the
+fly.;
+#X text 326 105 the next two arguments are random numbers multiplied
+together \, then the product becomes the denominator for the tempo.
+;
+#X text 9 179 first outlet bangs accented beats while second bangs
+all other beats;
+#X text 17 244 send this message to change the accuracy level. 1 removes
+all accented beats. default is 5 (as in 1 in 5 chance of accent becoming
+a regular beat);
+#X connect 4 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 1 11 0;
+#X connect 6 0 11 0;
+#X connect 6 0 17 0;
+#X connect 7 0 6 1;
+#X connect 7 0 11 1;
+#X connect 9 0 11 2;
+#X connect 10 0 11 3;
+#X connect 11 0 2 0;
+#X connect 11 1 1 0;
+#X connect 11 2 3 0;
+#X connect 11 3 12 0;
+#X connect 11 4 15 0;
+#X connect 18 0 11 0;
+#X coords 0 341 1 340 85 60 0;
