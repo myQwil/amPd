@@ -1,9 +1,9 @@
-#N canvas 310 207 941 691 12;
+#N canvas 683 172 941 691 12;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array wave 500 float 0;
 #X coords 0 1 499 -1 200 140 1;
 #X restore 716 10 graph;
-#X obj 216 617 *~;
+#X obj 228 591 *~;
 #X obj 206 649 dac~;
 #X obj 678 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1044,15 +1044,15 @@
 #X msg 517 90 0.85;
 #X msg 467 383 2000;
 #X msg 313 343 0.7;
-#X obj 217 555 *~;
+#X obj 201 525 *~;
 #X obj 284 568 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 10160 1;
 #X obj 372 529 loadbang;
 #X msg 333 545 0.8;
-#X obj 164 579 hip~ 1;
+#X obj 148 549 hip~ 1;
 #X msg 615 30 750;
-#X obj 217 528 +~;
-#X obj 218 579 hip~ 1;
+#X obj 201 498 +~;
+#X obj 202 549 hip~ 1;
 #X obj 497 -11 loadbang;
 #X obj 574 106 loadbang;
 #X obj 28 136 loadbang;
@@ -1110,8 +1110,8 @@
 #X floatatom 702 329 5 0 0 0 - - -, f 5;
 #X obj 702 351 * 0.01;
 #X obj 702 376 s vol;
-#X connect 1 0 2 0;
-#X connect 1 0 2 1;
+#X obj 228 616 *~ 0.9;
+#X connect 1 0 129 0;
 #X connect 3 0 11 0;
 #X connect 4 0 9 0;
 #X connect 4 0 75 0;
@@ -1243,4 +1243,6 @@
 #X connect 125 0 119 1;
 #X connect 126 0 127 0;
 #X connect 127 0 128 0;
+#X connect 129 0 2 0;
+#X connect 129 0 2 1;
 #X coords 0 691 1 690 85 60 0;
