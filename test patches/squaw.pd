@@ -62,7 +62,7 @@
 #X msg 30 114 1;
 #X msg 121 56 12;
 #X obj 71 179 +;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -75,7 +75,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 164 + 0.05;
 #X obj 170 141 / 800;
 #X connect 0 0 2 0;
@@ -127,7 +127,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 7;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -140,7 +140,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 500;
 #X obj 170 164 + 0.1;
 #X connect 0 0 2 0;
@@ -190,7 +190,7 @@
 #X msg 65 114 -1;
 #X msg 19 156 bang;
 #X msg 30 114 1;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 71 179 +;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
@@ -205,7 +205,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 400;
 #X obj 170 164 + 0.35;
 #X connect 0 0 2 0;
@@ -256,7 +256,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 14;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -269,7 +269,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 164 + 0;
 #X obj 170 141 / 5000;
 #X connect 0 0 2 0;
@@ -321,7 +321,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 16;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -334,7 +334,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 164 + 0;
 #X obj 170 141 / 500;
 #X connect 0 0 2 0;
@@ -386,7 +386,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 17;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -399,7 +399,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 5000;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -451,7 +451,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 19;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -464,7 +464,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 300;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -516,7 +516,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 22;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -529,7 +529,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 500;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -580,7 +580,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 21;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -593,7 +593,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 5000;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -646,7 +646,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 33;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -659,7 +659,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 164 + 0;
 #X obj 170 141 / 1200;
 #X connect 0 0 2 0;
@@ -710,7 +710,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 24;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -723,7 +723,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 600;
 #X obj 170 163 + 0;
 #X connect 0 0 2 0;
@@ -776,7 +776,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 28;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -789,7 +789,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 500;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -841,7 +841,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 26;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -854,7 +854,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 141 / 1000;
 #X obj 170 164 + 0;
 #X connect 0 0 2 0;
@@ -905,7 +905,7 @@
 #X msg 30 114 1;
 #X obj 71 179 +;
 #X msg 121 56 29;
-#X obj 272 153 random 100;
+#X obj 272 153 rand 100;
 #X obj 272 176 / 100;
 #X obj 272 199 - 0.5;
 #X obj 272 222 pack f f;
@@ -918,7 +918,7 @@
 #X floatatom 224 236 5 0 0 0 - - -, f 5;
 #X floatatom 224 216 5 0 0 0 - - -, f 5;
 #X obj 170 210 line;
-#X obj 170 118 random 100;
+#X obj 170 118 rand 100;
 #X obj 170 163 + 0;
 #X obj 170 141 / 800;
 #X connect 0 0 2 0;
@@ -984,7 +984,7 @@
 #X obj 566 75 s lngtmp;
 #X obj 200 288 r lngtmp;
 #X obj 417 284 r lngtmp;
-#X obj 212 26 random 100;
+#X obj 212 26 rand 100;
 #X obj 151 313 pack f f;
 #X obj 349 327 pack f f;
 #X obj 212 128 line;
@@ -995,13 +995,13 @@
 #X obj 163 197 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 2381 1;
 #X floatatom 160 214 5 0 0 0 - - -, f 5;
-#X obj 151 263 random 1000;
+#X obj 151 263 rand 1000;
 #X floatatom 566 53 5 0 0 0 - - -, f 5;
 #X obj 489 56 s lngbt;
 #X obj 489 33 metro;
 #X obj 176 24 vsl 15 128 0.12 0.78 0 0 empty empty empty 0 -9 0 10
 -262144 -1 -1 0 1;
-#X obj 367 257 random 500;
+#X obj 367 257 rand 500;
 #N canvas 1118 352 450 300 record 0;
 #X msg 58 170 open track.wav;
 #X msg 183 170 start;
@@ -1036,7 +1036,7 @@
 #X obj 482 505 *~;
 #X obj 146 446 lop~;
 #X obj 147 473 *~;
-#X obj 271 264 random 1200;
+#X obj 271 264 rand 1200;
 #X obj 271 288 + 500;
 #X obj 271 312 pack f f;
 #X obj 271 337 line;
@@ -1110,7 +1110,7 @@
 #X floatatom 702 329 5 0 0 0 - - -, f 5;
 #X obj 702 351 * 0.01;
 #X obj 702 376 s vol;
-#X obj 228 616 *~ 0.9;
+#X obj 228 616 *~ 0.88;
 #X connect 1 0 129 0;
 #X connect 3 0 11 0;
 #X connect 4 0 9 0;
