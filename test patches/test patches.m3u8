@@ -1,0 +1,17 @@
+﻿#EXTM3U
+#EXTINF:120,drones
+drones.pd
+#EXTINF:120,freqshift
+freqshift.pd
+#EXTINF:120,squaw
+squaw.pd
+#EXTINF:120,freqy-bass
+freqy-bass.pd
+#EXTINF:120,imafreq
+imafreq.pd
+#EXTINF:120,rileyBot
+rileyBot.pd
+#EXTINF:120,00 SEQ FM RUNME
+autechre_like\00_SEQ_FM_RUNME.pd
+#EXTINF:120, algorithmic acidr
+algorithmic acid for Pd-extended\_algorithmic_acidr.pd
