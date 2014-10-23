@@ -1,5 +1,5 @@
-#N canvas 53 59 995 888 12;
-#X obj 124 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#N canvas 257 39 995 888 12;
+#X obj 124 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 953 660 698 332 clock_divider 0;
 #X obj 12 15 inlet;
@@ -131,7 +131,7 @@
 #X obj 114 380 cpt 2;
 #X obj 400 664 FM_snare;
 #X obj 788 452 * 0.5;
-#X obj 115 416 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 115 416 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 115 465 timer;
 #X obj 115 439 sel 1 0;
@@ -243,7 +243,7 @@
 #X text 14 7 A Lame Ae Patch Like Human Koala;
 #X obj 240 58 metro 16;
 #X obj 663 557 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6600 1;
+-1 -1 0 1;
 #X obj 627 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 7620 1;
 #X obj 500 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -253,7 +253,7 @@
 #X obj 254 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 8255 1;
 #X obj 129 654 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11143 1;
+-1 -1 11112 1;
 #X obj 33 666 FM_BD;
 #X obj 706 239 rand 16;
 #X obj 660 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -347,11 +347,11 @@
 #X obj 521 48 s play;
 #X obj 487 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 412 787 ii 0.8;
 #X obj 297 788 ii 0.65;
 #X obj 532 788 ii 0.5;
 #X obj 663 795 ii 0.6;
 #X obj 182 788 ii 1.75;
+#X obj 412 787 ii 0.73;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 1 0 3 0;
@@ -448,8 +448,8 @@
 #X connect 62 0 63 0;
 #X connect 64 0 63 0;
 #X connect 71 0 70 0;
-#X connect 72 0 51 0;
-#X connect 73 0 52 0;
-#X connect 74 0 50 0;
-#X connect 75 0 49 0;
-#X connect 76 0 53 0;
+#X connect 72 0 52 0;
+#X connect 73 0 50 0;
+#X connect 74 0 49 0;
+#X connect 75 0 53 0;
+#X connect 76 0 51 0;
