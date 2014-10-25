@@ -1,8 +1,8 @@
 #N canvas 624 352 485 347 10;
 #X obj 257 153 dac~;
 #X obj 261 119 *~;
-#X obj 311 144 * 0.01;
-#X floatatom 311 124 5 0 0 0 - - -, f 5;
+#X obj 343 145 * 0.01;
+#X floatatom 343 125 5 0 0 0 - - -, f 5;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array view 500 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -225,11 +225,12 @@
 #X obj 54 173 s pet;
 #X obj 109 14 ii 1000;
 #X obj 210 98 r play;
-#X obj 315 164 r vol;
+#X obj 347 165 r vol;
 #X obj 261 98 *~ 0.6;
+#X obj 308 129 pad~;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
-#X connect 2 0 1 1;
+#X connect 2 0 55 0;
 #X connect 3 0 2 0;
 #X connect 6 0 12 1;
 #X connect 7 0 12 0;
@@ -281,6 +282,7 @@
 #X connect 49 0 38 3;
 #X connect 51 0 23 0;
 #X connect 52 0 9 0;
-#X connect 53 0 1 1;
+#X connect 53 0 55 0;
 #X connect 54 0 1 0;
+#X connect 55 0 1 1;
 #X coords 0 -1 1 1 85 60 1 0 0;
