@@ -36,21 +36,20 @@ extern "C" {
 }
 
 void Config(HWND hwndParent) {
-    MessageBox(hwndParent,"do it, faggot","Configuration",MB_OK);
+    MessageBox(hwndParent,"some day","Configuration",MB_OK);
 }
 
 void About(HWND hwndParent) {
-    MessageBox(hwndParent,"pdPlayer by Mike Willmot","About",MB_OK);
+    MessageBox(hwndParent,"amPd\n(Pure Data Plugin)","About",MB_OK);
 }
 
 int InfoBox(const char *file, HWND hwndParent) {
-
-	MessageBox(hwndParent,(char *)outBuf,"Message",MB_OK);
+	MessageBox(hwndParent,bufr,"Message",MB_OK);
 	return INFOBOX_UNCHANGED;
 }
 
 void Init() {
-    libpd.init(NCH, NCH, SAMPLERATE);
+    libpd.init(0, NCH, SAMPLERATE);
 
     expr_setup();
 
@@ -75,84 +74,133 @@ void Init() {
 	tanh_tilde_setup();
 
 	bufSize = NCH*ticks*PdBase::blockSize()*2;
-	inBuf = new short[bufSize];
-    outBuf = new short[bufSize];
-    inBufb = new short[bufSize];
-    outBufb = new short[bufSize];
+	bufr = new char[bufSize];
 
     libpd.addToSearchPath("C:\\Program Files (x86)\\Common Files\\Pd");
     libpd.computeAudio(true);
+
+    libpd.subscribe("title");
+    libpd.subscribe("artist");
+    libpd.subscribe("length");
+
+    libpd.setReceiver(rec);
 }
 
 void Quit() { }
 
-int IsOurFile(const char *fn) { return 0; }
+int GetLength()
+{ return length; }
 
-int GetLength() { return 120000; }
-int GetOutputTime() { return mod.outMod->GetOutputTime(); }
-void SetOutputTime(int time_in_ms) { pos = time_in_ms; }
-void SetVolume(int volume) { mod.outMod->SetVolume(volume); }
-void SetPan(int pan) { mod.outMod->SetPan(pan); }
-void Pause() { paused=1; mod.outMod->Pause(1); }
-void UnPause() { paused=0; mod.outMod->Pause(0); }
-int IsPaused() { return paused; }
+int IsOurFile(const char *fn)
+{ return 0; }
 
-void GetFileInfo(const char *filename, char *title, int *length_in_ms) {
-    if (!filename || !*filename) { // currently playing file
-		if (length_in_ms) *length_in_ms=GetLength();
-		if (title) { // get non-path portion.of filename
-			char *p=lastfn+strlen(lastfn);
-			while (*p != '\\' && p >= lastfn) p--;
-			strcpy(title,++p);
-		}
-	}
-	else // some other file
-	{
-		if (length_in_ms) // calculate length
-		{
-			*length_in_ms=-1000; // the default is unknown file length (-1000).
-		}
-		if (title) // get non path portion of filename
-		{
-			const char *p=filename+strlen(filename);
-			while (*p != '\\' && p >= filename) p--;
-			strcpy(title,++p);
-		}
-	}
+int GetOutputTime()
+{ return mod.outMod->GetOutputTime(); }
+
+void SetOutputTime(int time_in_ms)
+{ seek = time_in_ms; }
+
+void SetVolume(int volume)
+{ mod.outMod->SetVolume(volume); }
+
+void SetPan(int pan)
+{ mod.outMod->SetPan(pan); }
+
+void Pause()
+{ paused=1; mod.outMod->Pause(1); }
+
+void UnPause()
+{ paused=0; mod.outMod->Pause(0); }
+
+int IsPaused()
+{ return paused; }
+
+std::string name(const char* fn) {
+	std::string name = fn;
+	name = name.substr(name.find_last_of("\\") + 1);
+	return name;
 }
 
-void DecodeThread() {
+std::string path(const char* fn) {
+	std::string path = fn;
+	path = path.substr(0,path.find_last_of("\\"));
+	return path;
+}
+
+void GetFileInfo(const char *file, char *title, int *length_in_ms) {
+	*length_in_ms = length = 120000;
+	//strcpy(title,"snazzy");
+//	if (!file || !*file) { // currently playing file
+//		if (length_in_ms) *length_in_ms=GetLength();
+//		if (title) { // get non-path portion.of file
+//			char *p=lastfn+strlen(lastfn);
+//			while (*p != '\\' && p >= lastfn) p--;
+//			strcpy(title,++p);
+//		}
+//	}
+//	else // some other file
+//	{
+//		if (length_in_ms) // calculate length
+//		{
+//			*length_in_ms=-1000; // the default is unknown file length (-1000).
+//		}
+//		if (title) // get non path portion of file
+//		{
+//			const char *p=file+strlen(file);
+//			while (*p != '\\' && p >= file) p--;
+//			strcpy(title,++p);
+//		}
+//	}
+}
+
+//DWORD WINAPI SecondThread(void* arg) {
+//	int done=0; // set to TRUE if decoding has finished
+//	while (!stopped) {
+//		if (seek != -1) {// seek is needed.
+//			pos=seek; seek=-1; done=0;
+//            mod.outMod->Flush(pos); // flush output and seek to position
+//		}
+//		if (done) {
+//			PostMessage(mod.hMainWindow,WM_USER+2,0,0);
+//			return 0;
+//		}
+//		else if (mod.outMod->CanWrite() >= (bufSize<<(mod.dsp_isactive()?1:0))) {
+//			if (pos >= length) {
+//				done = 1;
+//			}
+//			libpd.processShort(ticks, inBuf, outBuf);
+//			pos = mod.outMod->GetWrittenTime();
+//			mod.SAAddPCMData((char *)outBuf,NCH,BPS,pos);
+//			mod.VSAAddPCMData((char *)outBuf,NCH,BPS,pos);
+//			mod.outMod->Write((char *)outBuf, bufSize);
+//		}
+//		else Sleep(20);
+//		// if we can't write data, wait a little bit. Otherwise, continue
+//		// through the loop writing more data (without sleeping)
+//	}
+//	return 0;
+//}
+
+DWORD WINAPI LaunchThread(void* arg) {
 	int done=0; // set to TRUE if decoding has finished
-	while (!killDecodeThread)
-	{
-		if (done) // done was set to TRUE during decoding, signaling eof
-		{
-			mod.outMod->CanWrite();
-			if (!mod.outMod->IsPlaying())
-			{
-				// we're done playing, so tell Winamp and quit the thread.
-				PostMessage(mod.hMainWindow,WM_WA_MPEG_EOF,0,0);
-				killDecodeThread = true;
-			}
-			Sleep(10);		// give a little CPU time back to the system.
+	while (!stopped) {
+		if (seek != -1) {// seek is needed.
+			pos=seek; seek=-1; done=0;
+            mod.outMod->Flush(pos); // flush output and seek to position
 		}
-		else if (mod.outMod->CanWrite() >= (bufSize<<(mod.dsp_isactive()?1:0))) {
-			libpd.processShort(ticks, inBuf, outBuf);
-
+		else if (mod.outMod->CanWrite() >= bufSize) {
 			pos = mod.outMod->GetWrittenTime();
-			mod.SAAddPCMData((char *)outBuf,NCH,BPS,pos);
-			mod.VSAAddPCMData((char *)outBuf,NCH,BPS,pos);
-
-			mod.outMod->Write((char *)outBuf, bufSize);
+			if (pos >= length+2000) {
+				PostMessage(mod.hMainWindow,WM_USER+2,0,0);
+				return 0;
+			}
+			libpd.processShort(ticks, NULL, (short*)bufr);
+			mod.SAAddPCMData(bufr,NCH,BPS,pos);
+			mod.VSAAddPCMData(bufr,NCH,BPS,pos);
+			mod.outMod->Write(bufr, bufSize);
 		}
 		else Sleep(20);
-		// if we can't write data, wait a little bit. Otherwise, continue
-		// through the loop writing more data (without sleeping)
 	}
-}
-
-DWORD CALLBACK LaunchThread(void* arg) {
-	DecodeThread();
 	return 0;
 }
 
@@ -160,13 +208,9 @@ int Play(const char *fn) {
     int maxlatency;
 	DWORD tid; // thread id
 	paused=0;
+    seek=-1;
 
-	std::string name = fn;
-	std::string path = fn;
-	name = name.substr(name.find_last_of("\\") + 1);
-	path = path.substr(0,path.find_last_of("\\"));
-
-	p = libpd.openPatch(name,path);
+	patch = libpd.openPatch(name(fn),path(fn));
 	libpd.sendFloat("vol", 1);
 	libpd.sendBang("play");
 
@@ -189,26 +233,21 @@ int Play(const char *fn) {
 	mod.outMod->SetVolume(-666);
 
 	// launch decode thread
-	killDecodeThread=0;
-	thread_handle = (HANDLE)
+	stopped=0;
+	hand = (HANDLE)
 		CreateThread(0,0,LaunchThread,0,0,&tid);
 
 	return 0;
 }
 
 void Stop() {
-    if (thread_handle != INVALID_HANDLE_VALUE) {
-		killDecodeThread=1;
-		if (WaitForSingleObject(thread_handle,INFINITE) == WAIT_TIMEOUT) {
-			MessageBox(mod.hMainWindow,"error asking thread to die!\n",
-				"error killing decode thread",0);
-			TerminateThread(thread_handle,0);
-		}
-		CloseHandle(thread_handle);
-		thread_handle = INVALID_HANDLE_VALUE;
+	stopped=1;
+    if (hand != INVALID_HANDLE_VALUE) {
+		CloseHandle(hand);
+		hand = INVALID_HANDLE_VALUE;
 	}
+	libpd.closePatch(patch); // close the patch
 
-	libpd.closePatch(p); // close the patch
 	mod.outMod->Close(); // close output system
 	mod.SAVSADeInit(); // deinitialize visualization
 }
@@ -218,10 +257,10 @@ void EQSet(int on, char data[10], int preamp) { }
 In_Module mod =
 {
 	IN_VER,	// defined in IN2.H
-	"amPd (Pure Data Plugin)",
+	(char*)"amPd v0.0 (x86)",
 	0,	// hMainWindow (filled in by winamp)
 	0,  // hDllInstance (filled in by winamp)
-	"PD\0Pure Data Files (*.pd)\0",	// this is a double-null limited list. "EXT\0Description\0EXT\0Description\0" etc.
+	(char*)"PD\0Pure Data Files (*.pd)\0",	// double-null limited list
 	1,	// is_seekable
 	1,	// uses output plug-in system
 	Config,

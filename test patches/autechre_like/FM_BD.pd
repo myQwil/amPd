@@ -33,7 +33,7 @@
 #X obj 45 172 r play;
 #X obj 218 494 throw~ sview;
 #X obj 27 216 del 1500;
-#X obj 131 342 *~ 0.375;
+#X obj 131 342 *~ 0.35;
 #X connect 0 0 2 1;
 #X connect 1 0 0 0;
 #X connect 2 0 15 0;

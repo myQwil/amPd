@@ -44,7 +44,7 @@ void grand_bang(t_grand *x) {
 
 void *grand_new(t_symbol *s, int argc, t_atom *argv) {
 	t_grand *x = (t_grand *)pd_new(grand_class);
-	t_float range=100, min=0, max=1;
+	t_float range=1000, min=0, max=1;
 
 	switch (argc) {
 	  case 3:

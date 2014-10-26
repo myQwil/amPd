@@ -574,7 +574,9 @@
 			<Option virtualFolder="src/" />
 		</Unit>
 		<Extensions>
-			<code_completion />
+			<code_completion>
+				<search_path add="libpd\cpp" />
+			</code_completion>
 			<debugger />
 			<envvars />
 		</Extensions>
