@@ -1,4 +1,4 @@
-#N canvas 69 145 591 307 10;
+#N canvas 884 357 591 307 10;
 #N canvas 567 593 470 315 divider 0;
 #X obj 124 118 rand;
 #X obj 93 211 *;
@@ -113,12 +113,12 @@
 #X restore 197 56 pd divider;
 #X obj 179 78 /;
 #X floatatom 206 79 8 0 0 0 - - -, f 8;
-#X obj 147 79 tgl 15 0 empty start empty 17 7 0 10 -262144 -1 -1 1
+#X obj 147 79 tgl 15 0 empty start empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 675 50 971 520 drones 1;
+#N canvas 675 50 971 520 drones 0;
 #X floatatom 21 198 5 0 0 0 - - -, f 5;
 #X obj 622 438 s shiftSpd;
-#N canvas 660 645 287 266 drone 1;
+#N canvas 660 645 287 266 drone 0;
 #X obj 11 97 osc~;
 #X obj 24 167 *~;
 #N canvas 1003 587 450 300 shift 0;
@@ -153,11 +153,11 @@
 #X obj 29 31 ii 50;
 #X obj 29 53 mtof;
 #X obj 24 199 throw~ drone;
-#X obj 177 80 osc~;
-#X obj 177 102 *~;
-#X obj 177 124 +~ 1;
-#X floatatom 209 105 5 0 0 0 - - -, f 5;
-#X floatatom 181 51 5 0 0 0 - - -, f 5;
+#X obj 95 64 osc~;
+#X obj 95 86 *~;
+#X obj 95 108 +~ 1;
+#X floatatom 127 89 5 0 0 0 - - -, f 5;
+#X floatatom 99 35 5 0 0 0 - - -, f 5;
 #X obj 24 136 *~;
 #X connect 0 0 15 0;
 #X connect 1 0 9 0;
@@ -668,31 +668,31 @@
 #X obj 698 156 + 27;
 #X obj 512 156 + 21;
 #X obj 131 220 vsl 15 128 0 0.15 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4260 1;
+-1 -1 0 1;
 #X obj 26 219 vsl 15 128 0.03 0.08 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 4660 1;
+-262144 -1 -1 0 1;
 #X obj 255 220 vsl 15 128 0 0.15 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5657 1;
+-1 -1 0 1;
 #X obj 193 220 vsl 15 128 0 0.2 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10864 1;
+-1 -1 0 1;
 #X obj 379 220 vsl 15 128 0 0.05 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4902 1;
+-1 -1 0 1;
 #X obj 317 220 vsl 15 128 0 0.1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5146 1;
+-1 -1 0 1;
 #X obj 503 220 vsl 15 128 0 0.015 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4330 1;
+-1 -1 0 1;
 #X obj 441 220 vsl 15 128 0 0.025 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4972 1;
+-1 -1 0 1;
 #X obj 627 220 vsl 15 128 0 0.015 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4462 1;
+-1 -1 0 1;
 #X obj 565 220 vsl 15 128 0 0.015 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9461 1;
+-1 -1 0 1;
 #X obj 751 220 vsl 15 128 0 0.015 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1416 1;
+-1 -1 0 1;
 #X obj 689 220 vsl 15 128 0 0.02 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10069 1;
+-1 -1 0 1;
 #X obj 475 442 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 6350 1;
 #X floatatom 461 462 5 0 0 0 - - -, f 5;
 #X obj 472 400 loadbang;
 #N canvas 1099 581 450 300 trem 0;
@@ -902,7 +902,7 @@
 #X floatatom 109 81 5 0 0 0 - - tempo, f 5;
 #X obj 109 60 300;
 #X obj 77 121 metro;
-#X obj 77 98 tgl 15 0 empty start empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 77 98 tgl 15 0 empty start empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X connect 0 0 5 1;
 #X connect 2 0 4 0;
@@ -910,7 +910,7 @@
 #X connect 5 0 1 0;
 #X connect 6 0 5 0;
 #X restore 4 80 pd tempo;
-#X obj 104 33 tgl 15 0 start start empty 17 7 0 10 -262144 -1 -1 1
+#X obj 104 33 tgl 15 0 start start empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 853 379 701 437 bass 0;
 #X obj 502 78 noise~;
@@ -1741,7 +1741,7 @@
 #X restore 119 195 pd drill;
 #X obj 171 277 dac~;
 #X obj 296 148 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 600 1;
+-1 -1 0 1;
 #X obj 177 249 *~;
 #X obj 170 11 r tempo;
 #X obj 147 122 s drillBeat;

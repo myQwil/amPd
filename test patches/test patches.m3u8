@@ -1,17 +1,15 @@
 ﻿#EXTM3U
-#EXTINF:120,drones
+#EXTINF:350,miwi - drones
 drones.pd
-#EXTINF:120,freqshift
+#EXTINF:240,miwi - freqshift
 freqshift.pd
-#EXTINF:120,squaw
+#EXTINF:310,miwi - squaw
 squaw.pd
-#EXTINF:120,freqy-bass
-freqy-bass.pd
-#EXTINF:120,imafreq
-imafreq.pd
-#EXTINF:120,rileyBot
-rileyBot.pd
-#EXTINF:120,00 SEQ FM RUNME
+#EXTINF:-1,Human Koala - autechre-like
 autechre_like\00_SEQ_FM_RUNME.pd
-#EXTINF:120, algorithmic acidr
-algorithmic acid for Pd-extended\_algorithmic_acidr.pd
+#EXTINF:480,miwi - I'm a Freq
+imafreq.pd
+#EXTINF:179,miwi - ModStep
+freqy-bass.pd
+#EXTINF:195,Nobuo Uematsu - Final Fantasy
+finalfantasy.pd

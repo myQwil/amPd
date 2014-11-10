@@ -1,4 +1,4 @@
-#N canvas 1007 493 429 429 10;
+#N canvas 802 368 429 429 10;
 #X floatatom 262 354 5 0 0 0 - - -, f 5;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array view 500 float 1;
@@ -73,13 +73,13 @@
 -0.0231096 -0.041469 -0.0574352 -0.0708584 -0.081644 -0.089749;
 #X coords 0 1 499 -1 200 140 1;
 #X restore 193 32 graph;
-#X obj 31 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 31 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 103 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 103 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 141 199 sel 1 0;
 #X obj 36 384 tabwrite~ view;
-#X obj 36 343 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 36 343 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 31 44 r tog;
 #X floatatom 53 344 6 0 0 0 - view -, f 6;
@@ -381,7 +381,7 @@
 #X obj 358 341 s dcay;
 #X floatatom 359 363 5 0 0 0 - - -, f 5;
 #X obj 359 382 s ramp;
-#N canvas 1067 364 465 341 hum 0;
+#N canvas 475 483 465 341 hum 0;
 #X obj 162 114 r bt;
 #X obj 162 158 s lbt;
 #X obj 219 136 s latak;
@@ -389,8 +389,7 @@
 #X obj 277 136 s lramp;
 #X floatatom 212 159 5 0 0 0 - - -, f 5;
 #X obj 277 114 * 2;
-#X obj 135 210 randv 4 1;
-#N canvas 914 380 450 555 lofm 0;
+#N canvas 290 360 450 555 lofm 0;
 #X floatatom 167 204 5 0 0 0 - - -, f 5;
 #X obj 159 397 *~;
 #X floatatom 255 350 5 0 0 0 - ldcay -, f 5;
@@ -460,16 +459,16 @@
 #X obj 280 320 pad 30000;
 #X floatatom 381 342 5 0 0 0 - - -, f 5;
 #X floatatom 222 55 5 0 0 0 - - -, f 5;
-#X obj 159 75 muse 31 3 -5 -4;
-#X obj 189 268 muse 50 3 4 5;
 #X obj 194 434 * 0.01;
 #X obj 375 300 * 0.01;
 #X obj 204 369 adj~;
 #X msg 324 426 \; lmvol 20;
+#X obj 189 268 muse 50 2 3 4 5;
+#X obj 159 75 muse 31 2 3 -5 -4;
 #X connect 1 0 12 0;
-#X connect 2 0 44 2;
-#X connect 3 0 44 0;
-#X connect 4 0 44 1;
+#X connect 2 0 42 2;
+#X connect 3 0 42 0;
+#X connect 4 0 42 1;
 #X connect 5 0 30 3;
 #X connect 6 0 10 1;
 #X connect 7 0 9 1;
@@ -480,14 +479,14 @@
 #X connect 12 0 23 1;
 #X connect 12 0 23 0;
 #X connect 12 0 24 0;
-#X connect 13 0 42 0;
+#X connect 13 0 40 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
 #X connect 18 0 19 0;
 #X connect 19 0 1 0;
-#X connect 21 0 44 0;
+#X connect 21 0 42 0;
 #X connect 22 0 30 0;
-#X connect 25 0 45 0;
+#X connect 25 0 43 0;
 #X connect 26 0 30 2;
 #X connect 29 0 10 0;
 #X connect 30 0 0 0;
@@ -495,19 +494,19 @@
 #X connect 31 0 32 0;
 #X connect 32 0 11 0;
 #X connect 33 0 39 0;
-#X connect 33 0 40 0;
-#X connect 34 0 41 0;
-#X connect 35 0 43 0;
+#X connect 33 0 45 0;
+#X connect 34 0 44 0;
+#X connect 35 0 41 0;
 #X connect 36 0 35 0;
 #X connect 37 0 12 1;
 #X connect 37 0 38 0;
-#X connect 40 0 14 0;
-#X connect 40 0 9 0;
-#X connect 41 0 15 0;
-#X connect 41 0 11 0;
-#X connect 42 0 12 1;
-#X connect 43 0 37 0;
-#X connect 44 0 1 1;
+#X connect 40 0 12 1;
+#X connect 41 0 37 0;
+#X connect 42 0 1 1;
+#X connect 44 0 15 0;
+#X connect 44 0 11 0;
+#X connect 45 0 14 0;
+#X connect 45 0 9 0;
 #X restore 104 136 pd lofm;
 #N canvas 955 377 450 555 hifm 0;
 #X floatatom 140 177 5 0 0 0 - - -, f 5;
@@ -592,7 +591,6 @@
 #X connect 39 1 20 1;
 #X restore 104 158 pd hifm;
 #X floatatom 80 215 5 0 0 0 - - -, f 5;
-#X obj 208 210 randv 4 1;
 #X obj 133 232 s lt;
 #X floatatom 243 232 5 0 0 0 - - -, f 5;
 #X floatatom 168 232 5 0 0 0 - - -, f 5;
@@ -605,29 +603,31 @@
 #X obj 219 114 * 32;
 #X obj 162 136 cpt 128;
 #X obj 208 232 s ht;
-#X connect 0 0 22 0;
-#X connect 3 0 17 1;
-#X connect 3 0 18 0;
+#X obj 135 210 randv 5 1;
+#X obj 208 210 randv 4 1;
+#X connect 0 0 20 0;
+#X connect 3 0 15 1;
+#X connect 3 0 16 0;
 #X connect 6 0 4 0;
-#X connect 7 0 12 0;
-#X connect 7 0 14 0;
-#X connect 10 0 12 0;
-#X connect 11 0 13 0;
-#X connect 11 0 23 0;
-#X connect 15 0 22 1;
-#X connect 16 0 22 1;
-#X connect 17 0 6 0;
-#X connect 17 0 21 0;
-#X connect 18 0 17 0;
-#X connect 19 0 18 0;
-#X connect 19 0 21 1;
-#X connect 20 0 18 0;
-#X connect 20 0 6 1;
-#X connect 21 0 2 0;
-#X connect 22 0 1 0;
-#X connect 22 0 7 0;
-#X connect 22 0 11 0;
-#X connect 22 1 5 0;
+#X connect 9 0 10 0;
+#X connect 13 0 20 1;
+#X connect 14 0 20 1;
+#X connect 15 0 6 0;
+#X connect 15 0 19 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 17 0 19 1;
+#X connect 18 0 16 0;
+#X connect 18 0 6 1;
+#X connect 19 0 2 0;
+#X connect 20 0 1 0;
+#X connect 20 0 22 0;
+#X connect 20 0 23 0;
+#X connect 20 1 5 0;
+#X connect 22 0 10 0;
+#X connect 22 0 12 0;
+#X connect 23 0 11 0;
+#X connect 23 0 21 0;
 #X restore 31 154 pd hum;
 #N canvas 58 575 450 300 record 0;
 #X obj 227 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -689,6 +689,15 @@
 #X connect 8 0 0 0;
 #X connect 9 0 0 1;
 #X restore 201 381 pd mix;
+#X text 116 30 miwi;
+#N canvas 424 244 450 300 info 0;
+#X text 174 77 artist : miwi;
+#X text 181 91 title : I'm a Freq;
+#X text 174 105 length : 480000;
+#X restore 273 220 pd info;
+#X obj 139 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 139 70 s play;
 #X connect 0 0 48 0;
 #X connect 2 0 26 0;
 #X connect 3 0 30 0;
@@ -736,4 +745,5 @@
 #X connect 53 0 54 0;
 #X connect 54 0 44 0;
 #X connect 54 1 44 1;
+#X connect 57 0 58 0;
 #X coords 0 429 1 428 85 60 0;

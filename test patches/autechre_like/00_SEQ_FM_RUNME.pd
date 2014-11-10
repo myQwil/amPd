@@ -1,4 +1,4 @@
-#N canvas 257 50 995 888 12;
+#N canvas 499 50 995 968 12;
 #X obj 124 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 953 660 698 332 clock_divider 0;
@@ -170,7 +170,7 @@
 #X obj 551 555 inlet;
 #X obj 68 29 r play;
 #X obj 399 719 throw~ sview;
-#X obj 68 54 del 20000;
+#X obj 68 54 del 10000;
 #X connect 0 0 17 0;
 #X connect 0 0 18 0;
 #X connect 0 0 25 0;
@@ -245,15 +245,15 @@
 #X obj 663 557 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 627 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10160 1;
+-1 -1 8255 1;
 #X obj 500 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9525 1;
+-1 -1 8890 1;
 #X obj 373 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7620 1;
+-1 -1 6985 1;
 #X obj 254 654 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10160 1;
+-1 -1 9525 1;
 #X obj 129 654 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9842 1;
+-1 -1 8890 1;
 #X obj 33 666 FM_BD;
 #X obj 706 239 rand 16;
 #X obj 660 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -347,27 +347,17 @@
 #X obj 521 48 s play;
 #X obj 487 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 1086 484 450 300 info 0;
-#X obj 186 57 r play;
-#X msg 113 119 Human Koala;
-#X obj 113 144 s artist;
-#X msg 186 144 autechre_like;
-#X obj 186 169 s title;
-#X obj 251 194 s length;
-#X msg 251 169 5:34;
-#X connect 0 0 6 0;
-#X connect 0 0 3 0;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 3 0 4 0;
-#X connect 6 0 5 0;
+#N canvas 570 377 450 300 info 1;
+#X text 175 84 artist : Human Koala;
+#X text 183 101 title : autechre-like;
+#X text 175 118 length : 0;
 #X restore 845 171 pd info;
-#X obj 182 788 ii 1.55;
-#X obj 297 786 ii 0.8;
-#X obj 410 787 ii 0.6;
-#X obj 532 788 ii 0.75;
 #X obj 688 679 pad~ 20;
-#X obj 663 795 ii 0.7;
+#X obj 182 788 ii 1.4;
+#X obj 297 786 ii 0.75;
+#X obj 410 787 ii 0.55;
+#X obj 532 788 ii 0.7;
+#X obj 663 795 ii 0.65;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 1 0 3 0;
@@ -446,7 +436,7 @@
 #X connect 45 0 44 0;
 #X connect 45 0 43 0;
 #X connect 47 0 1 0;
-#X connect 48 0 31 0;
+#X connect 48 0 73 0;
 #X connect 49 0 16 1;
 #X connect 49 0 69 0;
 #X connect 50 0 18 3;
@@ -458,15 +448,15 @@
 #X connect 53 0 54 1;
 #X connect 53 0 65 0;
 #X connect 55 0 5 0;
-#X connect 57 0 77 0;
+#X connect 57 0 73 0;
 #X connect 58 0 0 0;
 #X connect 61 0 62 0;
 #X connect 62 0 63 0;
 #X connect 64 0 63 0;
 #X connect 71 0 70 0;
-#X connect 73 0 53 0;
-#X connect 74 0 52 0;
-#X connect 75 0 51 0;
-#X connect 76 0 50 0;
-#X connect 77 0 31 0;
+#X connect 73 0 31 0;
+#X connect 74 0 53 0;
+#X connect 75 0 52 0;
+#X connect 76 0 51 0;
+#X connect 77 0 50 0;
 #X connect 78 0 49 0;
