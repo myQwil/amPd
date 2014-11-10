@@ -12,3 +12,14 @@ To install:
 To use in_pd in your own patches, Add [r play] and [r vol] to your patch  
 [r play] is sent a bang, which is used to start the patch  
 [r vol]  is sent a float value of 1, which is used to turn the volume on
+
+Adding metadata:
+----------------
+in_pd looks for artist, title, and length info. Adding this info to your patch is a simple matter of adding comments in pure data.
+
+The format is as follows:
+- artist : yourArtistName
+- title : yourSongTitle
+- length : lengthInMilliseconds
+
+make sure you separate the field name from the value with " : " (space-colon-space)
