@@ -1067,21 +1067,21 @@
 #X obj 262 493 line~;
 #X obj 262 468 pack f 50;
 #X obj 285 424 r cos1;
-#N canvas 855 50 325 205 mix 0;
+#N canvas 928 117 325 205 mix 0;
 #X obj 80 45 hsl 128 15 0 1 0 0 saw empty sawtooth -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 80 63 hsl 128 15 0 1 0 0 cos1 empty empty -2 -8 0 10 -262144
+#X obj 80 76 hsl 128 15 0 1 0 0 cos1 empty cosine_1 -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 80 81 hsl 128 15 0 1 0 0 cos2 empty empty -2 -8 0 10 -262144
+#X obj 80 107 hsl 128 15 0 1 0 0 cos2 empty cosine_2 -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 80 99 hsl 128 15 0 1 0 0 cos3 empty empty -2 -8 0 10 -262144
+#X obj 80 137 hsl 128 15 0 1 0 0 cos3 empty cosine_3 -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 80 117 hsl 128 15 1 500 0 0 tempo empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 80 169 hsl 128 15 1 500 0 0 tempo empty shift_tempo -2 -8 0
+10 -262144 -1 -1 0 1;
 #X restore 359 119 pd mix;
 #X obj 843 335 r play;
 #X obj 831 385 select;
-#X obj 831 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 831 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 848 468 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1112,6 +1112,9 @@
 #X restore 359 143 pd info;
 #X obj 766 313 del 300000;
 #X msg 766 338 0 10000;
+#X obj 646 332 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 646 352 s play;
 #X connect 1 0 128 0;
 #X connect 3 0 11 0;
 #X connect 4 0 9 0;
@@ -1249,4 +1252,5 @@
 #X connect 128 0 2 1;
 #X connect 131 0 132 0;
 #X connect 132 0 66 0;
+#X connect 133 0 134 0;
 #X coords 0 691 1 690 85 60 0;

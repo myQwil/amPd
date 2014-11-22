@@ -98,8 +98,10 @@ int IsOurFile(const char *fn)
 int GetOutputTime()
 { return mod.outMod->GetOutputTime(); }
 
-void SetOutputTime(int time_in_ms)
-{ seek = time_in_ms; }
+void SetOutputTime(int time_in_ms) {
+	seek = time_in_ms;
+	libpd << Float("pos", (float)time_in_ms / length);
+}
 
 void SetVolume(int volume)
 { mod.outMod->SetVolume(volume); }

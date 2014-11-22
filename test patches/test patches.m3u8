@@ -5,11 +5,11 @@ drones.pd
 freqshift.pd
 #EXTINF:310,miwi - squaw
 squaw.pd
-#EXTINF:-1,Human Koala - autechre-like
-autechre_like\00_SEQ_FM_RUNME.pd
 #EXTINF:480,miwi - I'm a Freq
 imafreq.pd
 #EXTINF:179,miwi - ModStep
 freqy-bass.pd
 #EXTINF:195,Nobuo Uematsu - Final Fantasy
 finalfantasy.pd
+#EXTINF:-1,Human Koala - autechre-like
+autechre_like\00_SEQ_FM_RUNME.pd
