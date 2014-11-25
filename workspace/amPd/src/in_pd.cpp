@@ -138,24 +138,20 @@ void GetFileInfo(const char *file, char *title, int *length_in_ms) {
 		*length_in_ms=GetLength();
 		ifstream infile(current.c_str());
 		while (getline(infile, line)) {
-			if (line.find("title : ")!=string::npos) {
-				hasTitle = true; titl = getTag(line);
-			}
-			if (line.find("artist : ")!=string::npos) {
-				hasArtist = true; artist = getTag(line);
-			}
+			if (line.find("title : ")!=string::npos)
+			{	hasTitle = true; titl = getTag(line);	}
+			if (line.find("artist : ")!=string::npos)
+			{	hasArtist = true; artist = getTag(line);	}
 		}
 	}
 	else { // some other file
 		bool hasLength = false;
 		ifstream infile(file);
 		while (getline(infile, line)) {
-			if (line.find("title : ")!=string::npos) {
-				hasTitle = true; titl = getTag(line);
-			}
-			if (line.find("artist : ")!=string::npos) {
-				hasArtist = true; artist = getTag(line);
-			}
+			if (line.find("title : ")!=string::npos)
+			{	hasTitle = true; titl = getTag(line);	}
+			if (line.find("artist : ")!=string::npos)
+			{	hasArtist = true; artist = getTag(line);	}
 			if (line.find("length : ")!=string::npos) {
 				hasLength = true;
 				int l = StringToNumber(getTag(line));
@@ -266,8 +262,7 @@ void Stop() {
 
 void EQSet(int on, char data[10], int preamp) { }
 
-In_Module mod =
-{
+In_Module mod = {
 	IN_VER,	// defined in IN2.H
 	(char*)"amPd v0.0 "
 #ifdef __alpha

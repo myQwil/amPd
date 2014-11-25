@@ -322,7 +322,7 @@ synth. The noise generator is from Obiwannabee's [efficient-drums]
 #X obj 638 45 t f b;
 #X obj 615 79 pack;
 #X obj 521 98 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 672 64 random 5;
+#X obj 672 64 rand 5;
 #X obj 291 -5 hsl 128 15 0.1 10 1 1 empty empty empty -2 -8 0 10 -262144
 -260097 -1 2100 0;
 #X obj 430 -6 hsl 128 15 0.05 100 1 1 empty empty empty -2 -8 0 10
