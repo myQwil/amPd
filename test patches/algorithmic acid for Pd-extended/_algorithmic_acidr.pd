@@ -2734,7 +2734,6 @@ dep 2 \; modrate 0.1 \; bpm 75 \; mult 8 \; initg 85 \; hhq 12 \; hhi
 #X obj 267 191 sel;
 #X obj 295 189 % 64;
 #X obj 30 114 r play;
-#X obj 30 136 del 3000;
 #X connect 0 0 1 0;
 #X connect 1 0 2 1;
 #X connect 2 0 6 0;
@@ -2785,5 +2784,4 @@ dep 2 \; modrate 0.1 \; bpm 75 \; mult 8 \; initg 85 \; hhq 12 \; hhi
 #X connect 72 0 14 0;
 #X connect 72 0 22 0;
 #X connect 73 0 70 1;
-#X connect 74 0 75 0;
-#X connect 75 0 11 0;
+#X connect 74 0 11 0;

@@ -106,7 +106,7 @@ void demultiplex_setup(void)
 
   class_addmethod   (demux_class, (t_method)demux_select, gensym("select"), A_DEFFLOAT, 0);
 
-  zexy_register("demultiplex");
+  //zexy_register("demultiplex");
 }
 void demux_setup(void)
 {

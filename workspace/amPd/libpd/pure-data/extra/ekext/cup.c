@@ -42,7 +42,7 @@ void cup_setup(void)
   (t_newmethod)cup_new,
   0, sizeof(t_cup),
   0, A_DEFFLOAT, 0);
-  post("cup counts up ^_^");
+//  post("cup counts up ^_^");
 
   class_addbang(cup_class, cup_bang);
   class_addfloat(cup_class, cup_float);

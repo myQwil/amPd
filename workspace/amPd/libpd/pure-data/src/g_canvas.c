@@ -1420,7 +1420,7 @@ static void canvas_f(t_canvas *x, t_symbol *s, int argc, t_atom *argv)
     static int warned;
     if (!warned)
     {
-        post("** ignoring width or font settings from future Pd version **");
+//        post("** ignoring width or font settings from future Pd version **");
         warned = 1;
     }
 }

@@ -136,25 +136,25 @@ static void *zexy_new(void)
 
 void zexy_setup(void)
 {
-  int i;
-
-  startpost("\n\t");
-  for (i=0; i<3; i++) startpost("%c", HEARTSYMBOL);
-  endpost();
-  post("\t%c the zexy external  "VERSION, HEARTSYMBOL);
-  post("\t%c (c) 1999-2012 IOhannes m zmölnig", HEARTSYMBOL);
-  post("\t%c       forum::für::umläute", HEARTSYMBOL);
-  post("\t%c       iem   @  kug", HEARTSYMBOL);
-  post("\t%c  compiled:  "__DATE__, HEARTSYMBOL);
-  post("\t%c send me a 'help' message", HEARTSYMBOL);
-  startpost("\t");
-  for (i=0; i<3; i++) startpost("%c", HEARTSYMBOL);
-  endpost(); endpost();
+//  int i;
+//
+//  startpost("\n\t");
+//  for (i=0; i<3; i++) startpost("%c", HEARTSYMBOL);
+//  endpost();
+//  post("\t%c the zexy external  "VERSION, HEARTSYMBOL);
+//  post("\t%c (c) 1999-2012 IOhannes m zmölnig", HEARTSYMBOL);
+//  post("\t%c       forum::für::umläute", HEARTSYMBOL);
+//  post("\t%c       iem   @  kug", HEARTSYMBOL);
+//  post("\t%c  compiled:  "__DATE__, HEARTSYMBOL);
+//  post("\t%c send me a 'help' message", HEARTSYMBOL);
+//  startpost("\t");
+//  for (i=0; i<3; i++) startpost("%c", HEARTSYMBOL);
+//  endpost(); endpost();
 
   zexy_class = class_new(gensym("zexy"), zexy_new, 0, sizeof(t_zexy), 0, 0);
   class_addmethod(zexy_class, zexy_help, gensym("help"), 0);
 
-  zexy_register("zexy");
+  //zexy_register("zexy");
 
   /* ************************************** */
   //z_zexy_setup();

@@ -6,61 +6,31 @@ using namespace std;
 extern In_Module mod;
 
 extern "C" {
-	void bonk_tilde_setup();
-	void choice_setup();
+	void extra_setup();
 	void expr_setup();
-	void fiddle_tilde_setup();
-	void loop_tilde_setup();
-	void lrshift_tilde_setup();
-	void pique_setup();
-	void sigmund_tilde_setup();
-	void stdout_setup();
 
-	void rand_setup();
-	void randv_setup();
-	void grand_setup();
-	void graid_setup();
-	void muse_setup();
-
-	void ii_setup();
-	void demux_setup();
-	void counter_setup();
-	void vectorPlus_setup();
-	void vectorMinus_setup();
-	void cup_setup();
-	void cupd_setup();
-	void setup_0x3c0x7e();
-	void setup_0x3e0x7e();
-
-	void filter_tilde_setup();
-	void tanh_tilde_setup();
-	void makesymbol_setup();
+	void allhammers_setup();
+	void ekext_setup();
+	void iemlib1_setup();
+	void iemlib2_setup();
+	void MarkEx_setup();
+	void miwi_setup();
+	void z_zexy_setup();
 }
 
 void Init() {
     libpd.init(0, NCH, Hz);
 
+    extra_setup();
     expr_setup();
 
-	rand_setup();
-	randv_setup();
-	grand_setup();
-	graid_setup();
-	muse_setup();
-
-	ii_setup();
-	demux_setup();
-	counter_setup();
-	vectorPlus_setup();
-	vectorMinus_setup();
-	cup_setup();
-	cupd_setup();
-	setup_0x3c0x7e();
-	setup_0x3e0x7e();
-
-	filter_tilde_setup();
-	tanh_tilde_setup();
-	makesymbol_setup();
+    allhammers_setup();
+    ekext_setup();
+    iemlib1_setup();
+    iemlib2_setup();
+    MarkEx_setup();
+    miwi_setup();
+    z_zexy_setup();
 
 	bufSize = NCH*ticks*PdBase::blockSize()*2;
 	bufr = new char[bufSize];
@@ -85,7 +55,7 @@ void About(HWND hwndParent) {
 }
 
 int InfoBox(const char *file, HWND hwndParent) {
-	//MessageBox(hwndParent,current.c_str(),"Message",MB_OK);
+//	MessageBox(hwndParent,libpd.nextMessage().symbol.c_str(),"Message",MB_OK);
 	return INFOBOX_UNCHANGED;
 }
 
