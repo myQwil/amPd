@@ -40,7 +40,7 @@
 #X obj 369 152 r \$1-min_del;
 #X obj 387 327 r \$1-del_dist;
 #X obj 579 813 outlet~;
-#X obj 64 48 t b b;
+#X obj 64 48 t;
 #X obj 91 86 f \$2;
 #X obj 91 105 * 2;
 #X obj 143 122 +;
@@ -48,8 +48,8 @@
 #X obj 168 198 -;
 #X obj 333 291 f;
 #X obj 308 535 f;
-#X obj 281 516 t b b;
-#X obj 306 272 t b b;
+#X obj 281 516 t;
+#X obj 306 272 t;
 #X obj 627 457 f 1;
 #X obj 561 512 == 0;
 #X obj 540 531 *~ 0;

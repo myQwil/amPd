@@ -108,10 +108,10 @@
 #X obj 131 513 switch~;
 #X obj 131 461 env~;
 #X msg 172 486 1;
-#X obj 147 164 t b b;
+#X obj 147 164 t;
 #X obj 131 486 > 0.1;
 #X obj 72 485 outlet~;
-#X obj 197 164 t b b;
+#X obj 197 164 t;
 #X msg 147 293 \$1 0 0 \, 0 \$2 1;
 #X obj 147 270 pack f f;
 #X obj 147 219 t f f;

@@ -9,7 +9,7 @@
 #X obj 265 308 exp;
 #X obj 265 327 +;
 #X obj 238 366 spigot 0;
-#X obj 180 303 t b b;
+#X obj 180 303 t;
 #X obj 238 387 f;
 #X obj 101 103 cnv 15 55 49 empty empty pois2 1 6 0 10 -258040 -1 0
 ;

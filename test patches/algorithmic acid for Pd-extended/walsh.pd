@@ -1,6 +1,6 @@
 #N canvas 375 0 373 401 10;
 #X obj 115 223 table walsh 262145;
-#X obj 88 172 t b b;
+#X obj 88 172 t;
 #X obj 88 242 tabread walsh;
 #X obj 88 261 s walshmax;
 #X obj 88 153 loadbang;

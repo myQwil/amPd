@@ -2,7 +2,7 @@
 #X obj 563 33 blkbpm;
 #X floatatom 563 89 5 0 0 0 - - -, f 5;
 #X obj 536 107 metro;
-#X obj 536 90 tgl 15 0 empty go empty 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 536 90 tgl 15 0 empty go empty 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 1080 424 dphasor1 xx;
 #X obj 235 664 output~;
 #N canvas 94 164 1366 686 drums 0;
@@ -47,7 +47,7 @@
 #X obj 746 436 int;
 #X obj 701 341 pois;
 #X obj 610 647 dphasor1~ xx 8;
-#X obj 521 588 t b b;
+#X obj 521 588 t;
 #X obj 610 571 t b;
 #X obj 548 626 f 0;
 #X obj 548 645 sig~;
@@ -297,7 +297,7 @@
 #X obj 1016 447 rand 8;
 #X obj 1031 409 int;
 #X obj 986 314 pois;
-#X obj 895 544 t b b;
+#X obj 895 544 t;
 #X obj 1011 295 r pois2;
 #X obj 1030 389 * 0.7;
 #X msg 1085 561 0;
@@ -371,7 +371,7 @@
 #X obj 1549 247 + 1;
 #X obj 1516 267 walsh~;
 #X msg 1633 194 20 0 \, 0 10000;
-#X obj 1682 269 t b b;
+#X obj 1682 269 t;
 #X obj 1709 329 rand 60;
 #X obj 1709 348 + 30;
 #X obj 1568 344 +~ 0;
@@ -682,7 +682,7 @@
 #X obj 563 14 r bpm;
 #X obj 620 14 r mult;
 #X obj 971 554 filt1000 tone;
-#X obj 30 186 tgl 15 0 go empty start! 17 7 0 16 -262144 -1 -1 1 1
+#X obj 30 186 tgl 15 0 go empty start! 17 7 0 16 -262144 -1 -1 0 1
 ;
 #X obj 147 65 r go;
 #X obj 147 84 sel 1;
@@ -912,29 +912,29 @@
 #X obj 18 59 pois;
 #X obj 43 40 r pois2;
 #X obj 93 133 rand 16;
-#X obj 18 116 t b b;
+#X obj 18 116 t;
 #X obj 18 154 tabwrite note;
 #X obj 168 -38 pois;
 #X obj 193 -57 r pois2;
 #X obj 240 131 rand 16;
-#X obj 168 19 t b b;
+#X obj 168 19 t;
 #X obj 153 152 + 1;
 #X obj 153 171 tabwrite length;
 #X obj 300 55 pois;
 #X obj 325 36 r pois2;
 #X obj 369 129 rand 16;
-#X obj 300 112 t b b;
+#X obj 300 112 t;
 #X obj 300 150 tabwrite oct;
 #X obj 429 53 pois;
 #X obj 454 34 r pois2;
 #X obj 516 127 rand 16;
-#X obj 429 110 t b b;
+#X obj 429 110 t;
 #X obj 429 148 == 0;
 #X obj 429 167 tabwrite accent;
 #X obj 576 51 pois;
 #X obj 601 32 r pois2;
 #X obj 657 125 rand 16;
-#X obj 576 108 t b b;
+#X obj 576 108 t;
 #X obj 576 146 == 0;
 #X obj 576 165 tabwrite glide;
 #X obj 429 129 rand 3;
@@ -1785,20 +1785,20 @@
 #X obj 26 86 pois;
 #X obj 51 67 r pois2;
 #X obj 113 160 rand 16;
-#X obj 26 143 t b b;
+#X obj 26 143 t;
 #X obj 148 179 pois;
 #X obj 173 160 r pois2;
 #X obj 241 274 rand 16;
-#X obj 148 236 t b b;
+#X obj 148 236 t;
 #X obj 148 274 + 1;
 #X obj 300 84 pois;
 #X obj 325 65 r pois2;
 #X obj 381 158 rand 16;
-#X obj 300 141 t b b;
+#X obj 300 141 t;
 #X obj 442 177 pois;
 #X obj 467 158 r pois2;
 #X obj 535 251 rand 16;
-#X obj 442 234 t b b;
+#X obj 442 234 t;
 #X obj 442 272 == 0;
 #X obj 442 253 rand 3;
 #X obj 742 192 pois;
@@ -1808,7 +1808,7 @@
 #X obj 301 217 pois;
 #X obj 326 198 r pois2;
 #X obj 382 291 rand 16;
-#X obj 301 274 t b b;
+#X obj 301 274 t;
 #X obj 300 179 tabwrite oct2a;
 #X obj 301 312 tabwrite oct2b;
 #X obj 442 291 tabwrite accent2;
@@ -1871,7 +1871,7 @@
 #X obj 610 245 pois;
 #X obj 635 226 r pois2;
 #X obj 691 319 rand 16;
-#X obj 610 302 t b b;
+#X obj 610 302 t;
 #X obj 610 359 tabwrite wave2;
 #X obj 610 321 rand 16;
 #X obj 610 340 + 1;
@@ -2679,37 +2679,37 @@ filtlf 100 \, filtlg -1 apstages 0 \, lbw 5000;
 #X coords 0 686 1 685 85 60 0;
 #X restore 536 175 pd hightone;
 #X obj 279 118 tgl 15 0 empty empty patch_on 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 279 135 switch~;
 #X obj 373 355 *~ 0.4;
 #X obj 426 355 *~ 0.4;
 #X obj 28 212 cnv 15 217 133 empty empty empty 20 12 0 14 -241580 -66577
 0;
 #X obj 30 226 tgl 15 0 drums_enable sound_enable drums 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 30 243 tgl 15 0 bass1_enable sound_enable bass_component_1 17
-7 0 10 -262144 -1 -1 1 1;
+7 0 10 -262144 -1 -1 0 1;
 #X obj 30 260 tgl 15 0 bass2_enable sound_enable bass_component_2 17
-7 0 10 -262144 -1 -1 1 1;
+7 0 10 -262144 -1 -1 0 1;
 #X obj 30 277 tgl 15 0 highseq_enable sound_enable high_seq 17 7 0
-10 -262144 -1 -1 1 1;
+10 -262144 -1 -1 0 1;
 #X obj 30 294 tgl 15 0 hightone_enable sound_enable high_tone 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 30 311 tgl 15 0 pitchshift_enable sound_enable pitchshift_feedback
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 30 328 tgl 15 0 reverb727_enable sound_enable reverb_enable
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X text 28 208 mute/unmute sounds;
 #X obj 81 226 tgl 15 0 bd_enable sound_enable bd 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 112 226 tgl 15 0 sd1_enable sound_enable sd1 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 148 226 tgl 15 0 sd2_enable sound_enable sd2 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 184 226 tgl 15 0 hh_enable sound_enable hh 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 215 226 tgl 15 0 fx_enable sound_enable fx 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 314 310 catch~ main_l;
 #X obj 400 310 catch~ main_r;
 #X obj 235 626 +~;
@@ -2734,6 +2734,7 @@ dep 2 \; modrate 0.1 \; bpm 75 \; mult 8 \; initg 85 \; hhq 12 \; hhi
 #X obj 267 191 sel;
 #X obj 295 189 % 64;
 #X obj 30 114 r play;
+#X obj 29 136 del 2000;
 #X connect 0 0 1 0;
 #X connect 1 0 2 1;
 #X connect 2 0 6 0;
@@ -2784,4 +2785,5 @@ dep 2 \; modrate 0.1 \; bpm 75 \; mult 8 \; initg 85 \; hhq 12 \; hhi
 #X connect 72 0 14 0;
 #X connect 72 0 22 0;
 #X connect 73 0 70 1;
-#X connect 74 0 11 0;
+#X connect 74 0 75 0;
+#X connect 75 0 11 0;

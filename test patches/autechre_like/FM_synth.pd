@@ -16,7 +16,7 @@
 #X obj 599 234 sel 0 1;
 #X obj 354 13 inlet;
 #X obj 370 254 spigot;
-#X obj 377 159 t b b;
+#X obj 377 159 t;
 #X obj 413 227 > 90;
 #X obj 367 333 *~ 1000;
 #X obj 467 272 * 2;

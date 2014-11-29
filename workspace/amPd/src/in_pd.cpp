@@ -10,6 +10,7 @@ extern "C" {
 	void expr_setup();
 
 	void allhammers_setup();
+	void allsickles_setup();
 	void ekext_setup();
 	void iemlib1_setup();
 	void iemlib2_setup();
@@ -25,6 +26,7 @@ void Init() {
     expr_setup();
 
     allhammers_setup();
+    allsickles_setup();
     ekext_setup();
     iemlib1_setup();
     iemlib2_setup();
@@ -37,9 +39,6 @@ void Init() {
 
     libpd.addToSearchPath("%ProgramFiles%/Common Files/Pd");
     libpd.computeAudio(true);
-
-    libpd.subscribe("title");
-    libpd.subscribe("length");
 }
 
 void Quit() {
@@ -55,7 +54,7 @@ void About(HWND hwndParent) {
 }
 
 int InfoBox(const char *file, HWND hwndParent) {
-//	MessageBox(hwndParent,libpd.nextMessage().symbol.c_str(),"Message",MB_OK);
+	MessageBox(hwndParent,libpd.nextMessage().symbol.c_str(),"Message",MB_OK);
 	return INFOBOX_UNCHANGED;
 }
 
@@ -144,6 +143,7 @@ DWORD WINAPI LaunchThread(void* arg) {
 		if (seek != -1) {// seek is needed.
 			pos=seek; seek=-1;
             mod.outMod->Flush(pos); // flush output and seek to position
+            libpd << Float("pos", (float)pos/length);
 		}
 		else if (mod.outMod->CanWrite() >= bufSize) {
 			pos = mod.outMod->GetWrittenTime();

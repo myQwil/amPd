@@ -8,7 +8,7 @@
 #X obj 105 120 + \$4;
 #X obj 78 139 delay;
 #X obj 78 196 spigot 0;
-#X obj 78 216 t b b;
+#X obj 78 216 t;
 #X obj 96 177 t b f;
 #X obj 277 103 inlet;
 #X obj 156 196 outlet;

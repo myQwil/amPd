@@ -33,3 +33,956 @@ Info: Internal Builder is used for build
 g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
 g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
 Info: Nothing to build for amPd
+12:59:47 **** Rebuild of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_vdial.o" "..\\libpd\\pure-data\\src\\g_vdial.c" 
+..\libpd\pure-data\src\g_vdial.c: In function 'vradio_donew':
+..\libpd\pure-data\src\g_vdial.c:556:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_vdial.c:555:48: warning: unused variable 'fthold' [-Wunused-variable]
+..\libpd\pure-data\src\g_vdial.c:555:9: warning: unused variable 'ftbreak' [-Wunused-variable]
+..\libpd\pure-data\src\g_vdial.c:552:38: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\markex\\markex.o" "..\\libpd\\pure-data\\extra\\markex\\markex.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_graph.o" "..\\libpd\\pure-data\\src\\g_graph.c" 
+..\libpd\pure-data\src\g_graph.c: In function 'glist_clear':
+..\libpd\pure-data\src\g_graph.c:138:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_graph.c:135:17: warning: unused variable 'y2' [-Wunused-variable]
+..\libpd\pure-data\src\g_graph.c: In function 'glist_retext':
+..\libpd\pure-data\src\g_graph.c:156:15: warning: unused variable 'c' [-Wunused-variable]
+..\libpd\pure-data\src\g_graph.c: In function 'glist_merge':
+..\libpd\pure-data\src\g_graph.c:225:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_graph.c:233:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_graph.c: In function 'glist_redraw':
+..\libpd\pure-data\src\g_graph.c:643:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_graph.c: In function 'graph_vis':
+..\libpd\pure-data\src\g_graph.c:717:19: warning: unused variable 'ga' [-Wunused-variable]
+..\libpd\pure-data\src\g_graph.c: In function 'graph_getrect':
+..\libpd\pure-data\src\g_graph.c:874:17: warning: unused variable 'ob' [-Wunused-variable]
+..\libpd\pure-data\src\g_graph.c: In function 'graph_delete':
+..\libpd\pure-data\src\g_graph.c:977:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_graph.c: At top level:
+..\libpd\pure-data\src\g_graph.c:987:13: warning: 'graph_motion' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_conf.o" "..\\libpd\\pure-data\\src\\m_conf.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_acoustics.o" "..\\libpd\\pure-data\\src\\x_acoustics.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\pique.o" "..\\libpd\\pure-data\\extra\\extra\\pique.c" 
+..\libpd\pure-data\extra\extra\pique.c: In function 'pique_doit':
+..\libpd\pure-data\extra\extra\pique.c:86:18: warning: unused variable 'fp2' [-Wunused-variable]
+..\libpd\pure-data\extra\extra\pique.c:86:12: warning: unused variable 'fp1' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_array.o" "..\\libpd\\pure-data\\src\\g_array.c" 
+..\libpd\pure-data\src\g_array.c: In function 'array_new':
+..\libpd\pure-data\src\g_array.c:47:17: warning: unused variable 'gp' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'array_resize':
+..\libpd\pure-data\src\g_array.c:70:17: warning: unused variable 'gp' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'graph_scalar':
+..\libpd\pure-data\src\g_array.c:189:16: warning: unused variable 'gp' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:188:11: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:187:17: warning: unused variable 'template' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:186:11: warning: unused variable 'x2' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:184:12: warning: unused variable 'zz' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:184:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_getarray':
+..\libpd\pure-data\src\g_array.c:208:9: warning: unused variable 'nwords' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'graph_array':
+..\libpd\pure-data\src\g_array.c:335:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_array.c:290:16: warning: unused variable 'gp' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:288:11: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:282:27: warning: unused variable 'nwords' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:282:23: warning: unused variable 'zz' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:282:20: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'glist_arraydialog':
+..\libpd\pure-data\src\g_array.c:380:15: warning: variable 'a' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_arraydialog':
+..\libpd\pure-data\src\g_array.c:412:19: warning: unused variable 'stylearraytype' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:411:25: warning: unused variable 'styletype' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:411:13: warning: unused variable 'styleonset' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_arrayviewlist_new':
+..\libpd\pure-data\src\g_array.c:470:15: warning: unused variable 'arraytype' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:467:32: warning: unused variable 'type' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:467:12: warning: unused variable 'xonset' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_arrayviewlist_fillpage':
+..\libpd\pure-data\src\g_array.c:503:15: warning: unused variable 'arraytype' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:502:10: warning: unused variable 'cmdbuf' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:500:32: warning: unused variable 'type' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:500:12: warning: unused variable 'xonset' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_free':
+..\libpd\pure-data\src\g_array.c:566:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_array.c: In function 'array_doclick_element':
+..\libpd\pure-data\src\g_array.c:753:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_array.c: In function 'array_getrect':
+..\libpd\pure-data\src\g_array.c:952:46: warning: unused variable 'dy' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:952:42: warning: unused variable 'dx' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_select':
+..\libpd\pure-data\src\g_array.c:992:15: warning: unused variable 'x' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_getfloatwords':
+..\libpd\pure-data\src\g_array.c:1140:17: warning: unused variable 'type' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_normalize':
+..\libpd\pure-data\src\g_array.c:1277:9: warning: unused variable 'type' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: In function 'garray_resize_long':
+..\libpd\pure-data\src\g_array.c:1471:14: warning: unused variable 'gl' [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c: At top level:
+..\libpd\pure-data\src\g_array.c:624:12: warning: 'array_motion_altkey' defined but not used [-Wunused-variable]
+..\libpd\pure-data\src\g_array.c:934:13: warning: 'array_getrect' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_class.o" "..\\libpd\\pure-data\\src\\m_class.c" 
+..\libpd\pure-data\src\m_class.c: In function 'dogensym':
+..\libpd\pure-data\src\m_class.c:492:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_class.c: In function 'pd_typedmess':
+..\libpd\pure-data\src\m_class.c:690:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_NULL' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_SEMI' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_COMMA' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_DOLLAR' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_DOLLSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_GIMME' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:692:13: warning: enumeration value 'A_CANT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_class.c:638:15: warning: unused variable 'f' [-Wunused-variable]
+..\libpd\pure-data\src\m_class.c: At top level:
+..\libpd\pure-data\src\m_class.c:515:18: warning: 'addfileextent' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\lrshift~.o" "..\\libpd\\pure-data\\extra\\extra\\lrshift~.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "..\\libpd\\pure-data\\extra\\cyclone\\tanh~.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_time.o" "..\\libpd\\pure-data\\src\\x_time.c" 
+..\libpd\pure-data\src\x_time.c: In function 'hang_tick':
+..\libpd\pure-data\src\x_time.c:427:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_NULL' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_SEMI' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_COMMA' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_DEFFLOAT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_DEFSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_DOLLAR' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_DOLLSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_GIMME' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:438:9: warning: enumeration value 'A_CANT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c: In function 'pipe_list':
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_NULL' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_SEMI' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_COMMA' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_DEFFLOAT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_DEFSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_DOLLAR' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_DOLLSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_GIMME' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c:472:9: warning: enumeration value 'A_CANT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\x_time.c: In function 'pipe_clear':
+..\libpd\pure-data\src\x_time.c:514:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_qlist.o" "..\\libpd\\pure-data\\src\\x_qlist.c" 
+..\libpd\pure-data\src\x_qlist.c: In function 'qlist_new':
+..\libpd\pure-data\src\x_qlist.c:35:22: warning: unused variable 'filename' [-Wunused-variable]
+..\libpd\pure-data\src\x_qlist.c:35:15: warning: unused variable 'name' [-Wunused-variable]
+..\libpd\pure-data\src\x_qlist.c: In function 'textfile_new':
+..\libpd\pure-data\src\x_qlist.c:242:22: warning: unused variable 'filename' [-Wunused-variable]
+..\libpd\pure-data\src\x_qlist.c:242:15: warning: unused variable 'name' [-Wunused-variable]
+..\libpd\pure-data\src\x_qlist.c: In function 'textfile_bang':
+..\libpd\pure-data\src\x_qlist.c:260:9: warning: unused variable 'count' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_dac.o" "..\\libpd\\pure-data\\src\\d_dac.c" 
+..\libpd\pure-data\src\d_dac.c: In function 'dac_new':
+..\libpd\pure-data\src\d_dac.c:25:24: warning: unused variable 'ap' [-Wunused-variable]
+..\libpd\pure-data\src\d_dac.c: In function 'adc_new':
+..\libpd\pure-data\src\d_dac.c:86:24: warning: unused variable 'ap' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\markex\\vector-.o" "..\\libpd\\pure-data\\extra\\markex\\vector-.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "..\\libpd\\pure-data\\extra\\iemlib\\iemlib1.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_inter.o" "..\\libpd\\pure-data\\src\\s_inter.c" 
+..\libpd\pure-data\src\s_inter.c: In function 'socketreceiver_read':
+..\libpd\pure-data\src\s_inter.c:501:15: warning: unused variable 'semi' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c: In function 'sys_vgui':
+..\libpd\pure-data\src\s_inter.c:645:37: warning: unused variable 'nwrote' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c:645:28: warning: unused variable 'headwas' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c:645:17: warning: unused variable 'bytesleft' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c: In function 'sys_unqueuegui':
+..\libpd\pure-data\src\s_inter.c:829:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\s_inter.c: In function 'sys_startgui':
+..\libpd\pure-data\src\s_inter.c:874:10: warning: unused variable 'buf' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c:873:9: warning: unused variable 'msgsock' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c:870:11: warning: unused variable 'childpid' [-Wunused-variable]
+..\libpd\pure-data\src\s_inter.c: At top level:
+..\libpd\pure-data\src\s_inter.c:847:12: warning: 'sys_watchfd' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_osc.o" "..\\libpd\\pure-data\\src\\d_osc.c" 
+..\libpd\pure-data\src\d_osc.c:63:32: warning: 'scalarphasor_class' defined but not used [-Wunused-variable]
+..\libpd\pure-data\src\d_osc.c:242:29: warning: 'scalarosc_class' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\extra.o" "..\\libpd\\pure-data\\extra\\extra\\extra.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_numbox.o" "..\\libpd\\pure-data\\src\\g_numbox.c" 
+..\libpd\pure-data\src\g_numbox.c: In function 'my_numbox_new':
+..\libpd\pure-data\src\g_numbox.c:758:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_numbox.c:754:17: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_audio.o" "..\\libpd\\pure-data\\src\\s_audio.c" 
+..\libpd\pure-data\src\s_audio.c: In function 'sys_setchsr':
+..\libpd\pure-data\src\s_audio.c:144:9: warning: unused variable 'nblk' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c: In function 'sys_set_audio_settings':
+..\libpd\pure-data\src\s_audio.c:188:13: warning: unused variable 'ip' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c: In function 'glob_audio_dialog':
+..\libpd\pure-data\src\s_audio.c:788:50: warning: unused variable 'audiooutchan1' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:788:36: warning: unused variable 'audiooutdev1' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:788:22: warning: unused variable 'audioinchan1' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:788:9: warning: unused variable 'audioindev1' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:787:24: warning: unused variable 'audioon' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:787:15: warning: unused variable 'advance' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:787:9: warning: unused variable 'rate' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:786:52: warning: unused variable 'choutdev' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:786:23: warning: unused variable 'audiooutdev' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:786:9: warning: unused variable 'naudiooutdev' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:785:49: warning: unused variable 'chindev' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:785:22: warning: unused variable 'audioindev' [-Wunused-variable]
+..\libpd\pure-data\src\s_audio.c:785:9: warning: unused variable 'naudioindev' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_ctl.o" "..\\libpd\\pure-data\\src\\d_ctl.c" 
+..\libpd\pure-data\src\d_ctl.c: In function 'vline_tilde_perform':
+..\libpd\pure-data\src\d_ctl.c:262:12: warning: unused variable 'samppermsec' [-Wunused-variable]
+..\libpd\pure-data\src\d_ctl.c: In function 'vline_tilde_float':
+..\libpd\pure-data\src\d_ctl.c:351:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_arithmetic.o" "..\\libpd\\pure-data\\src\\d_arithmetic.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_bang.o" "..\\libpd\\pure-data\\src\\g_bang.c" 
+..\libpd\pure-data\src\g_bang.c: In function 'bng_new':
+..\libpd\pure-data\src\g_bang.c:441:10: warning: unused variable 'str' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\iemlib\\filter~.o" "..\\libpd\\pure-data\\extra\\iemlib\\filter~.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_text.o" "..\\libpd\\pure-data\\src\\g_text.c" 
+..\libpd\pure-data\src\g_text.c: In function 'canvas_howputnew':
+..\libpd\pure-data\src\g_text.c:142:15: warning: unused variable 'ypix' [-Wunused-variable]
+..\libpd\pure-data\src\g_text.c:142:9: warning: unused variable 'xpix' [-Wunused-variable]
+..\libpd\pure-data\src\g_text.c: In function 'canvas_obj':
+..\libpd\pure-data\src\g_text.c:188:13: warning: unused variable 'x' [-Wunused-variable]
+..\libpd\pure-data\src\g_text.c: In function 'gatom_key':
+..\libpd\pure-data\src\g_text.c:703:13: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+..\libpd\pure-data\src\g_text.c: In function 'gatom_getwherelabel':
+..\libpd\pure-data\src\g_text.c:821:32: warning: variable 'height' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_text.c:821:25: warning: variable 'width' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_text.c: In function 'text_drawborder':
+..\libpd\pure-data\src\g_text.c:1321:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_text.c:1267:32: warning: variable 'height' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_text.c:1267:25: warning: variable 'width' set but not used [-Wunused-but-set-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_memory.o" "..\\libpd\\pure-data\\src\\m_memory.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_fft_mayer.o" "..\\libpd\\pure-data\\src\\d_fft_mayer.c" 
+..\libpd\pure-data\src\d_fft_mayer.c: In function 'mayer_realfft':
+..\libpd\pure-data\src\d_fft_mayer.c:401:13: warning: unused variable 'd' [-Wunused-variable]
+..\libpd\pure-data\src\d_fft_mayer.c:401:11: warning: unused variable 'c' [-Wunused-variable]
+..\libpd\pure-data\src\d_fft_mayer.c: In function 'mayer_realifft':
+..\libpd\pure-data\src\d_fft_mayer.c:414:13: warning: unused variable 'd' [-Wunused-variable]
+..\libpd\pure-data\src\d_fft_mayer.c:414:11: warning: unused variable 'c' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_connective.o" "..\\libpd\\pure-data\\src\\x_connective.c" 
+..\libpd\pure-data\src\x_connective.c: In function 'pack_new':
+..\libpd\pure-data\src\x_connective.c:641:29: warning: variable 'vec' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\x_connective.c: In function 'makefilename_scanformat':
+..\libpd\pure-data\src\x_connective.c:1222:16: warning: unused variable 'chr' [-Wunused-variable]
+..\libpd\pure-data\src\x_connective.c:1221:9: warning: unused variable 'num' [-Wunused-variable]
+..\libpd\pure-data\src\x_connective.c: At top level:
+..\libpd\pure-data\src\x_connective.c:138:13: warning: 'pdsymbol_list' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_toggle.o" "..\\libpd\\pure-data\\src\\g_toggle.c" 
+..\libpd\pure-data\src\g_toggle.c: In function 'toggle_new':
+..\libpd\pure-data\src\g_toggle.c:370:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_toggle.c:366:32: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\ekext\\ekext.o" "..\\libpd\\pure-data\\extra\\ekext\\ekext.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_soundfile.o" "..\\libpd\\pure-data\\src\\d_soundfile.c" 
+..\libpd\pure-data\src\d_soundfile.c: In function 'open_soundfile_via_fd':
+..\libpd\pure-data\src\d_soundfile.c:249:20: warning: unused variable 'param' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:211:9: warning: unused variable 'format' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'soundfiler_read':
+..\libpd\pure-data\src\d_soundfile.c:1315:13: warning: unused variable 'nzero' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1159:41: warning: unused variable 'itemsleft' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'soundfiler_dowrite':
+..\libpd\pure-data\src\d_soundfile.c:1428:49: warning: unused variable 'nitems' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1358:20: warning: unused variable 'nitems' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1354:9: warning: unused variable 'maxsize' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1353:26: warning: unused variable 'itemsleft' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1352:9: warning: unused variable 'endianness' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:1351:9: warning: unused variable 'headersize' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'readsf_child_main':
+..\libpd\pure-data\src\d_soundfile.c:1616:18: warning: unused variable 'boo' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'readsf_perform':
+..\libpd\pure-data\src\d_soundfile.c:1933:24: warning: unused variable 'nchannels' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'writesf_child_main':
+..\libpd\pure-data\src\d_soundfile.c:2201:21: warning: unused variable 'bigendian' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2178:17: warning: unused variable 'skipheaderbytes' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2177:18: warning: unused variable 'bytelimit' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2176:18: warning: unused variable 'onsetframes' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2171:18: warning: unused variable 'boo' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2343:21: warning: unused variable 'bigendian' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: In function 'writesf_perform':
+..\libpd\pure-data\src\d_soundfile.c:2430:15: warning: unused variable 'fp' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2427:66: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c:2427:63: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\d_soundfile.c: At top level:
+..\libpd\pure-data\src\d_soundfile.c:2380:13: warning: 'writesf_tick' declared 'static' but never defined [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_utf8.o" "..\\libpd\\pure-data\\src\\s_utf8.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_template.o" "..\\libpd\\pure-data\\src\\g_template.c" 
+..\libpd\pure-data\src\g_template.c: In function 'template_find_field':
+..\libpd\pure-data\src\g_template.c:126:17: warning: unused variable 't' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'template_conformwords':
+..\libpd\pure-data\src\g_template.c:248:9: warning: unused variable 'nfrom' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'template_conformscalar':
+..\libpd\pure-data\src\g_template.c:297:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_template.c:268:25: warning: unused variable 'nfrom' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c:268:9: warning: unused variable 'nto' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'gtemplate_donew':
+..\libpd\pure-data\src\g_template.c:594:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_template.c:575:15: warning: unused variable 'sx' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'gtemplate_free':
+..\libpd\pure-data\src\g_template.c:685:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_template.c: In function 'fielddesc_setfloat_var':
+..\libpd\pure-data\src\g_template.c:752:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'fielddesc_cvttocoord':
+..\libpd\pure-data\src\g_template.c:862:20: warning: unused variable 'pix' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'curve_vis':
+..\libpd\pure-data\src\g_template.c:1145:37: warning: unused variable 'closed' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'array_getfields':
+..\libpd\pure-data\src\g_template.c:1496:9: warning: unused variable 'arrayonset' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c: In function 'plot_vis':
+..\libpd\pure-data\src\g_template.c:1694:43: warning: unused variable 'nextxloc' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c:1694:37: warning: unused variable 'ypix' [-Wunused-variable]
+..\libpd\pure-data\src\g_template.c:1694:31: warning: unused variable 'xpix' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_glob.o" "..\\libpd\\pure-data\\src\\m_glob.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "..\\libpd\\pure-data\\extra\\expr~\\vexp_fun.c" 
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_toint':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:536:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:535:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_rint':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:566:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:565:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_tofloat':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:584:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:583:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_sqrt':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:620:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:619:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_exp':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:637:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:636:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_log':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:654:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:653:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_ln':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:671:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:670:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_sin':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:685:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:684:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_cos':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:699:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:698:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_tan':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:714:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:713:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_asin':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:728:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:727:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_acos':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:742:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:741:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_atan':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:757:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:756:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_floor':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:809:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:808:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_ceil':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:826:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:825:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_sinh':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:839:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:838:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_cosh':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:853:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:852:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_tanh':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:868:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:867:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_fact':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:944:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:943:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_abs':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:981:17: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:980:23: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_imodf':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:1221:1: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:1221:1: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: In function 'ex_modf':
+..\libpd\pure-data\extra\expr~\vexp_fun.c:1235:1: warning: unused variable 'scalar' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:1235:1: warning: unused variable 'rp' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_fun.c: At top level:
+..\libpd\pure-data\extra\expr~\vexp_fun.c:110:13: warning: 'ex_asinh' declared 'static' but never defined [-Wunused-function]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:111:13: warning: 'ex_acosh' declared 'static' but never defined [-Wunused-function]
+..\libpd\pure-data\extra\expr~\vexp_fun.c:113:13: warning: 'ex_atanh' declared 'static' but never defined [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_misc.o" "..\\libpd\\pure-data\\src\\d_misc.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_editor.o" "..\\libpd\\pure-data\\src\\g_editor.c" 
+..\libpd\pure-data\src\g_editor.c: In function 'gobj_shouldvis':
+..\libpd\pure-data\src\g_editor.c:89:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'glist_deselect':
+..\libpd\pure-data\src\g_editor.c:225:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c:193:16: warning: variable 'reenter' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'glist_selectall':
+..\libpd\pure-data\src\g_editor.c:276:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_disconnect':
+..\libpd\pure-data\src\g_editor.c:425:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_undo_set_cut':
+..\libpd\pure-data\src\g_editor.c:502:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c:491:13: warning: unused variable 'y' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_undo_cut':
+..\libpd\pure-data\src\g_editor.c:547:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c:573:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_hitbox':
+..\libpd\pure-data\src\g_editor.c:809:13: warning: unused variable 'ob' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_create_editor':
+..\libpd\pure-data\src\g_editor.c:897:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_destroy_editor':
+..\libpd\pure-data\src\g_editor.c:910:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_vis':
+..\libpd\pure-data\src\g_editor.c:925:10: warning: unused variable 'buf' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_donecanvasdialog':
+..\libpd\pure-data\src\g_editor.c:1082:18: warning: variable 'redraw' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_done_popup':
+..\libpd\pure-data\src\g_editor.c:1157:10: warning: unused variable 'pathbuf' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_doclick':
+..\libpd\pure-data\src\g_editor.c:1286:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c:1394:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_isconnected':
+..\libpd\pure-data\src\g_editor.c:1438:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_doconnect':
+..\libpd\pure-data\src\g_editor.c:1469:47: warning: variable 'hotspot2' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_editor.c:1468:47: warning: variable 'hotspot1' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_key':
+..\libpd\pure-data\src\g_editor.c:1736:19: warning: unused variable 'ob' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:1650:17: warning: variable 'fflag' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'glob_verifyquit':
+..\libpd\pure-data\src\g_editor.c:1890:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_dofind':
+..\libpd\pure-data\src\g_editor.c:1981:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c:1988:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_stowconnections':
+..\libpd\pure-data\src\g_editor.c:2131:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_docopy':
+..\libpd\pure-data\src\g_editor.c:2162:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_dopaste':
+..\libpd\pure-data\src\g_editor.c:2310:23: warning: unused variable 'last' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:2310:13: warning: unused variable 'newgobj' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_reselect':
+..\libpd\pure-data\src\g_editor.c:2399:17: warning: unused variable 'indx' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:2398:17: warning: unused variable 'nobjwas' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:2389:15: warning: unused variable 'ob' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:2388:18: warning: unused variable 'sel' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_tidy':
+..\libpd\pure-data\src\g_editor.c:2474:22: warning: unused variable 'y3' [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c: In function 'canvas_texteditor':
+..\libpd\pure-data\src\g_editor.c:2580:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_editor.c: At top level:
+..\libpd\pure-data\src\g_editor.c:32:14: warning: 'canvas_textcopybuf' defined but not used [-Wunused-variable]
+..\libpd\pure-data\src\g_editor.c:33:12: warning: 'canvas_textcopybufsize' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_pd.o" "..\\libpd\\pure-data\\src\\m_pd.c" 
+..\libpd\pure-data\src\m_pd.c: In function 'pd_unbind':
+..\libpd\pure-data\src\m_pd.c:167:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_pd.c: In function 'pd_findbyclass':
+..\libpd\pure-data\src\m_pd.c:195:25: warning: unused variable 'e2' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_vslider.o" "..\\libpd\\pure-data\\src\\g_vslider.c" 
+..\libpd\pure-data\src\g_vslider.c: In function 'vslider_new':
+..\libpd\pure-data\src\g_vslider.c:514:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_vslider.c:511:17: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\zexy.o" "..\\libpd\\pure-data\\extra\\zexy\\zexy.c" 
+In file included from ..\libpd\pure-data\extra\zexy\zexy.c:24:0:
+..\libpd\pure-data\extra\zexy\zexy.h:112:13: warning: 'zexy_register' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "..\\libpd\\pure-data\\extra\\zexy\\0x3e0x7e.c" 
+In file included from ..\libpd\pure-data\extra\zexy\zexySIMD.h:1:0,
+                 from ..\libpd\pure-data\extra\zexy\0x3e0x7e.c:21:
+..\libpd\pure-data\extra\zexy\zexy.h:112:13: warning: 'zexy_register' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_traversal.o" "..\\libpd\\pure-data\\src\\g_traversal.c" 
+..\libpd\pure-data\src\g_traversal.c: In function 'gpointer_unset':
+..\libpd\pure-data\src\g_traversal.c:129:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_traversal.c: In function 'gpointer_setglist':
+..\libpd\pure-data\src\g_traversal.c:139:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_traversal.c: In function 'gpointer_setarray':
+..\libpd\pure-data\src\g_traversal.c:149:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_traversal.c: In function 'ptrobj_sendwindow':
+..\libpd\pure-data\src\g_traversal.c:281:17: warning: unused variable 'to' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:280:9: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:279:15: warning: unused variable 'templatesym' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:278:15: warning: unused variable 'sc' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c: In function 'ptrobj_rewind':
+..\libpd\pure-data\src\g_traversal.c:344:11: warning: unused variable 'canvas' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:342:17: warning: unused variable 'to' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:341:9: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:340:15: warning: unused variable 'templatesym' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:339:15: warning: unused variable 'sc' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c: In function 'getsize_pointer':
+..\libpd\pure-data\src\g_traversal.c:744:9: warning: unused variable 'elemsize' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:738:9: warning: unused variable 'nitems' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c: In function 'setsize_float':
+..\libpd\pure-data\src\g_traversal.c:901:13: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:819:12: warning: unused variable 'at' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c: In function 'sublist_pointer':
+..\libpd\pure-data\src\g_traversal.c:1096:20: warning: unused variable 'vp' [-Wunused-variable]
+..\libpd\pure-data\src\g_traversal.c:1095:13: warning: unused variable 'vec' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\miwi.o" "..\\libpd\\pure-data\\extra\\miwi\\miwi.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_global.o" "..\\libpd\\pure-data\\src\\d_global.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_readwrite.o" "..\\libpd\\pure-data\\src\\g_readwrite.c" 
+..\libpd\pure-data\src\g_readwrite.c: In function 'canvas_scanbinbuf':
+..\libpd\pure-data\src\g_readwrite.c:28:12: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'glist_readatoms':
+..\libpd\pure-data\src\g_readwrite.c:73:17: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:58:18: warning: unused variable 'nline' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'glist_readscalar':
+..\libpd\pure-data\src\g_readwrite.c:113:21: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:113:18: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'glist_readfrombinbuf':
+..\libpd\pure-data\src\g_readwrite.c:171:13: warning: unused variable 'gobj' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:169:60: warning: unused variable 'nitems' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:169:57: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:169:54: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:169:9: warning: unused variable 'cr' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:168:15: warning: unused variable 'canvas' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'glist_doread':
+..\libpd\pure-data\src\g_readwrite.c:254:13: warning: unused variable 'vec' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:57: warning: unused variable 'j' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:54: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:41: warning: unused variable 'nextmsg' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:32: warning: unused variable 'message' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:25: warning: unused variable 'nline' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:253:17: warning: unused variable 'natoms' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'canvas_dataproperties':
+..\libpd\pure-data\src\g_readwrite.c:310:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_readwrite.c: In function 'canvas_writescalar':
+..\libpd\pure-data\src\g_readwrite.c:368:17: warning: unused variable 'ds' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'glist_write':
+..\libpd\pure-data\src\g_readwrite.c:545:13: warning: unused variable 'y' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:544:9: warning: unused variable 'ntemplates' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:543:16: warning: unused variable 'templatevec' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c:540:17: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: In function 'canvas_saveto':
+..\libpd\pure-data\src\g_readwrite.c:603:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_readwrite.c: In function 'canvas_savetemplatesto':
+..\libpd\pure-data\src\g_readwrite.c:659:13: warning: unused variable 'y' [-Wunused-variable]
+..\libpd\pure-data\src\g_readwrite.c: At top level:
+..\libpd\pure-data\src\g_readwrite.c:20:17: warning: 'declare_class' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_file.o" "..\\libpd\\pure-data\\src\\s_file.c" 
+..\libpd\pure-data\src\s_file.c: In function 'sys_getpreference':
+..\libpd\pure-data\src\s_file.c:180:5: warning: pointer targets in passing argument 5 of 'RegQueryValueExA' differ in signedness [-Wpointer-sign]
+In file included from c:\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h:67:0,
+                 from ..\libpd\pure-data\src\s_file.c:28:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h:97:23: note: expected 'LPBYTE' but argument is of type 'char *'
+..\libpd\pure-data\src\s_file.c: In function 'sys_putpreference':
+..\libpd\pure-data\src\s_file.c:209:5: warning: pointer targets in passing argument 5 of 'RegSetValueExA' differ in signedness [-Wpointer-sign]
+In file included from c:\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h:67:0,
+                 from ..\libpd\pure-data\src\s_file.c:28:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h:108:23: note: expected 'const BYTE *' but argument is of type 'const char *'
+..\libpd\pure-data\src\s_file.c: In function 'sys_loadpreferences':
+..\libpd\pure-data\src\s_file.c:295:14: warning: unused variable 'nolib' [-Wunused-variable]
+..\libpd\pure-data\src\s_file.c: At top level:
+..\libpd\pure-data\src\s_file.c:190:13: warning: 'sys_doneloadpreferences' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\bonk~.o" "..\\libpd\\pure-data\\extra\\extra\\bonk~.c" 
+..\libpd\pure-data\extra\extra\bonk~.c: In function 'bonk_freefilterbank':
+..\libpd\pure-data\extra\extra\bonk~.c:392:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\extra\extra\bonk~.c: In function 'bonk_doit':
+..\libpd\pure-data\extra\extra\bonk~.c:629:51: warning: variable 'lothresh' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\extra\extra\bonk~.c:629:41: warning: variable 'hithresh' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\extra\extra\bonk~.c: In function 'bonk_read':
+..\libpd\pure-data\extra\extra\bonk~.c:1005:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "..\\libpd\\pure-data\\extra\\zexy\\demultiplex.c" 
+In file included from ..\libpd\pure-data\extra\zexy\demultiplex.c:20:0:
+..\libpd\pure-data\extra\zexy\zexy.h:112:13: warning: 'zexy_register' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\choice.o" "..\\libpd\\pure-data\\extra\\extra\\choice.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_hslider.o" "..\\libpd\\pure-data\\src\\g_hslider.c" 
+..\libpd\pure-data\src\g_hslider.c: In function 'hslider_new':
+..\libpd\pure-data\src\g_hslider.c:532:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_hslider.c:529:33: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\fitter.o" "..\\libpd\\pure-data\\extra\\cyclone\\fitter.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\randv.o" "..\\libpd\\pure-data\\extra\\miwi\\randv.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\muse.o" "..\\libpd\\pure-data\\extra\\miwi\\muse.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "..\\libpd\\pure-data\\extra\\cyclone\\allhammers.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_atom.o" "..\\libpd\\pure-data\\src\\m_atom.c" 
+..\libpd\pure-data\src\m_atom.c: In function 'atom_getsymbol':
+..\libpd\pure-data\src\m_atom.c:26:10: warning: unused variable 'buf' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\stdout.o" "..\\libpd\\pure-data\\extra\\extra\\stdout.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_delay.o" "..\\libpd\\pure-data\\src\\d_delay.c" 
+..\libpd\pure-data\src\d_delay.c: In function 'sigdelread_float':
+..\libpd\pure-data\src\d_delay.c:176:13: warning: unused variable 'delsize' [-Wunused-variable]
+..\libpd\pure-data\src\d_delay.c:170:9: warning: unused variable 'samps' [-Wunused-variable]
+..\libpd\pure-data\src\d_delay.c: At top level:
+..\libpd\pure-data\src\d_delay.c:11:12: warning: 'delread_zero' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\expr~\\vexp.o" "..\\libpd\\pure-data\\extra\\expr~\\vexp.c" 
+..\libpd\pure-data\extra\expr~\vexp.c: In function 'ex_eval':
+..\libpd\pure-data\extra\expr~\vexp.c:1106:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat]
+..\libpd\pure-data\extra\expr~\vexp.c:1188:17: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long int' [-Wformat]
+..\libpd\pure-data\extra\expr~\vexp.c: In function 'eval_store':
+..\libpd\pure-data\extra\expr~\vexp.c:1260:13: warning: unused variable 'badleft' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c:1259:15: warning: unused variable 'var' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c:1258:15: warning: unused variable 'tbl' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c:1257:13: warning: unused variable 'isvalue' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c:1256:22: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c: In function 'eval_var':
+..\libpd\pure-data\extra\expr~\vexp.c:1363:22: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c: In function 'eval_sigidx':
+..\libpd\pure-data\extra\expr~\vexp.c:1412:15: warning: unused variable 'tbl' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp.c:1409:20: warning: unused variable 'j' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\counter.o" "..\\libpd\\pure-data\\extra\\cyclone\\counter.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_interface.o" "..\\libpd\\pure-data\\src\\x_interface.c" 
+..\libpd\pure-data\src\x_interface.c: In function 'print_list':
+..\libpd\pure-data\src\x_interface.c:64:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\x_interface.c: In function 'print_anything':
+..\libpd\pure-data\src\x_interface.c:76:9: warning: unused variable 'i' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_misc.o" "..\\libpd\\pure-data\\src\\x_misc.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_hdial.o" "..\\libpd\\pure-data\\src\\g_hdial.c" 
+..\libpd\pure-data\src\g_hdial.c: In function 'hradio_donew':
+..\libpd\pure-data\src\g_hdial.c:552:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_hdial.c:551:48: warning: unused variable 'fthold' [-Wunused-variable]
+..\libpd\pure-data\src\g_hdial.c:551:9: warning: unused variable 'ftbreak' [-Wunused-variable]
+..\libpd\pure-data\src\g_hdial.c:548:38: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_net.o" "..\\libpd\\pure-data\\src\\x_net.c" 
+..\libpd\pure-data\src\x_net.c: In function 'netreceive_doit':
+..\libpd\pure-data\src\x_net.c:207:12: warning: unused variable 'messbuf' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_resample.o" "..\\libpd\\pure-data\\src\\d_resample.c" 
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\cpp\\PdTypes.o" "..\\libpd\\cpp\\PdTypes.cpp" 
+..\libpd\cpp\PdTypes.cpp: In member function 'std::string pd::List::toString() const':
+..\libpd\cpp\PdTypes.cpp:178:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "..\\libpd\\pure-data\\extra\\zexy\\z_zexy.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "..\\libpd\\pure-data\\extra\\zexy\\0x3c0x7e.c" 
+In file included from ..\libpd\pure-data\extra\zexy\zexySIMD.h:1:0,
+                 from ..\libpd\pure-data\extra\zexy\0x3c0x7e.c:20:
+..\libpd\pure-data\extra\zexy\zexy.h:112:13: warning: 'zexy_register' defined but not used [-Wunused-function]
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\cpp\\PdBase.o" "..\\libpd\\cpp\\PdBase.cpp" 
+..\libpd\cpp\PdBase.cpp: In member function 'virtual void pd::PdBase::sendList(const string&, const pd::List&)':
+..\libpd\cpp\PdBase.cpp:324:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+..\libpd\cpp\PdBase.cpp: In member function 'virtual void pd::PdBase::sendMessage(const string&, const string&, const pd::List&)':
+..\libpd\cpp\PdBase.cpp:348:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+..\libpd\cpp\PdBase.cpp: In member function 'virtual bool pd::PdBase::readArray(const string&, std::vector<float>&, int, int)':
+..\libpd\cpp\PdBase.cpp:649:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+..\libpd\cpp\PdBase.cpp: In member function 'void pd::PdBase::PdContext::addMessage(pd::Message&)':
+..\libpd\cpp\PdBase.cpp:837:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\iemlib\\init.o" "..\\libpd\\pure-data\\extra\\iemlib\\init.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_binbuf.o" "..\\libpd\\pure-data\\src\\m_binbuf.c" 
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_text':
+..\libpd\pure-data\src\m_binbuf.c:68:13: warning: unused variable 'type' [-Wunused-variable]
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_gettext':
+..\libpd\pure-data\src\m_binbuf.c:218:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_add':
+..\libpd\pure-data\src\m_binbuf.c:236:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_restore':
+..\libpd\pure-data\src\m_binbuf.c:346:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_eval':
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_NULL' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_POINTER' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_SEMI' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_COMMA' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_DEFFLOAT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_DEFSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_DOLLAR' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_DOLLSYM' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_GIMME' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c:719:13: warning: enumeration value 'A_CANT' not handled in switch [-Wswitch]
+..\libpd\pure-data\src\m_binbuf.c: In function 'binbuf_convert':
+..\libpd\pure-data\src\m_binbuf.c:1153:33: warning: unused variable 'multiplier' [-Wunused-variable]
+..\libpd\pure-data\src\m_binbuf.c:1171:33: warning: unused variable 'multiplier' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_math.o" "..\\libpd\\pure-data\\src\\d_math.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\grand.o" "..\\libpd\\pure-data\\extra\\miwi\\grand.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_vumeter.o" "..\\libpd\\pure-data\\src\\g_vumeter.c" 
+..\libpd\pure-data\src\g_vumeter.c: In function 'vu_scale':
+..\libpd\pure-data\src\g_vumeter.c:471:13: warning: unused variable 'w4' [-Wunused-variable]
+..\libpd\pure-data\src\g_vumeter.c: In function 'vu_new':
+..\libpd\pure-data\src\g_vumeter.c:639:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_vumeter.c:638:48: warning: unused variable 'fthold' [-Wunused-variable]
+..\libpd\pure-data\src\g_vumeter.c:638:9: warning: unused variable 'ftbreak' [-Wunused-variable]
+..\libpd\pure-data\src\g_vumeter.c:637:25: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\loud.o" "..\\libpd\\pure-data\\extra\\cyclone\\loud.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "..\\libpd\\pure-data\\extra\\zexy\\makesymbol.c" 
+In file included from ..\libpd\pure-data\extra\zexy\makesymbol.c:40:0:
+..\libpd\pure-data\extra\zexy\zexy.h:112:13: warning: 'zexy_register' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_filter.o" "..\\libpd\\pure-data\\src\\d_filter.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_guiconnect.o" "..\\libpd\\pure-data\\src\\g_guiconnect.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_main.o" "..\\libpd\\pure-data\\src\\s_main.c" 
+..\libpd\pure-data\src\s_main.c: In function 'sys_findprogdir':
+..\libpd\pure-data\src\s_main.c:440:50: warning: unused variable 'sp' [-Wunused-variable]
+..\libpd\pure-data\src\s_main.c: In function 'sys_argparse':
+..\libpd\pure-data\src\s_main.c:567:9: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+..\libpd\pure-data\src\s_main.c:526:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_main.c:525:10: warning: unused variable 'sbuf' [-Wunused-variable]
+..\libpd\pure-data\src\s_main.c: In function 'sys_addreferencepath':
+..\libpd\pure-data\src\s_main.c:1019:10: warning: unused variable 'sbuf' [-Wunused-variable]
+..\libpd\pure-data\src\s_main.c: At top level:
+..\libpd\pure-data\src\s_main.c:424:12: warning: 'sys_getmultidevchannels' defined but not used [-Wunused-function]
+..\libpd\pure-data\src\s_main.c:1017:13: warning: 'sys_addreferencepath' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\shared.o" "..\\libpd\\pure-data\\extra\\cyclone\\shared.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_obj.o" "..\\libpd\\pure-data\\src\\m_obj.c" 
+..\libpd\pure-data\src\m_obj.c: In function 'inlet_new':
+..\libpd\pure-data\src\m_obj.c:56:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c:58:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'inlet_list':
+..\libpd\pure-data\src\m_obj.c:138:12: warning: unused variable 'at' [-Wunused-variable]
+..\libpd\pure-data\src\m_obj.c: In function 'pointerinlet_new':
+..\libpd\pure-data\src\m_obj.c:192:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c:194:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'floatinlet_new':
+..\libpd\pure-data\src\m_obj.c:214:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c:216:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'symbolinlet_new':
+..\libpd\pure-data\src\m_obj.c:236:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c:238:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'outlet_new':
+..\libpd\pure-data\src\m_obj.c:336:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c:338:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'obj_disconnect':
+..\libpd\pure-data\src\m_obj.c:511:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\m_obj.c: In function 'obj_issignaloutlet':
+..\libpd\pure-data\src\m_obj.c:685:9: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\markex\\vector+.o" "..\\libpd\\pure-data\\extra\\markex\\vector+.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_arithmetic.o" "..\\libpd\\pure-data\\src\\x_arithmetic.c" 
+..\libpd\pure-data\src\x_arithmetic.c: In function 'exp_float':
+..\libpd\pure-data\src\x_arithmetic.c:627:10: warning: unused variable 'buf' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_ugen.o" "..\\libpd\\pure-data\\src\\d_ugen.c" 
+..\libpd\pure-data\src\d_ugen.c: In function 'signal_cleanup':
+..\libpd\pure-data\src\d_ugen.c:367:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:365:29: warning: unused variable 'sig2' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:365:16: warning: unused variable 'svec' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c: In function 'signal_new':
+..\libpd\pure-data\src\d_ugen.c:448:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:434:15: warning: unused variable 'fp' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:432:15: warning: unused variable 'n2' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c: In function 'ugen_stop':
+..\libpd\pure-data\src\d_ugen.c:559:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:558:15: warning: unused variable 's' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c: In function 'ugen_start_graph':
+..\libpd\pure-data\src\d_ugen.c:616:25: warning: unused variable 'vecsize' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:616:9: warning: unused variable 'parent_vecsize' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:615:27: warning: unused variable 'srate' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:615:13: warning: unused variable 'parent_srate' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c: In function 'ugen_doit':
+..\libpd\pure-data\src\d_ugen.c:725:9: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:731:9: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:745:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:825:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\d_ugen.c:716:27: warning: unused variable 'oc2' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c: In function 'ugen_done_graph':
+..\libpd\pure-data\src\d_ugen.c:1013:20: warning: unused variable 'insigs' [-Wunused-variable]
+..\libpd\pure-data\src\d_ugen.c:878:28: warning: variable 'phase' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\src\d_ugen.c:869:20: warning: unused variable 'u2' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\m_sched.o" "..\\libpd\\pure-data\\src\\m_sched.c" 
+..\libpd\pure-data\src\m_sched.c: In function 'sys_addhist':
+..\libpd\pure-data\src\m_sched.c:182:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\m_sched.c: In function 'glob_audiostatus':
+..\libpd\pure-data\src\m_sched.c:221:9: warning: unused variable 'dev' [-Wunused-variable]
+..\libpd\pure-data\src\m_sched.c: In function 'sched_pollformeters':
+..\libpd\pure-data\src\m_sched.c:271:41: warning: unused variable 'sched_nextpingtime' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\libpd_wrapper\\z_libpd.o" "..\\libpd\\libpd_wrapper\\z_libpd.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "..\\libpd\\pure-data\\extra\\expr~\\vexp_if.c" 
+..\libpd\pure-data\extra\expr~\vexp_if.c: In function 'fexpr_tilde_clear':
+..\libpd\pure-data\extra\expr~\vexp_if.c:722:16: warning: unused variable 'nargs' [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_if.c: At top level:
+..\libpd\pure-data\extra\expr~\vexp_if.c:44:14: warning: 'exp_version' defined but not used [-Wunused-variable]
+..\libpd\pure-data\extra\expr~\vexp_if.c:98:1: warning: 'expr_flt' defined but not used [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_loader.o" "..\\libpd\\pure-data\\src\\s_loader.c" 
+..\libpd\pure-data\src\s_loader.c: In function 'sys_do_load_lib':
+..\libpd\pure-data\src\s_loader.c:98:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\s_loader.c:92:11: warning: unused variable 'dlobj' [-Wunused-variable]
+..\libpd\pure-data\src\s_loader.c:91:31: warning: unused variable 'altsymname' [-Wunused-variable]
+..\libpd\pure-data\src\s_loader.c: In function 'sys_load_lib':
+..\libpd\pure-data\src\s_loader.c:275:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_mycanvas.o" "..\\libpd\\pure-data\\src\\g_mycanvas.c" 
+..\libpd\pure-data\src\g_mycanvas.c: In function 'my_canvas_dialog':
+..\libpd\pure-data\src\g_mycanvas.c:191:9: warning: unused variable 'sr_flags' [-Wunused-variable]
+..\libpd\pure-data\src\g_mycanvas.c: In function 'my_canvas_new':
+..\libpd\pure-data\src\g_mycanvas.c:269:10: warning: unused variable 'str' [-Wunused-variable]
+..\libpd\pure-data\src\g_mycanvas.c:267:25: warning: unused variable 'f' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\libpd_wrapper\\s_libpdmidi.o" "..\\libpd\\libpd_wrapper\\s_libpdmidi.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_list.o" "..\\libpd\\pure-data\\src\\x_list.c" 
+..\libpd\pure-data\src\x_list.c: In function 'list_append_list':
+..\libpd\pure-data\src\x_list.c:226:9: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\x_list.c: In function 'list_append_anything':
+..\libpd\pure-data\src\x_list.c:249:9: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\x_list.c: In function 'list_prepend_list':
+..\libpd\pure-data\src\x_list.c:308:9: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\x_list.c: In function 'list_prepend_anything':
+..\libpd\pure-data\src\x_list.c:333:9: warning: unused variable 'n' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_audio_dummy.o" "..\\libpd\\pure-data\\src\\s_audio_dummy.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\graid.o" "..\\libpd\\pure-data\\extra\\miwi\\graid.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\sigmund~.o" "..\\libpd\\pure-data\\extra\\extra\\sigmund~.c" 
+..\libpd\pure-data\extra\extra\sigmund~.c: In function 'sigmund_getpitch':
+..\libpd\pure-data\extra\extra\sigmund~.c:371:32: warning: variable 'sumamp' set but not used [-Wunused-but-set-variable]
+..\libpd\pure-data\extra\extra\sigmund~.c: In function 'sigmund_list':
+..\libpd\pure-data\extra\extra\sigmund~.c:1299:25: warning: unused variable 'pit' [-Wunused-variable]
+..\libpd\pure-data\extra\extra\sigmund~.c:1297:32: warning: unused variable 'nfound' [-Wunused-variable]
+..\libpd\pure-data\extra\extra\sigmund~.c:1297:20: warning: unused variable 'totstorage' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "..\\libpd\\pure-data\\extra\\iemlib\\iemlib2.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\fiddle~.o" "..\\libpd\\pure-data\\extra\\extra\\fiddle~.c" 
+..\libpd\pure-data\extra\extra\fiddle~.c: In function 'sigfiddle_doinit':
+..\libpd\pure-data\extra\extra\fiddle~.c:1116:27: warning: unused variable 'buf3' [-Wunused-variable]
+..\libpd\pure-data\extra\extra\fiddle~.c:1116:19: warning: unused variable 'buf2' [-Wunused-variable]
+..\libpd\pure-data\extra\extra\fiddle~.c:1116:12: warning: unused variable 'buf1' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\ekext\\cupd.o" "..\\libpd\\pure-data\\extra\\ekext\\cupd.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\libpd_wrapper\\util\\z_print_util.o" "..\\libpd\\libpd_wrapper\\util\\z_print_util.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_all_guis.o" "..\\libpd\\pure-data\\src\\g_all_guis.c" 
+..\libpd\pure-data\src\g_all_guis.c: In function 'iemgui_send':
+..\libpd\pure-data\src\g_all_guis.c:349:13: warning: unused variable 'pargv' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:348:26: warning: unused variable 'nth_arg' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:348:16: warning: unused variable 'tail_len' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:348:9: warning: unused variable 'pargc' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c: In function 'iemgui_receive':
+..\libpd\pure-data\src\g_all_guis.c:369:13: warning: unused variable 'pargv' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:368:26: warning: unused variable 'nth_arg' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:368:16: warning: unused variable 'tail_len' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:368:9: warning: unused variable 'pargc' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c: In function 'iemgui_label':
+..\libpd\pure-data\src\g_all_guis.c:404:13: warning: unused variable 'pargv' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:403:26: warning: unused variable 'nth_arg' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:403:16: warning: unused variable 'tail_len' [-Wunused-variable]
+..\libpd\pure-data\src\g_all_guis.c:403:9: warning: unused variable 'pargc' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_array.o" "..\\libpd\\pure-data\\src\\d_array.c" 
+..\libpd\pure-data\src\d_array.c: In function 'tabread4_tilde_perform':
+..\libpd\pure-data\src\d_array.c:429:20: warning: unused variable 'count' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c: In function 'tabosc4_tilde_perform':
+..\libpd\pure-data\src\d_array.c:591:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c:589:9: warning: unused variable 'maxindex' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c: In function 'tabsend_dsp':
+..\libpd\pure-data\src\d_array.c:769:12: warning: unused variable 'vecsize' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c:769:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c: In function 'tabwrite_float':
+..\libpd\pure-data\src\d_array.c:1001:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\d_array.c: At top level:
+..\libpd\pure-data\src\d_array.c:26:13: warning: 'tabwrite_tilde_tick' declared 'static' but never defined [-Wunused-function]
+..\libpd\pure-data\src\d_array.c:707:13: warning: 'tabsend_tick' declared 'static' but never defined [-Wunused-function]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\miwi\\rand.o" "..\\libpd\\pure-data\\extra\\miwi\\rand.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_path.o" "..\\libpd\\pure-data\\src\\s_path.c" 
+..\libpd\pure-data\src\s_path.c: In function 'sys_bashfilename':
+..\libpd\pure-data\src\s_path.c:53:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\s_path.c: In function 'sys_unbashfilename':
+..\libpd\pure-data\src\s_path.c:67:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\s_path.c: In function 'namelist_append_files':
+..\libpd\pure-data\src\s_path.c:195:32: warning: unused variable 'rtn' [-Wunused-variable]
+..\libpd\pure-data\src\s_path.c: In function 'open_via_helppath':
+..\libpd\pure-data\src\s_path.c:417:17: warning: unused variable 'usedir' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_scalar.o" "..\\libpd\\pure-data\\src\\g_scalar.c" 
+..\libpd\pure-data\src\g_scalar.c: In function 'scalar_select':
+..\libpd\pure-data\src\g_scalar.c:227:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_scalar.c: In function 'scalar_doclick':
+..\libpd\pure-data\src\g_scalar.c:353:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_scalar.c: In function 'scalar_save':
+..\libpd\pure-data\src\g_scalar.c:376:12: warning: unused variable 'argc' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c:376:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c:375:16: warning: unused variable 'argv' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c:375:12: warning: unused variable 'a' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c: In function 'scalar_free':
+..\libpd\pure-data\src\g_scalar.c:418:29: warning: unused variable 'dt' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c:418:17: warning: unused variable 'datatypes' [-Wunused-variable]
+..\libpd\pure-data\src\g_scalar.c:417:9: warning: unused variable 'i' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_fftroutine.o" "..\\libpd\\pure-data\\src\\d_fftroutine.c" 
+..\libpd\pure-data\src\d_fftroutine.c: In function 'fft_clear':
+..\libpd\pure-data\src\d_fftroutine.c:282:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\d_fftroutine.c: In function 'load_registers':
+..\libpd\pure-data\src\d_fftroutine.c:488:28: warning: unused variable 'n' [-Wunused-variable]
+..\libpd\pure-data\src\d_fftroutine.c: In function 'store_registers':
+..\libpd\pure-data\src\d_fftroutine.c:619:38: warning: unused variable 'phase' [-Wunused-variable]
+..\libpd\pure-data\src\d_fftroutine.c:619:33: warning: unused variable 'mag' [-Wunused-variable]
+..\libpd\pure-data\src\d_fftroutine.c: In function 'pd_fft':
+..\libpd\pure-data\src\d_fftroutine.c:994:16: warning: unused variable 'fp2' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_midi.o" "..\\libpd\\pure-data\\src\\x_midi.c" 
+..\libpd\pure-data\src\x_midi.c: In function 'inmidi_clk':
+..\libpd\pure-data\src\x_midi.c:575:13: warning: unused variable 'cur' [-Wunused-variable]
+..\libpd\pure-data\src\x_midi.c: In function 'makenote_tick':
+..\libpd\pure-data\src\x_midi.c:966:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c: In function 'makenote_stop':
+..\libpd\pure-data\src\x_midi.c:996:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c: In function 'makenote_clear':
+..\libpd\pure-data\src\x_midi.c:1009:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c: In function 'stripnote_float':
+..\libpd\pure-data\src\x_midi.c:1052:13: warning: unused variable 'hang' [-Wunused-variable]
+..\libpd\pure-data\src\x_midi.c: In function 'bag_float':
+..\libpd\pure-data\src\x_midi.c:1237:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c:1252:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c: In function 'bag_flush':
+..\libpd\pure-data\src\x_midi.c:1265:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\x_midi.c: In function 'bag_clear':
+..\libpd\pure-data\src\x_midi.c:1276:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\x_gui.o" "..\\libpd\\pure-data\\src\\x_gui.c" 
+..\libpd\pure-data\src\x_gui.c: In function 'gfxstub_offlist':
+..\libpd\pure-data\src\x_gui.c:89:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\s_print.o" "..\\libpd\\pure-data\\src\\s_print.c" 
+..\libpd\pure-data\src\s_print.c: In function 'logpost':
+..\libpd\pure-data\src\s_print.c:133:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:132:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'post':
+..\libpd\pure-data\src\s_print.c:147:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:146:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'startpost':
+..\libpd\pure-data\src\s_print.c:161:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:160:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'postfloat':
+..\libpd\pure-data\src\s_print.c:189:10: warning: unused variable 'buf' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'error':
+..\libpd\pure-data\src\s_print.c:210:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:209:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'verbose':
+..\libpd\pure-data\src\s_print.c:225:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:224:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'pd_error':
+..\libpd\pure-data\src\s_print.c:250:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:249:11: warning: unused variable 'arg' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c: In function 'bug':
+..\libpd\pure-data\src\s_print.c:299:9: warning: unused variable 'i' [-Wunused-variable]
+..\libpd\pure-data\src\s_print.c:298:11: warning: unused variable 'arg' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_io.o" "..\\libpd\\pure-data\\src\\g_io.c" 
+..\libpd\pure-data\src\g_io.c: In function 'vinlet_dspprolog':
+..\libpd\pure-data\src\g_io.c:170:23: warning: unused variable 'outsig' [-Wunused-variable]
+..\libpd\pure-data\src\g_io.c: In function 'voutlet_dspepilog':
+..\libpd\pure-data\src\g_io.c:489:19: warning: unused variable 'insig' [-Wunused-variable]
+..\libpd\pure-data\src\g_io.c: At top level:
+..\libpd\pure-data\src\g_io.c:102:12: warning: 'tot' defined but not used [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\libpd_wrapper\\x_libpdreceive.o" "..\\libpd\\libpd_wrapper\\x_libpdreceive.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\d_fft.o" "..\\libpd\\pure-data\\src\\d_fft.c" 
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\ekext\\cup.o" "..\\libpd\\pure-data\\extra\\ekext\\cup.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\extra\\loop~.o" "..\\libpd\\pure-data\\extra\\extra\\loop~.c" 
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_canvas.o" "..\\libpd\\pure-data\\src\\g_canvas.c" 
+..\libpd\pure-data\src\g_canvas.c: In function 'linetraverser_next':
+..\libpd\pure-data\src\g_canvas.c:244:17: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_free':
+..\libpd\pure-data\src\g_canvas.c:709:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_drawlines':
+..\libpd\pure-data\src\g_canvas.c:740:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_fixlinesfor':
+..\libpd\pure-data\src\g_canvas.c:755:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_deletelinesfor':
+..\libpd\pure-data\src\g_canvas.c:772:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_deletelinesforio':
+..\libpd\pure-data\src\g_canvas.c:793:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_loadbangabstractions':
+..\libpd\pure-data\src\g_canvas.c:849:15: warning: unused variable 's' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_loadbang':
+..\libpd\pure-data\src\g_canvas.c:878:13: warning: unused variable 'y' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_fattensub':
+..\libpd\pure-data\src\g_canvas.c:949:13: warning: unused variable 'y' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_dodsp':
+..\libpd\pure-data\src\g_canvas.c:1091:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+..\libpd\pure-data\src\g_canvas.c: In function 'glist_redrawall':
+..\libpd\pure-data\src\g_canvas.c:1196:18: warning: unused variable 'cl' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c: In function 'canvas_open':
+..\libpd\pure-data\src\g_canvas.c:1376:10: warning: unused variable 'listbuf' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c:1374:21: warning: unused variable 'thislist' [-Wunused-variable]
+..\libpd\pure-data\src\g_canvas.c:1374:17: warning: unused variable 'nl' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\src\\g_rtext.o" "..\\libpd\\pure-data\\src\\g_rtext.c" 
+..\libpd\pure-data\src\g_rtext.c: In function 'rtext_new':
+..\libpd\pure-data\src\g_rtext.c:54:23: warning: unused variable 'indx' [-Wunused-variable]
+..\libpd\pure-data\src\g_rtext.c:54:16: warning: unused variable 'h' [-Wunused-variable]
+..\libpd\pure-data\src\g_rtext.c:54:9: warning: unused variable 'w' [-Wunused-variable]
+..\libpd\pure-data\src\g_rtext.c: In function 'rtext_retext':
+..\libpd\pure-data\src\g_rtext.c:354:17: warning: unused variable 'ndecimals' [-Wunused-variable]
+..\libpd\pure-data\src\g_rtext.c: In function 'rtext_key':
+..\libpd\pure-data\src\g_rtext.c:468:16: warning: unused variable 's2' [-Wunused-variable]
+..\libpd\pure-data\src\g_rtext.c:468:11: warning: unused variable 's1' [-Wunused-variable]
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\sic.o" "..\\libpd\\pure-data\\extra\\cyclone\\sic.c" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
+Info: Nothing to build for amPd
+Info: Nothing to build for amPd
+Info: Nothing to build for amPd
+Info: Nothing to build for amPd
+14:34:04 **** Incremental Build of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
+c:/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/ld.exe: cannot open output file C:\Progra~2\Winamp\Plugins\in_pd.dll: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for amPd
+Info: Nothing to build for amPd
+17:24:38 **** Incremental Build of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+gcc -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "libpd\\pure-data\\extra\\cyclone\\allsickles.o" "..\\libpd\\pure-data\\extra\\cyclone\\allsickles.c" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allsickles.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
+17:26:42 **** Incremental Build of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allsickles.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
+04:49:44 **** Incremental Build of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allsickles.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
+04:52:34 **** Incremental Build of configuration Debug for project amPd ****
+Info: Internal Builder is used for build
+g++ -DHAVE_UNISTD_H -DMSW -DPD -DPD_INTERNAL -DUSEAPI_DUMMY -DWINVER=0x0502 "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\pure-data\\src" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\libpd_wrapper\\util" "-IC:\\Users\\Michael\\Documents\\GitHub\\in_pd\\workspace\\amPd\\libpd\\cpp" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\in_pd.o" "..\\src\\in_pd.cpp" 
+g++ -s -shared -o "C:\\Progra~2\\Winamp\\Plugins\\in_pd.dll" "src\\in_pd.o" "libpd\\pure-data\\src\\x_time.o" "libpd\\pure-data\\src\\x_qlist.o" "libpd\\pure-data\\src\\x_net.o" "libpd\\pure-data\\src\\x_misc.o" "libpd\\pure-data\\src\\x_midi.o" "libpd\\pure-data\\src\\x_list.o" "libpd\\pure-data\\src\\x_interface.o" "libpd\\pure-data\\src\\x_gui.o" "libpd\\pure-data\\src\\x_connective.o" "libpd\\pure-data\\src\\x_arithmetic.o" "libpd\\pure-data\\src\\x_acoustics.o" "libpd\\pure-data\\src\\s_utf8.o" "libpd\\pure-data\\src\\s_print.o" "libpd\\pure-data\\src\\s_path.o" "libpd\\pure-data\\src\\s_main.o" "libpd\\pure-data\\src\\s_loader.o" "libpd\\pure-data\\src\\s_inter.o" "libpd\\pure-data\\src\\s_file.o" "libpd\\pure-data\\src\\s_audio_dummy.o" "libpd\\pure-data\\src\\s_audio.o" "libpd\\pure-data\\src\\m_sched.o" "libpd\\pure-data\\src\\m_pd.o" "libpd\\pure-data\\src\\m_obj.o" "libpd\\pure-data\\src\\m_memory.o" "libpd\\pure-data\\src\\m_glob.o" "libpd\\pure-data\\src\\m_conf.o" "libpd\\pure-data\\src\\m_class.o" "libpd\\pure-data\\src\\m_binbuf.o" "libpd\\pure-data\\src\\m_atom.o" "libpd\\pure-data\\src\\g_vumeter.o" "libpd\\pure-data\\src\\g_vslider.o" "libpd\\pure-data\\src\\g_vdial.o" "libpd\\pure-data\\src\\g_traversal.o" "libpd\\pure-data\\src\\g_toggle.o" "libpd\\pure-data\\src\\g_text.o" "libpd\\pure-data\\src\\g_template.o" "libpd\\pure-data\\src\\g_scalar.o" "libpd\\pure-data\\src\\g_rtext.o" "libpd\\pure-data\\src\\g_readwrite.o" "libpd\\pure-data\\src\\g_numbox.o" "libpd\\pure-data\\src\\g_mycanvas.o" "libpd\\pure-data\\src\\g_io.o" "libpd\\pure-data\\src\\g_hslider.o" "libpd\\pure-data\\src\\g_hdial.o" "libpd\\pure-data\\src\\g_guiconnect.o" "libpd\\pure-data\\src\\g_graph.o" "libpd\\pure-data\\src\\g_editor.o" "libpd\\pure-data\\src\\g_canvas.o" "libpd\\pure-data\\src\\g_bang.o" "libpd\\pure-data\\src\\g_array.o" "libpd\\pure-data\\src\\g_all_guis.o" "libpd\\pure-data\\src\\d_ugen.o" "libpd\\pure-data\\src\\d_soundfile.o" "libpd\\pure-data\\src\\d_resample.o" "libpd\\pure-data\\src\\d_osc.o" "libpd\\pure-data\\src\\d_misc.o" "libpd\\pure-data\\src\\d_math.o" "libpd\\pure-data\\src\\d_global.o" "libpd\\pure-data\\src\\d_filter.o" "libpd\\pure-data\\src\\d_fftroutine.o" "libpd\\pure-data\\src\\d_fft_mayer.o" "libpd\\pure-data\\src\\d_fft.o" "libpd\\pure-data\\src\\d_delay.o" "libpd\\pure-data\\src\\d_dac.o" "libpd\\pure-data\\src\\d_ctl.o" "libpd\\pure-data\\src\\d_array.o" "libpd\\pure-data\\src\\d_arithmetic.o" "libpd\\pure-data\\extra\\zexy\\zexy.o" "libpd\\pure-data\\extra\\zexy\\z_zexy.o" "libpd\\pure-data\\extra\\zexy\\makesymbol.o" "libpd\\pure-data\\extra\\zexy\\demultiplex.o" "libpd\\pure-data\\extra\\zexy\\0x3e0x7e.o" "libpd\\pure-data\\extra\\zexy\\0x3c0x7e.o" "libpd\\pure-data\\extra\\miwi\\randv.o" "libpd\\pure-data\\extra\\miwi\\rand.o" "libpd\\pure-data\\extra\\miwi\\muse.o" "libpd\\pure-data\\extra\\miwi\\miwi.o" "libpd\\pure-data\\extra\\miwi\\grand.o" "libpd\\pure-data\\extra\\miwi\\graid.o" "libpd\\pure-data\\extra\\markex\\vector-.o" "libpd\\pure-data\\extra\\markex\\vector+.o" "libpd\\pure-data\\extra\\markex\\markex.o" "libpd\\pure-data\\extra\\iemlib\\init.o" "libpd\\pure-data\\extra\\iemlib\\iemlib2.o" "libpd\\pure-data\\extra\\iemlib\\iemlib1.o" "libpd\\pure-data\\extra\\iemlib\\filter~.o" "libpd\\pure-data\\extra\\extra\\stdout.o" "libpd\\pure-data\\extra\\extra\\sigmund~.o" "libpd\\pure-data\\extra\\extra\\pique.o" "libpd\\pure-data\\extra\\extra\\lrshift~.o" "libpd\\pure-data\\extra\\extra\\loop~.o" "libpd\\pure-data\\extra\\extra\\fiddle~.o" "libpd\\pure-data\\extra\\extra\\extra.o" "libpd\\pure-data\\extra\\extra\\choice.o" "libpd\\pure-data\\extra\\extra\\bonk~.o" "libpd\\pure-data\\extra\\expr~\\vexp_if.o" "libpd\\pure-data\\extra\\expr~\\vexp_fun.o" "libpd\\pure-data\\extra\\expr~\\vexp.o" "libpd\\pure-data\\extra\\ekext\\ekext.o" "libpd\\pure-data\\extra\\ekext\\cupd.o" "libpd\\pure-data\\extra\\ekext\\cup.o" "libpd\\pure-data\\extra\\cyclone\\tanh~.o" "libpd\\pure-data\\extra\\cyclone\\sic.o" "libpd\\pure-data\\extra\\cyclone\\shared.o" "libpd\\pure-data\\extra\\cyclone\\loud.o" "libpd\\pure-data\\extra\\cyclone\\fitter.o" "libpd\\pure-data\\extra\\cyclone\\counter.o" "libpd\\pure-data\\extra\\cyclone\\allsickles.o" "libpd\\pure-data\\extra\\cyclone\\allhammers.o" "libpd\\libpd_wrapper\\z_libpd.o" "libpd\\libpd_wrapper\\x_libpdreceive.o" "libpd\\libpd_wrapper\\util\\z_print_util.o" "libpd\\libpd_wrapper\\s_libpdmidi.o" "libpd\\cpp\\PdTypes.o" "libpd\\cpp\\PdBase.o" -lpthread -lsetupapi -lwsock32 
