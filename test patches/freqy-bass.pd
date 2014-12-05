@@ -24,7 +24,7 @@
 #X restore 262 186 graph;
 #X obj 347 106 tabwrite~ view;
 #X floatatom 421 67 5 0 0 0 - - -, f 5;
-#X obj 347 65 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 1
+#X obj 347 65 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
 1;
 #X obj 261 65 *~;
 #X obj 224 131 tgl 15 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
@@ -258,7 +258,7 @@
 #X obj 211 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 211 200 s play;
-#X obj 109 4 ii 40;
+#X obj 109 4 ii 400;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 50 0;

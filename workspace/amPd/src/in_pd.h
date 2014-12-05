@@ -30,7 +30,5 @@ volatile int seek;
 
 char* bufr;
 
-PdReceiver* recvr;
-
 volatile int stopped=0;			// the kill switch for the decode thread
 HANDLE hand=INVALID_HANDLE_VALUE;	// the handle to the decode thread

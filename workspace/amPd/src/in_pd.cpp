@@ -143,7 +143,6 @@ DWORD WINAPI LaunchThread(void* arg) {
 		if (seek != -1) {// seek is needed.
 			pos=seek; seek=-1;
             mod.outMod->Flush(pos); // flush output and seek to position
-            libpd << Float("pos", (float)pos/length);
 		}
 		else if (mod.outMod->CanWrite() >= bufSize) {
 			pos = mod.outMod->GetWrittenTime();
