@@ -1,13 +1,11 @@
 ﻿#EXTM3U
 #EXTINF:350,miwi - drones
 drones.pd
-#EXTINF:240,miwi - freqshift
+#EXTINF:-1,miwi - freqshift
 freqshift.pd
-#EXTINF:310,miwi - squaw
-squaw.pd
 #EXTINF:480,miwi - I'm a Freq
 imafreq.pd
-#EXTINF:179,miwi - ModStep
+#EXTINF:-1,miwi - ModStep
 freqy-bass.pd
 #EXTINF:195,Nobuo Uematsu - Final Fantasy
 finalfantasy.pd

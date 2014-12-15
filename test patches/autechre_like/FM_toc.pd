@@ -6,7 +6,7 @@
 #X obj 279 162 sig~;
 #X obj 388 232 *~ 880;
 #X msg 246 72 440;
-#X obj 36 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 36 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 442 145 pow;
 #X msg 444 116 2 \$1;
@@ -30,7 +30,7 @@
 #X obj 300 338 *~;
 #X obj 91 22 r play;
 #X obj 176 371 throw~ sview;
-#X obj 91 47 del 80000;
+#X obj 91 47 del 40000;
 #X connect 0 0 1 1;
 #X connect 1 0 27 0;
 #X connect 2 0 6 0;

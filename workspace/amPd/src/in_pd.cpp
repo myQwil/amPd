@@ -54,7 +54,13 @@ void About(HWND hwndParent) {
 }
 
 int InfoBox(const char *file, HWND hwndParent) {
-	MessageBox(hwndParent,libpd.nextMessage().symbol.c_str(),"Message",MB_OK);
+	Message msg = libpd.nextMessage();
+	string text = "";
+	for (int i = 0; i < 50 && msg.type != NONE; i++) {
+		text += msg.symbol + "\n";
+		msg = libpd.nextMessage();
+	}
+	MessageBox(hwndParent,text.c_str(),"Message",MB_OK);
 	return INFOBOX_UNCHANGED;
 }
 
@@ -178,6 +184,7 @@ int Play(const char *fn) {
 	paused=0;
     seek=-1;
 
+    libpd.closePatch(patch); // close the patch if accidentally left open
 	patch = libpd.openPatch(name(fn),path(fn));
 	current = fn; // remember the currently playing file's path
 
@@ -192,14 +199,14 @@ int Play(const char *fn) {
 			if (!length) length = -1000;
 		}
 	}
-	if (!hasLength) { length = -1000; }
+	if (!hasLength) length = -1000;
 
 	libpd << Float("vol", 1);
 	libpd << Bang("play");
 
 	maxlatency = mod.outMod->Open(Hz,NCH,BPS,-1,-1);
 
-	if (maxlatency < 0) { return 1; } // error opening device
+	if (maxlatency < 0) return 1; // error opening device
 
 	mod.SetInfo((Hz*BPS*NCH)/1000,Hz/1000,NCH,1);
 
@@ -223,7 +230,7 @@ void Stop() {
 		CloseHandle(hand);
 		hand = INVALID_HANDLE_VALUE;
 	}
-	libpd.closePatch(patch); // close the patch
+	libpd.closePatch(patch);
 
 	mod.outMod->Close(); // close output system
 	mod.SAVSADeInit(); // deinitialize visualization

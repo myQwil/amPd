@@ -7,12 +7,12 @@ typedef struct _graid {
 	t_float x_f, x_min, x_max;
 } t_graid;
 
-void graid_float(t_graid *x, t_float f) {
+static void graid_float(t_graid *x, t_float f) {
 	double range=x->x_f, min=x->x_min, scale=x->x_max-min;
 	outlet_float(x->x_obj.ob_outlet, f / (range / scale) + min);
 }
 
-void *graid_new(t_symbol *s, int argc, t_atom *argv) {
+static void *graid_new(t_symbol *s, int argc, t_atom *argv) {
 	t_graid *x = (t_graid *)pd_new(graid_class);
 	t_float range=100, min=0, max=1;
 	
