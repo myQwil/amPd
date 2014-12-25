@@ -29,6 +29,7 @@ inactiveCodeColor=97,97,97
 org.eclipse.cdt.internal.ui.text.doctools.multi=179,181,175
 org.eclipse.cdt.internal.ui.text.doctools.recognizedTag=147,147,204
 org.eclipse.cdt.internal.ui.text.doctools.single=179,181,175
+overriddenByCSS=,semanticHighlighting.class.bold,semanticHighlighting.enum.color,semanticHighlighting.enum.enabled,semanticHighlighting.enum.italic,semanticHighlighting.functionDeclaration.bold,semanticHighlighting.macroDefinition.bold,semanticHighlighting.methodDeclaration.bold,semanticHighlighting.parameterVariable.color,semanticHighlighting.parameterVariable.enabled,semanticHighlighting.typedef.bold,semanticHighlighting.typeParameter.color,semanticHighlighting.typeParameter.enabled,
 pp_default=246,243,232
 pp_directive=239,239,175
 pp_header=204,147,147

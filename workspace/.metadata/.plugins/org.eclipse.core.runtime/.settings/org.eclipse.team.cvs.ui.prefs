@@ -1,4 +1,6 @@
+TerminalPrefInvertColors=true
 eclipse.preferences.version=1
+overriddenByCSS=,TerminalPrefInvertColors,
 pref_console_command_color=127,159,127
 pref_console_error_color=202,230,130
 pref_console_message_color=246,243,232

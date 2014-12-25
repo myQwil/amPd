@@ -10,6 +10,7 @@ DLTK_keyword_return_bold=false
 DLTK_number=138,204,207
 DLTK_single_line_comment=127,159,127
 DLTK_single_line_comment_bold=false
+DLTK_single_line_comment_italic=true
 DLTK_string=204,147,147
 DLTK_string.eval=204,147,147
 DLTK_string.regexp=204,147,147

@@ -3,6 +3,7 @@ AbstractTextEditor.Color.Background.SystemDefault=false
 AbstractTextEditor.Color.Foreground=246,243,232
 AbstractTextEditor.Color.Foreground.SystemDefault=false
 bookmarkIndicationColor=168,147,204
+bookmarkIndicationColorBold=true
 comment1Color=127,159,127
 comment1ColorBold=false
 comment2Color=127,159,127

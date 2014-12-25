@@ -19,6 +19,44 @@ extern "C" {
 	void z_zexy_setup();
 }
 
+
+int StringToNumber (const string &text) {
+	stringstream ss(text);
+	int result;
+	return ss >> result ? result : 0;
+}
+
+string NumberToString (const int &num) {
+	stringstream ss;
+	ss << num;
+	return ss.str();
+}
+
+string EQNum (const int &num) {
+	stringstream ss;
+	ss << "eq" << num;
+	return ss.str();
+}
+
+string getTag(string &line) {
+	line = line.substr(line.find(":") + 2);
+	line = line.substr(0, line.length() - 1);
+	return line;
+}
+
+string name(const char* fn) {
+	string name = fn;
+	name = name.substr(name.find_last_of("\\") + 1);
+	return name;
+}
+
+string path(const char* fn) {
+	string path = fn;
+	path = path.substr(0,path.find_last_of("\\"));
+	return path;
+}
+
+
 void Init() {
     libpd.init(0, NCH, Hz);
 
@@ -93,18 +131,6 @@ void UnPause()
 int IsPaused()
 { return paused; }
 
-string getTag(string &line) {
-	line = line.substr(line.find(":") + 2);
-	line = line.substr(0, line.length() - 1);
-	return line;
-}
-
-int StringToNumber (const string &text) {
-	stringstream ss(text);
-	int result;
-	return ss >> result ? result : 0;
-}
-
 void GetFileInfo(const char *file, char *title, int *length_in_ms) {
 	bool hasTitle=false, hasArtist=false;
 	string line, titl, artist, fullname;
@@ -166,18 +192,6 @@ DWORD WINAPI LaunchThread(void* arg) {
 	return 0;
 }
 
-string name(const char* fn) {
-	string name = fn;
-	name = name.substr(name.find_last_of("\\") + 1);
-	return name;
-}
-
-string path(const char* fn) {
-	string path = fn;
-	path = path.substr(0,path.find_last_of("\\"));
-	return path;
-}
-
 int Play(const char *fn) {
     int maxlatency;
 	DWORD tid; // thread id
@@ -201,6 +215,11 @@ int Play(const char *fn) {
 	}
 	if (!hasLength) length = -1000;
 
+	libpd << Float("eq", eqOn);
+	libpd << Float("pre", pre);
+	for (int i=0; i < 10; i++)
+		libpd << Float(EQNum(i), eq[i]);
+
 	libpd << Float("vol", 1);
 	libpd << Bang("play");
 
@@ -210,7 +229,7 @@ int Play(const char *fn) {
 
 	mod.SetInfo((Hz*BPS*NCH)/1000,Hz/1000,NCH,1);
 
-	// initialize visualization stuff
+	// initialize visualization
 	mod.SAVSAInit(maxlatency,Hz);
 	mod.VSASetInfo(Hz,NCH);
 
@@ -236,12 +255,6 @@ void Stop() {
 	mod.SAVSADeInit(); // deinitialize visualization
 }
 
-string StringInt (const string &str, const int &num) {
-	stringstream ss;
-	ss << str << num;
-	return ss.str();
-}
-
 void refresh(const string &dest, int &vOld, const int &vNew) {
 	if (vOld != vNew) {
 		libpd << Float(dest, vNew);
@@ -251,15 +264,9 @@ void refresh(const string &dest, int &vOld, const int &vNew) {
 
 void EQSet(int on, char data[10], int preamp) {
 	refresh("eq", eqOn, on);
-	if (on) {
-		refresh("pre", pre, preamp);
-		for (int i=0; i < 10; i++) {
-			if (eq[i] != data[i]) {
-				libpd << Float(StringInt("eq", i), data[i]);
-				eq[i] = data[i];
-			}
-		}
-	}
+	refresh("pre", pre, preamp);
+	for (int i=0; i < 10; i++)
+		refresh(EQNum(i), eq[i], data[i]);
 }
 
 In_Module mod = {
