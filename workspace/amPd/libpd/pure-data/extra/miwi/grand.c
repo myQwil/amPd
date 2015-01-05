@@ -1,14 +1,16 @@
 #include "m_pd.h"
 #include <time.h>
 
+/* -------------------------- grand -------------------------- */
+
 static t_class *grand_class;
 
 typedef struct _grand {
 	t_object x_obj;
-	t_float x_f, x_min, x_max;
-	int x_thym;
-	unsigned int x_state; // roll-over odometer
+	t_float x_max, x_min, x_f;
 	t_outlet *g_out, *r_out;
+	unsigned int x_state;
+	int x_c;
 } t_grand;
 
 static int grand_addthym(void) {
@@ -23,49 +25,43 @@ static int grand_timeseed(int thym) {
 }
 
 static void grand_seed(t_grand *x, t_symbol *s, int argc, t_atom *argv) {
-	x->x_state = x->x_thym =
-		(!argc ? grand_addthym() : atom_getfloat(argv));
+	x->x_state = (argc ? atom_getfloat(argv) : grand_addthym());
 }
 
 static void grand_peek(t_grand *x, t_symbol *s) {
-	post("%s%s%u (%d)", s->s_name, (*s->s_name ? ": " : ""),
-		x->x_state, x->x_thym);
+	post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state);
 }
 
 static void grand_bang(t_grand *x) {
 	int n=x->x_f, nval;
-	int range = (n < 1 ? 1 : n);
-	double min=x->x_min, scale=x->x_max-min;
-	x->x_state = x->x_state * 472940017 + 832416023;
-	nval = ((double)range+1) * ((double)x->x_state) / 4294967296;
-
+	int scale = (n==0 ? 1 : n);
+	int b = ((n<0 ? -1:1)*(x->x_c>1));
+	double min=x->x_min, range=x->x_max-min;
+	unsigned int randval = x->x_state;
+	x->x_state = randval = randval * 472940017 + 832416023;
+	nval = ((double)scale+b) * ((double)randval)
+		 * (1./4294967296.);
 	outlet_float(x->r_out, nval);
-	outlet_float(x->g_out, nval / (range / scale) + min);
+	outlet_float(x->g_out, nval / (scale / range) + min);
 }
 
 static void *grand_new(t_symbol *s, int argc, t_atom *argv) {
 	t_grand *x = (t_grand *)pd_new(grand_class);
-	t_float range=1000, min=0, max=1;
-
+	t_float max=1, min=0, scale=1000;
 	switch (argc) {
-	  case 3:
-		max = atom_getfloat(argv+2);
-		min = atom_getfloat(argv+1);
+		case 3: scale=atom_getfloat(argv+2);
 		/* no break */
-	  case 1:
-		range = atom_getfloat(argv);
-	  break;
-	  case 2:
-		max = atom_getfloat(argv+1);
-		min = atom_getfloat(argv);
+		case 2: min=atom_getfloat(argv+1);
+		/* no break */
+		case 1: max=atom_getfloat(argv);
 	}
-	x->x_f=range; x->x_min=min; x->x_max=max;
-	x->x_thym = grand_addthym();
-	x->x_state = grand_timeseed(x->x_thym);
+	x->x_max=max, x->x_min=min, x->x_f=scale;
+	x->x_state = grand_timeseed(grand_addthym());
+	x->x_c=argc;
 
-	floatinlet_new(&x->x_obj, &x->x_f);
-	floatinlet_new(&x->x_obj, &x->x_min);
 	floatinlet_new(&x->x_obj, &x->x_max);
+	floatinlet_new(&x->x_obj, &x->x_min);
+	if (argc>2) floatinlet_new(&x->x_obj, &x->x_f);
 	x->g_out = outlet_new(&x->x_obj, &s_float); // gradient value
 	x->r_out = outlet_new(&x->x_obj, &s_float); // random value
 	return (x);

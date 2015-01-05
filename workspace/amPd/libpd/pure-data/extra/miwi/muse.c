@@ -1,6 +1,6 @@
 #include "m_pd.h"
 
-/* -------------------------- muse ------------------------------ */
+/* -------------------------- muse -------------------------- */
 
 static t_class *muse_class;
 
@@ -13,9 +13,9 @@ typedef struct _muse {
 } t_muse;
 
 static double getnote(t_muse *x, int d) {
-	int n = x->x_n, dn = d%n;
+	int n=x->x_n, dn=d%n;
 	double root = x->x_scl[0];
-	int oct = d/n - (dn<0 ? 1:0); // floor negatives
+	int oct = d/n - (dn<0); // floor negatives
 	d = (dn+n) % n; // modulo always positive
 	double step = (d ? x->x_scl[d] : 0);
 	return (root + step + (oct * x->x_oct));
@@ -25,7 +25,7 @@ static void muse_float(t_muse *x, t_float f) {
 	int d = f;
 	double note = getnote(x, d);
 	if (f!=d) {
-		if (f<0) { d=f-1; f*=-1; } else d=f+1;
+		if (f<0) d=f-1, f*=-1; else d=f+1;
 		double next = getnote(x, d);
 		note = (f-(int)f) / (1 / (next-note)) + note;
 	}
@@ -37,12 +37,10 @@ static void muse_list(t_muse *x, t_symbol *s, int ac, t_atom *av) {
 	if (!ac||ac>=x->x_max)
 	{ pd_error(x, "muse: too many/few args"); return; }
 	
-	int i;
-	t_float *fp = x->x_scl+1;
-	if (x->x_n != ac+1) x->x_n = ac+1;
-	for (i = ac; i--; av++, fp++) {
+	int i; t_float *fp = x->x_scl+1;
+	x->x_n=ac+1;
+	for (i=ac; i--; av++, fp++)
 		if (av->a_type == A_FLOAT) *fp = av->a_w.w_float;
-	}
 }
 
 static void muse_key(t_muse *x, t_symbol *s, int ac, t_atom *av) {
@@ -71,14 +69,13 @@ static void *muse_new(t_symbol *s, int argc, t_atom *argv) {
 	if (argc < 2) {
 		*x->x_scl = (argc ? atom_getfloat(argv) : 0);
 		floatinlet_new(&x->x_obj, x->x_scl);
-		*(x->x_scl+1) = 7;
+		*(x->x_scl+1) = 7; // perfect fifth
 		x->x_n = 2;
 		argc = 0;
 	} else x->x_n = argc;
 	
-	int i;
-	t_float *fp;
-	for (i = argc, fp = x->x_scl; i--; argv++, fp++) {
+	int i; t_float *fp;
+	for (i=argc, fp=x->x_scl; i--; argv++, fp++) {
 		*fp = atom_getfloat(argv);
 		floatinlet_new(&x->x_obj, fp);
 	}

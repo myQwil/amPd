@@ -1,3 +1,5 @@
 SHOW_MULTIPLE_EDITOR_TABS=false
+TerminalPrefInvertColors=true
 eclipse.preferences.version=1
+overriddenByCSS=,TerminalPrefInvertColors,
 showIntro=false

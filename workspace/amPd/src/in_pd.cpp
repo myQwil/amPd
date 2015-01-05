@@ -5,20 +5,6 @@ using namespace std;
 
 extern In_Module mod;
 
-extern "C" {
-	void extra_setup();
-	void expr_setup();
-
-	void allhammers_setup();
-	void allsickles_setup();
-	void ekext_setup();
-	void iemlib1_setup();
-	void iemlib2_setup();
-	void MarkEx_setup();
-	void miwi_setup();
-	void z_zexy_setup();
-}
-
 
 int StringToNumber (const string &text) {
 	stringstream ss(text);
@@ -56,6 +42,20 @@ string path(const char* fn) {
 	return path;
 }
 
+
+extern "C" {
+	void extra_setup();
+	void expr_setup();
+
+	void allhammers_setup();
+	void allsickles_setup();
+	void ekext_setup();
+	void iemlib1_setup();
+	void iemlib2_setup();
+	void MarkEx_setup();
+	void miwi_setup();
+	void z_zexy_setup();
+}
 
 void Init() {
     libpd.init(0, NCH, Hz);

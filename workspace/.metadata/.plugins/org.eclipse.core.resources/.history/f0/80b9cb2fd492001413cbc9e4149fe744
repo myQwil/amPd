@@ -1,0 +1,83 @@
+#include "m_pd.h"
+#include <time.h>
+
+static t_class *rand_class;
+
+typedef struct _rand {
+	t_object x_obj;
+	t_float x_min, x_max;
+	int x_thym, x_a;
+	unsigned int x_state; // roll-over odometer
+} t_rand;
+
+static int rand_addthym(void) {
+	int thym = time(0) % 31536000; // seconds in a year
+	return thym + !(thym%2); // odd numbers only
+}
+
+static int rand_timeseed(int thym) {
+	static unsigned int rand_nextseed = 1489853723;
+	rand_nextseed = rand_nextseed * thym + 938284287;
+	return (rand_nextseed & 0x7fffffff);
+}
+
+static void rand_seed(t_rand *x, t_symbol *s, int argc, t_atom *argv) {
+	x->x_state = x->x_thym =
+		(!argc ? rand_addthym() : atom_getfloat(argv));
+}
+
+static void rand_peek(t_rand *x, t_symbol *s) {
+	post("%s%s%u (%d)", s->s_name, (*s->s_name ? ": " : ""),
+		x->x_state, x->x_thym);
+}
+
+static void rand_bang(t_rand *x) {
+	int min=x->x_min, n=x->x_max-min, a=x->x_a, nval;
+	int range = (n == 0 ? 1*!a : n);
+	int addOn = (range > 0 ? 1 : -1)*a;
+	unsigned int randval = x->x_state;
+	x->x_state = randval = randval * 472940017 + 832416023;
+	nval = ((double)range+addOn) * ((double)randval)
+		 * (1./4294967296.);
+	if (nval == range+addOn) nval = range-!addOn;
+	nval += min;
+	outlet_float(x->x_obj.ob_outlet, nval);
+}
+
+static void *rand_new(t_symbol *s, int argc, t_atom *argv) {
+	t_rand *x = (t_rand *)pd_new(rand_class);
+	x->x_max=0;
+
+	switch (argc) {
+	  case 2:
+		x->x_a=1;
+		x->x_min = atom_getfloat(argv);
+		floatinlet_new(&x->x_obj, &x->x_min);
+		x->x_max = atom_getfloat(argv+1);
+		floatinlet_new(&x->x_obj, &x->x_max);
+	  break;
+	  case 1:
+		x->x_a=0; x->x_min=0;
+		x->x_max = atom_getfloat(argv);
+	  /* no break */
+	  case 0:
+		floatinlet_new(&x->x_obj, &x->x_max);
+	}
+	x->x_thym = rand_addthym();
+	x->x_state = rand_timeseed(x->x_thym);
+	outlet_new(&x->x_obj, &s_float);
+	return (x);
+}
+
+void rand_setup(void) {
+	rand_class = class_new(gensym("rand"),
+		(t_newmethod)rand_new, 0,
+		sizeof(t_rand), 0,
+		A_GIMME, 0);
+
+	class_addbang(rand_class, rand_bang);
+	class_addmethod(rand_class, (t_method)rand_seed,
+		gensym("seed"), A_GIMME, 0);
+	class_addmethod(rand_class, (t_method)rand_peek,
+		gensym("peek"), A_DEFSYM, 0);
+}
