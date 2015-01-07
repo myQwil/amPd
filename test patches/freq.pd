@@ -896,7 +896,7 @@
 #X obj 148 46 cpt;
 #X obj 148 24 r bt;
 #X obj 197 72 rand 100 500;
-#X obj 148 118 rind 0.2 0.45;
+#X obj 148 118 rind 0.1 0.4;
 #X connect 0 0 18 0;
 #X connect 1 0 2 1;
 #X connect 2 0 10 0;
