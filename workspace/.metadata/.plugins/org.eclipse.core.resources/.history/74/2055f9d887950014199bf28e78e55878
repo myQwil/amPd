@@ -1,0 +1,73 @@
+#include "../m_pd.h"
+#include <time.h>
+
+/* -------------------------- rond -------------------------- */
+
+static t_class *rond_class;
+
+typedef struct _rond {
+	t_object x_obj;
+	t_float x_min, x_max;
+	unsigned int x_state;
+} t_rond;
+
+static int rond_addthym(void) {
+	int thym = time(0) % 31536000; // seconds in a year
+	return thym + !(thym%2); // odd numbers only
+}
+
+static int rond_timeseed(int thym) {
+	static unsigned int rond_nextseed = 1489853723;
+	rond_nextseed = rond_nextseed * thym + 938284287;
+	return (rond_nextseed & 0x7fffffff);
+}
+
+static void rond_seed(t_rond *x, t_symbol *s, int argc, t_atom *argv) {
+	x->x_state = (argc ? atom_getfloat(argv) : rond_addthym());
+}
+
+static void rond_peek(t_rond *x, t_symbol *s) {
+	post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state);
+}
+
+static void rond_bang(t_rond *x) {
+	double min=x->x_min, n=x->x_max-min, nval;
+	double range = (n==0 ? 1 : n);
+	unsigned int rondval = x->x_state;
+	x->x_state = rondval = rondval * 472940017 + 832416023;
+	nval = range * ((double)rondval)
+		 * (1./4294967296.);
+	nval += min;
+	outlet_float(x->x_obj.ob_outlet, nval);
+}
+
+static void *rond_new(t_symbol *s, int argc, t_atom *argv) {
+	t_rond *x = (t_rond *)pd_new(rond_class);
+	t_float min=0, max=0;
+	switch (argc) {
+	  case 2:
+		max=atom_getfloat(argv+1);
+		min=atom_getfloat(argv);
+	  break;
+	  case 1: max=atom_getfloat(argv);
+	}
+	x->x_min=min, x->x_max=max;
+	x->x_state = rond_timeseed(rond_addthym());
+	if (argc>1) floatinlet_new(&x->x_obj, &x->x_min);
+	floatinlet_new(&x->x_obj, &x->x_max);
+	outlet_new(&x->x_obj, &s_float);
+	return (x);
+}
+
+void rond_setup(void) {
+	rond_class = class_new(gensym("rond"),
+		(t_newmethod)rond_new, 0,
+		sizeof(t_rond), 0,
+		A_GIMME, 0);
+
+	class_addbang(rond_class, rond_bang);
+	class_addmethod(rond_class, (t_method)rond_seed,
+		gensym("seed"), A_GIMME, 0);
+	class_addmethod(rond_class, (t_method)rond_peek,
+		gensym("peek"), A_DEFSYM, 0);
+}
