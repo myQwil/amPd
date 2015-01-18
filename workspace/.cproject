@@ -75,7 +75,7 @@
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="setupapi"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="wsock32"/>
 								</option>
-								<option id="gnu.cpp.link.option.strip.428534957" superClass="gnu.cpp.link.option.strip" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.strip.428534957" name="Omit all symbol information (-s)" superClass="gnu.cpp.link.option.strip" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.713216560" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
