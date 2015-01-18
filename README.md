@@ -27,9 +27,9 @@ make sure you separate the field name from the value with " : " (space-colon-spa
 Using Winamp's Equalizer
 ------------------------
 Winamp's equalizer sends the following values to pure-data:
-- *eq*
+- **eq**
 	- the On/Off switch (0-1)
-- *pre*
+- **pre**
 	- the Preamp slider (0-63)
-- *eq0-eq9*
+- **eq0-eq9**
 	- the frequency sliders (0-63)
