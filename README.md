@@ -1,4 +1,4 @@
-in_pd
+amPd
 =====
 Winamp Pure Data plugin
 -----------------------
@@ -14,7 +14,7 @@ To use in_pd in your own patches, Add [r play] and [r vol] to your patch
 [r vol]  is sent a float value of 1, which is used to turn the volume on
 
 Adding tags:
-----------------
+------------
 in_pd looks for artist, title, and length info. Adding this info to your patch is a simple matter of adding comments in pure data.
 
 The format is as follows:
@@ -23,3 +23,13 @@ The format is as follows:
 - length : lengthInMilliseconds
 
 make sure you separate the field name from the value with " : " (space-colon-space)
+
+Using Winamp's Equalizer
+------------------------
+Winamp's equalizer sends the following values to pure-data:
+- eq
+	- the On/Off switch (0-1)
+- pre
+	- the Preamp slider (0-63)
+- eq0-eq9
+	- the frequency sliders (0-63)
