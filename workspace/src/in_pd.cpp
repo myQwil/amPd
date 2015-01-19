@@ -47,6 +47,11 @@ extern "C" {
 	void extra_setup();
 	void expr_setup();
 
+	//void adaptive_setup();
+	void arraysize_setup();
+	void bassemu_tilde_setup();
+	void bsaylor_setup();
+	//void chaos_setup();
 	void allhammers_setup();
 	void allsickles_setup();
 	void ekext_setup();
@@ -63,6 +68,11 @@ void Init() {
     extra_setup();
     expr_setup();
 
+    //adaptive_setup();
+    arraysize_setup();
+    bassemu_tilde_setup();
+    bsaylor_setup();
+    //chaos_setup();
     allhammers_setup();
     allsickles_setup();
     ekext_setup();
@@ -76,6 +86,7 @@ void Init() {
 	bufr = new char[bufSize];
 
     libpd.addToSearchPath("%ProgramFiles%/Common Files/Pd");
+    libpd.addToSearchPath("%ProgramFiles%/Common Files/amPd");
     libpd.computeAudio(true);
 }
 
