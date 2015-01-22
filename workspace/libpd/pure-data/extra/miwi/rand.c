@@ -40,9 +40,9 @@ static void rand_bang(t_rand *x) {
 		nval = (double)c * state * (1./4294967296.);
 		outlet_float(x->x_obj.ob_outlet, x->x_vec[nval]);
 	} else {
-		int min=x->x_min, n=x->x_max-min, a=(n<0), b=(c>1);
-		int range = (!n ? 1*!b : n) + ((a ? -1:1)*b);
-		double val = (double)range * state * (1./4294967296.) + min+a;
+		int min=x->x_min, n=x->x_max-min, b=(n<0);
+		int range = (c>1? n+(b? -1:1) : (!n? 1:n));
+		double val = (double)range * state * (1./4294967296.) + min+b;
 		nval = val-(val<0);
 		outlet_float(x->x_obj.ob_outlet, nval);
 	}
