@@ -33,16 +33,17 @@ static void rand_peek(t_rand *x, t_symbol *s) {
 
 static void rand_bang(t_rand *x) {
 	int c=x->x_c, nval;
-	unsigned int randval = x->x_state;
-	x->x_state = randval = randval * 472940017 + 832416023;
+	unsigned int state = x->x_state;
+	x->x_state = state = state * 472940017 + 832416023;
 
 	if (c>2) {
-		nval = (double)c * randval * (1./4294967296.);
+		nval = (double)c * state * (1./4294967296.);
 		outlet_float(x->x_obj.ob_outlet, x->x_vec[nval]);
 	} else {
-		int min=x->x_min, n=x->x_max-min, b=(c>1);
-		int range = (!n ? 1*!b : n) + ((n<0 ? -1:1)*b);
-		nval = (double)range * randval * (1./4294967296.) + min;
+		int min=x->x_min, n=x->x_max-min, a=(n<0), b=(c>1);
+		int range = (!n ? 1*!b : n) + ((a ? -1:1)*b);
+		double val = (double)range * state * (1./4294967296.) + min+a;
+		nval = val-(val<0);
 		outlet_float(x->x_obj.ob_outlet, nval);
 	}
 }
