@@ -4,6 +4,7 @@ void rand_setup(void);
 void randv_setup(void);
 void rind_setup(void);
 void muse_setup(void);
+void negate_setup(void);
 void miwi_setup(void);
 
 void miwi_setup(void) {
@@ -13,4 +14,5 @@ void miwi_setup(void) {
 	randv_setup();
 	rind_setup();
 	muse_setup();
+	negate_setup();
 }
