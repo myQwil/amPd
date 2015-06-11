@@ -30,7 +30,7 @@
 //void cosh_tilde_setup(void);
 //void cosx_tilde_setup(void);
 //void count_tilde_setup(void);
-//void curve_tilde_setup(void);
+void curve_tilde_setup(void);
 //void cycle_tilde_setup(void);
 //void delay_tilde_setup(void);
 //void delta_tilde_setup(void);
@@ -111,7 +111,7 @@ void allsickles_setup(void)
 //    cosh_tilde_setup();
 //    cosx_tilde_setup();
 //    count_tilde_setup();
-//    curve_tilde_setup();
+	curve_tilde_setup();
 //    cycle_tilde_setup();
 //    delay_tilde_setup();
 //    delta_tilde_setup();
@@ -155,7 +155,7 @@ void allsickles_setup(void)
 //    Snapshot_tilde_setup();
 //    spike_tilde_setup();
 //    svf_tilde_setup();
-    tanh_tilde_setup();
+	tanh_tilde_setup();
 //    tanx_tilde_setup();
 //    train_tilde_setup();
 //    trapezoid_tilde_setup();
