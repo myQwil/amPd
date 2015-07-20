@@ -22,15 +22,14 @@ static double getnote(t_muse *x, int d) {
 }
 
 static void muse_float(t_muse *x, t_float f) {
-	int d = f;
+	int d=f;
 	double note = getnote(x, d);
 	if (f!=d) {
-		if (f<0) d=f-1, f*=-1; else d=f+1;
-		double next = getnote(x, d);
-		note = (f-(int)f) / (1 / (next-note)) + note;
-	}
-	outlet_float(x->f_out, mtof(note));
+		int b = f<0?-1:1;
+		double next = getnote(x, d+b);
+		note = b*(f-d) / (1/(next-note)) + note; }
 	outlet_float(x->m_out, note);
+	outlet_float(x->f_out, mtof(note));
 }
 
 static void muse_list(t_muse *x, t_symbol *s, int ac, t_atom *av) {
@@ -44,20 +43,18 @@ static void muse_list(t_muse *x, t_symbol *s, int ac, t_atom *av) {
 }
 
 static void muse_key(t_muse *x, t_symbol *s, int ac, t_atom *av) {
-	if (!ac||ac>=x->x_max)
+	if (!ac||ac>x->x_max)
 	{ pd_error(x, "muse: too many/few args"); return; }
 	
 	if (av->a_type == A_FLOAT) *x->x_scl = av->a_w.w_float;
 	if (ac>1) muse_list(x, 0, ac-1, av+1);
 }
 
-static void muse_size(t_muse *x, t_floatarg f) {
-	x->x_n = f;
-}
+static void muse_size(t_muse *x, t_floatarg f)
+{ x->x_n = f; }
 
-static void muse_octave(t_muse *x, t_floatarg f) {
-	x->x_oct = f;
-}
+static void muse_octave(t_muse *x, t_floatarg f)
+{ x->x_oct = f; }
 
 static void *muse_new(t_symbol *s, int argc, t_atom *argv) {
 	t_muse *x = (t_muse *)pd_new(muse_class);
@@ -66,27 +63,25 @@ static void *muse_new(t_symbol *s, int argc, t_atom *argv) {
 	x->x_max = (argc > 12 ? argc : 12); // enough space for a chromatic scale
 	x->x_scl = (t_float *)getbytes(x->x_max * sizeof(*x->x_scl));
 	
-	if (argc < 2) {
+	if (argc<2) {
 		*x->x_scl = (argc ? atom_getfloat(argv) : 0);
 		floatinlet_new(&x->x_obj, x->x_scl);
 		*(x->x_scl+1) = 7; // perfect fifth
 		x->x_n = 2;
-		argc = 0;
-	} else x->x_n = argc;
+		argc = 0; }
+	else x->x_n = argc;
 	
 	int i; t_float *fp;
 	for (i=argc, fp=x->x_scl; i--; argv++, fp++) {
 		*fp = atom_getfloat(argv);
-		floatinlet_new(&x->x_obj, fp);
-	}
+		floatinlet_new(&x->x_obj, fp); }
 	x->f_out = outlet_new(&x->x_obj, &s_float); // frequency
 	x->m_out = outlet_new(&x->x_obj, &s_float); // midi note
 	return (x);
 }
 
-static void muse_free(t_muse *x) {
-	freebytes(x->x_scl, x->x_max * sizeof(*x->x_scl));
-}
+static void muse_free(t_muse *x)
+{ freebytes(x->x_scl, x->x_max * sizeof(*x->x_scl)); }
 
 void muse_setup(void) {
 	muse_class = class_new(gensym("muse"),

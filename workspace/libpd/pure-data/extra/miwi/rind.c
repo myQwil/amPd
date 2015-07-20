@@ -22,20 +22,18 @@ static int rind_makeseed(void) {
 	return (rind_next & 0x7fffffff);
 }
 
-static void rind_seed(t_rind *x, t_symbol *s, int argc, t_atom *argv) {
-	x->x_state = (argc ? atom_getfloat(argv) : rind_time());
-}
+static void rind_seed(t_rind *x, t_symbol *s, int argc, t_atom *argv)
+{ x->x_state = (argc ? atom_getfloat(argv) : rind_time()); }
 
-static void rind_peek(t_rind *x, t_symbol *s) {
-	post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state);
-}
+static void rind_peek(t_rind *x, t_symbol *s)
+{ post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state); }
 
 static void rind_bang(t_rind *x) {
 	double min=x->x_min, n=x->x_max-min, nval;
-	double range = (!n? 1:n);
+	double range = n?n:1;
 	unsigned int state = x->x_state;
 	x->x_state = state = state * 472940017 + 832416023;
-	nval = range * state * (1./4294967296.) + min;
+	nval = (1./4294967296) * range * state + min;
 	outlet_float(x->x_obj.ob_outlet, nval);
 }
 
@@ -44,11 +42,9 @@ static void *rind_new(t_symbol *s, int argc, t_atom *argv) {
 	t_float min=0, max=1;
 	switch (argc) {
 	  case 2:
-		max=atom_getfloat(argv+1);
 		min=atom_getfloat(argv);
-	  break;
-	  case 1: max=atom_getfloat(argv);
-	}
+		max=atom_getfloat(argv+1); break;
+	  case 1: max=atom_getfloat(argv); }
 	x->x_min=min, x->x_max=max;
 	x->x_state = rind_makeseed();
 	floatinlet_new(&x->x_obj, &x->x_min);
