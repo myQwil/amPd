@@ -22,24 +22,24 @@ static int randv_makeseed(void) {
 	return (randv_next & 0x7fffffff);
 }
 
-static int nextr(t_randv *x, int n) {
-	int nval;
-	int range = (n<1? 1:n);
-	unsigned int state = x->x_state;
-	x->x_state = state = state * 472940017 + 832416023;
-	nval = (1./4294967296) * range * state;
-	return nval;
-}
-
 static void randv_seed(t_randv *x, t_symbol *s, int argc, t_atom *argv)
 { x->x_state = (argc ? atom_getfloat(argv) : randv_time()); }
 
 static void randv_peek(t_randv *x, t_symbol *s)
 { post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state); }
 
+static int nextr(t_randv *x, int n) {
+	int nval;
+	int range = n<1?1:n;
+	unsigned int state = x->x_state;
+	x->x_state = state = state * 472940017 + 832416023;
+	nval = (1./4294967296) * range * state;
+	return nval;
+}
+
 static void randv_bang(t_randv *x) {
-	int n=x->x_f, m=x->x_max, f=nextr(x,n);
-	int max = m<1?1:m;
+	int n=x->x_f, max=x->x_max, f=nextr(x,n);
+	max = max<1?1:max;
 	if (f == x->x_prev) {
 		if (x->x_i >= max) {
 			x->x_i = 1;
