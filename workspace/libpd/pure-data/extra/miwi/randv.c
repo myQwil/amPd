@@ -1,4 +1,4 @@
-#include "../m_pd.h"
+#include "m_pd.h"
 #include <time.h>
 
 static t_class *randv_class;
