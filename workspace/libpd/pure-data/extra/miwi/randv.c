@@ -1,12 +1,12 @@
-#include "m_pd.h"
+#include "../m_pd.h"
 #include <time.h>
 
 static t_class *randv_class;
 
 typedef struct _randv {
 	t_object x_obj;
-	t_float x_f, x_max;
-	int x_prev, x_i;
+	int x_f, x_max,		// random value, max repeats
+		x_prev, x_i;	// previous value, counter
 	unsigned int x_state;
 	t_outlet *f_out, *o_out;
 } t_randv;
@@ -26,7 +26,7 @@ static void randv_seed(t_randv *x, t_symbol *s, int argc, t_atom *argv)
 { x->x_state = (argc ? atom_getfloat(argv) : randv_time()); }
 
 static void randv_peek(t_randv *x, t_symbol *s)
-{ post("%s%s%u", s->s_name, (*s->s_name ? ": " : ""), x->x_state); }
+{ post("%s%s%u", s->s_name, *s->s_name?": ":"", x->x_state); }
 
 static int nextr(t_randv *x, int n) {
 	int nval;
@@ -38,28 +38,26 @@ static int nextr(t_randv *x, int n) {
 }
 
 static void randv_bang(t_randv *x) {
-	int n=x->x_f, max=x->x_max, f=nextr(x,n);
+	int n=x->x_f, max=x->x_max, f=nextr(x,n), i=x->x_i;
 	max = max<1?1:max;
-	if (f == x->x_prev) {
-		if (x->x_i >= max) {
-			x->x_i = 1;
-			n = n<1?1:n;
+	if (f==x->x_prev) {
+		if (i>=max) {
+			i=1, n=n<1?1:n;
 			f = (nextr(x, n-1) + f+1) % n; }
-		else x->x_i++; }
-	else x->x_i = 1;
-	x->x_prev = f;
+		else i++; }
+	else i=1;
+	x->x_prev=f, x->x_i=i;
 	outlet_float(x->x_obj.ob_outlet, f);
 }
 
 static void *randv_new(t_floatarg f, t_floatarg max) {
 	t_randv *x = (t_randv *)pd_new(randv_class);
-	x->x_f = (f < 1 ? 3 : f);
-	x->x_max = (max < 1 ? 2 : max);
+	x->x_f = f<1?3:f;
+	x->x_max = max<1?2:max;
 	x->x_state = randv_makeseed();
-
+	outlet_new(&x->x_obj, &s_float);
 	floatinlet_new(&x->x_obj, &x->x_f);
 	floatinlet_new(&x->x_obj, &x->x_max);
-	outlet_new(&x->x_obj, &s_float);
 	return (x);
 }
 
