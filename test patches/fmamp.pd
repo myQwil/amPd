@@ -55,7 +55,7 @@
 #X obj 157 122 r vol;
 #X obj 43 170 dac~;
 #X text 292 41 title : FMAmp;
-#X text 292 65 artist : miwi;
+#X text 292 65 artist : myQuil;
 #X text 313 89 length : 0;
 #X floatatom 133 81 5 0 0 0 - - -, f 5;
 #N canvas 0 50 450 250 (subpatch) 0;

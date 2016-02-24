@@ -1,5 +1,5 @@
 #N canvas 699 534 450 300 10;
-#X text 246 27 artist : miwi;
+#X text 246 27 artist : myQuil;
 #X text 253 41 title : pos test;
 #X obj 173 64 r met;
 #X obj 141 42 r play;

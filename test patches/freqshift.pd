@@ -30,14 +30,14 @@
 #X obj 96 7 loadbang;
 #X obj 115 38 650;
 #X obj 224 263 * 0.01;
-#X text 17 5 miwi;
+#X text 17 5 myQuil;
 #X obj 25 148 * 5000;
 #X obj 200 9 b;
 #X obj 171 267 pad~;
 #X obj 133 230 *~ 0.6;
 #N canvas 908 239 450 300 info 0;
 #X text 167 127 album : amPd;
-#X text 160 113 artist : miwi;
+#X text 160 113 artist : myQuil;
 #X text 167 99 title : freqshift;
 #X text 160 141 length : 0;
 #X restore 228 191 pd info;

@@ -1843,14 +1843,14 @@
 #X text 75 63 sus. event (s pause);
 #X obj 4 164 change;
 #X obj 221 232 r vol;
-#X text 18 16 miwi;
+#X text 18 16 myQuil;
 #X obj 296 41 s play;
 #X obj 291 17 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 221 268 pad~;
 #X obj 356 181 metro 18.87;
 #N canvas 254 303 450 300 info 0;
-#X text 174 77 artist : miwi;
+#X text 174 77 artist : myQuil;
 #X text 181 91 title : drones;
 #X text 174 105 length : 350000;
 #X restore 487 178 pd info;

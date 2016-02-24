@@ -1099,9 +1099,9 @@
 #X floatatom 702 329 5 0 0 0 - - -, f 5;
 #X obj 702 351 * 0.01;
 #X obj 702 376 s vol;
-#X text 47 25 miwi;
+#X text 47 25 myQuil;
 #N canvas 302 389 450 300 info 0;
-#X text 164 81 artist : miwi;
+#X text 164 81 artist : myQuil;
 #X text 172 98 title : squaw;
 #X text 164 115 length : 310000;
 #X restore 359 143 pd info;

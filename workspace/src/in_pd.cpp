@@ -58,7 +58,7 @@ extern "C" {
 	void iemlib1_setup();
 	void iemlib2_setup();
 	void MarkEx_setup();
-	void miwi_setup();
+	void myQuil_setup();
 	void z_zexy_setup();
 }
 
@@ -79,7 +79,7 @@ void Init() {
     iemlib1_setup();
     iemlib2_setup();
     MarkEx_setup();
-    miwi_setup();
+    myQuil_setup();
     z_zexy_setup();
 
 	bufSize = NCH*ticks*PdBase::blockSize()*2;

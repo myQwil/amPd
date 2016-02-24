@@ -212,7 +212,7 @@
 #X obj 72 158 muse;
 #X obj 297 24 r play;
 #X obj 404 302 r vol;
-#X text 70 42 miwi;
+#X text 70 42 myQuil;
 #X msg 198 271 30;
 #X obj 72 180 pad~ 2;
 #X obj 246 185 pad~ 2;

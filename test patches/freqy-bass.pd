@@ -297,9 +297,9 @@
 #X connect 26 0 25 2;
 #X coords 0 248 1 247 85 60 0;
 #X restore 230 20 pd vals;
-#X text 17 297 miwi;
+#X text 17 297 myQuil;
 #N canvas 159 139 450 300 info 0;
-#X text 165 105 artist : miwi;
+#X text 165 105 artist : myQuil;
 #X text 172 119 title : ModStep;
 #X text 165 133 l!ength : 179700;
 #X text 165 148 length : 0;
