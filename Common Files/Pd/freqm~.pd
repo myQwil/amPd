@@ -4,7 +4,7 @@
 #X obj 129 64 *~;
 #X obj 129 86 +~;
 #X obj 129 42 osc~;
-#X obj 157 86 inlet~;
+#X obj 158 86 inlet~;
 #X obj 129 20 inlet~;
 #X obj 155 64 inlet~;
 #X connect 0 0 1 0;
