@@ -1,12 +1,12 @@
-#N canvas 923 661 157 224 10;
-#X obj 37 118 osc~;
-#X obj 37 140 outlet~;
-#X obj 37 74 *~;
-#X obj 37 96 +~;
-#X obj 37 52 osc~;
-#X obj 78 74 inlet~;
-#X obj 37 30 inlet~;
-#X obj 74 52 inlet~;
+#N canvas 923 661 340 169 10;
+#X obj 129 108 osc~;
+#X obj 129 130 outlet~;
+#X obj 129 64 *~;
+#X obj 129 86 +~;
+#X obj 129 42 osc~;
+#X obj 157 86 inlet~;
+#X obj 129 20 inlet~;
+#X obj 155 64 inlet~;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -14,4 +14,4 @@
 #X connect 5 0 3 1;
 #X connect 6 0 4 0;
 #X connect 7 0 2 1;
-#X coords 0 224 1 223 85 60 0;
+#X coords 0 169 1 168 85 60 0;
