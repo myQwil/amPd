@@ -1,7 +1,7 @@
 #N canvas 834 448 307 319 10;
 #X obj 112 144 freqm~;
 #X obj 77 80 metro;
-#X obj 42 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 42 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X floatatom 115 60 5 0 0 0 - - -;
 #X obj 133 252 *~;
@@ -11,7 +11,7 @@
 #X obj 95 101 s bt;
 #X obj 133 208 *~;
 #X obj 7 80 sel;
-#X obj 167 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 167 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 167 55 metro 10000;
 #X obj 178 248 r vol;
@@ -44,7 +44,7 @@
 #X obj 232 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 232 165 s play;
-#N canvas 605 279 378 261 vals 0;
+#N canvas 881 105 378 261 vals 1;
 #X obj 239 232 outlet~;
 #X obj 5 232 outlet~;
 #X obj 115 232 outlet~;
@@ -137,7 +137,7 @@
 #X connect 40 0 32 1;
 #X coords 0 261 1 260 85 60 0;
 #X restore 112 122 pd vals;
-#N canvas 974 276 329 269 vals 0;
+#N canvas 1267 98 329 269 vals 1;
 #X obj 38 201 outlet~;
 #X floatatom 47 129 5 0 0 0 - - -;
 #X floatatom 207 133 5 0 0 0 - - -;
@@ -205,7 +205,7 @@
 #X obj 134 166 fmbloc~;
 #X obj 25 126 rind 2 5;
 #X obj 191 77 rind 3 7;
-#X obj 25 226 !;
+#X obj 25 226 == 0;
 #X connect 0 0 40 0;
 #X connect 1 0 8 0;
 #X connect 2 0 1 0;
