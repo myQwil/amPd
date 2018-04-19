@@ -6,7 +6,7 @@
 Pd, but not shared with Pd objects. */
 
 /* NOTE: this file describes Pd implementation details which may change
-in future releases.  The public (stable) API is in m_pd.h. */  
+in future releases.  The public (stable) API is in m_pd.h. */
 
 /* LATER consider whether to use 'char' for method arg types to save space */
 #ifndef __m_imp_h_
@@ -34,7 +34,11 @@ struct _class
     t_symbol *c_helpname;               /* name of help file */
     t_symbol *c_externdir;              /* directory extern was loaded from */
     size_t c_size;                      /* size of an instance */
-    t_methodentry *c_methods;           /* methods other than bang, etc below */
+#ifdef PDINSTANCE
+    t_methodentry **c_methods;          /* methods other than bang, etc below */
+#else
+    t_methodentry *c_methods;
+#endif
     int c_nmethod;                      /* number of methods */
     t_method c_freemethod;              /* function to call before freeing */
     t_bangmethod c_bangmethod;          /* common methods */
@@ -43,10 +47,11 @@ struct _class
     t_symbolmethod c_symbolmethod;
     t_listmethod c_listmethod;
     t_anymethod c_anymethod;
-    struct _widgetbehavior *c_wb;       /* "gobjs" only */
-    struct _parentwidgetbehavior *c_pwb;/* widget behavior in parent */
+    const struct _widgetbehavior *c_wb; /* "gobjs" only */
+    const struct _parentwidgetbehavior *c_pwb;/* widget behavior in parent */
     t_savefn c_savefn;                  /* function to call when saving */
     t_propertiesfn c_propertiesfn;      /* function to start prop dialog */
+    struct _class *c_next;
     int c_floatsignalin;                /* onset to float for signal input */
     char c_gobj;                        /* true if is a gobj */
     char c_patchable;                   /* true if we have a t_object header */
@@ -54,6 +59,8 @@ struct _class
     char c_drawcommand;             /* a drawing command for a template */
 };
 
+/* m_class.c */
+EXTERN void pd_emptylist(t_pd *x);
 
 /* m_obj.c */
 EXTERN int obj_noutlets(t_object *x);
@@ -74,9 +81,18 @@ EXTERN int obj_nsigoutlets(t_object *x);
 EXTERN int obj_siginletindex(t_object *x, int m);
 EXTERN int obj_sigoutletindex(t_object *x, int m);
 
+/* s_inter.c */
+void pd_globallock( void);
+void pd_globalunlock( void);
+
 /* misc */
+#define SYMTABHASHSIZE 1024
+
 EXTERN t_pd *glob_evalfile(t_pd *ignore, t_symbol *name, t_symbol *dir);
 EXTERN void glob_initfromgui(void *dummy, t_symbol *s, int argc, t_atom *argv);
 EXTERN void glob_quit(void *dummy);
+EXTERN void open_via_helppath(const char *name, const char *dir);
+
+
 #define __m_imp_h_
 #endif /* __m_imp_h_ */

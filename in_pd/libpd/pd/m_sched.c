@@ -13,37 +13,26 @@
 
     /* LATER consider making this variable.  It's now the LCM of all sample
     rates we expect to see: 32000, 44100, 48000, 88200, 96000. */
-#define TIMEUNITPERSEC (32.*441000.)
-
-#define THREAD_LOCKING  
-#include "pthread.h"
+#define TIMEUNITPERMSEC (32. * 441.)
+#define TIMEUNITPERSECOND (TIMEUNITPERMSEC * 1000.)
 
 #define SYS_QUIT_QUIT 1
 #define SYS_QUIT_RESTART 2
 static int sys_quit;
-double sys_time;
-static double sys_time_per_msec = TIMEUNITPERSEC / 1000.;
 
-int sys_schedblocksize = DEFDACBLKSIZE;
 int sys_usecsincelastsleep(void);
 int sys_sleepgrain;
-
-void sched_reopenmeplease(void)   /* request from s_audio for deferred reopen */
-{
-    sys_quit = SYS_QUIT_RESTART;
-}
 
 typedef void (*t_clockmethod)(void *client);
 
 struct _clock
 {
-    double c_settime;
+    double c_settime;       /* in TIMEUNITS; <0 if unset */
     void *c_owner;
     t_clockmethod c_fn;
     struct _clock *c_next;
+    t_float c_unit;         /* >0 if in TIMEUNITS; <0 if in samples */
 };
-
-t_clock *clock_setlist;
 
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
@@ -56,6 +45,7 @@ t_clock *clock_new(void *owner, t_method fn)
     x->c_owner = owner;
     x->c_fn = (t_clockmethod)fn;
     x->c_next = 0;
+    x->c_unit = TIMEUNITPERMSEC;
     return (x);
 }
 
@@ -63,10 +53,11 @@ void clock_unset(t_clock *x)
 {
     if (x->c_settime >= 0)
     {
-        if (x == clock_setlist) clock_setlist = x->c_next;
+        if (x == pd_this->pd_clock_setlist)
+            pd_this->pd_clock_setlist = x->c_next;
         else
         {
-            t_clock *x2 = clock_setlist;
+            t_clock *x2 = pd_this->pd_clock_setlist;
             while (x2->c_next != x) x2 = x2->c_next;
             x2->c_next = x->c_next;
         }
@@ -77,14 +68,16 @@ void clock_unset(t_clock *x)
     /* set the clock to call back at an absolute system time */
 void clock_set(t_clock *x, double setticks)
 {
-    if (setticks < sys_time) setticks = sys_time;
+    if (setticks < pd_this->pd_systime) setticks = pd_this->pd_systime;
     clock_unset(x);
     x->c_settime = setticks;
-    if (clock_setlist && clock_setlist->c_settime <= setticks)
+    if (pd_this->pd_clock_setlist &&
+        pd_this->pd_clock_setlist->c_settime <= setticks)
     {
         t_clock *cbefore, *cafter;
-        for (cbefore = clock_setlist, cafter = clock_setlist->c_next;
-            cbefore; cbefore = cafter, cafter = cbefore->c_next)
+        for (cbefore = pd_this->pd_clock_setlist,
+            cafter = pd_this->pd_clock_setlist->c_next;
+                cbefore; cbefore = cafter, cafter = cbefore->c_next)
         {
             if (!cafter || cafter->c_settime > setticks)
             {
@@ -94,36 +87,76 @@ void clock_set(t_clock *x, double setticks)
             }
         }
     }
-    else x->c_next = clock_setlist, clock_setlist = x;
+    else x->c_next = pd_this->pd_clock_setlist, pd_this->pd_clock_setlist = x;
 }
 
     /* set the clock to call back after a delay in msec */
 void clock_delay(t_clock *x, double delaytime)
 {
-    clock_set(x, sys_time + sys_time_per_msec * delaytime);
+    clock_set(x, (x->c_unit > 0 ?
+        pd_this->pd_systime + x->c_unit * delaytime :
+            pd_this->pd_systime -
+                (x->c_unit*(TIMEUNITPERSECOND/STUFF->st_dacsr)) * delaytime));
+}
+
+    /* set the time unit in msec or (if 'samps' is set) in samples.  This
+    is flagged by setting c_unit negative.  If the clock is currently set,
+    recalculate the delay based on the new unit and reschedule */
+void clock_setunit(t_clock *x, double timeunit, int sampflag)
+{
+    double timeleft;
+    if (timeunit <= 0)
+        timeunit = 1;
+    /* if no change, return to avoid truncation errors recalculating delay */
+    if ((sampflag && (timeunit == -x->c_unit)) ||
+        (!sampflag && (timeunit == x->c_unit * TIMEUNITPERMSEC)))
+            return;
+
+        /* figure out time left in the units we were in */
+    timeleft = (x->c_settime < 0 ? -1 :
+        (x->c_settime - pd_this->pd_systime)/((x->c_unit > 0)? x->c_unit :
+            (x->c_unit*(TIMEUNITPERSECOND/STUFF->st_dacsr))));
+    if (sampflag)
+        x->c_unit = -timeunit;  /* negate to flag sample-based */
+    else x->c_unit = timeunit * TIMEUNITPERMSEC;
+    if (timeleft >= 0)  /* reschedule if already set */
+        clock_delay(x, timeleft);
 }
 
     /* get current logical time.  We don't specify what units this is in;
-    use clock_gettimesince() to measure intervals from time of this call. 
-    This was previously, incorrectly named "clock_getsystime"; the old
-    name is aliased to the new one in m_pd.h. */
+    use clock_gettimesince() to measure intervals from time of this call. */
 double clock_getlogicaltime( void)
 {
-    return (sys_time);
+    return (pd_this->pd_systime);
 }
-    /* OBSOLETE NAME */
-double clock_getsystime( void) { return (sys_time); }
+
+    /* OBSOLETE (misleading) function name kept for compatibility */
+double clock_getsystime( void) { return (pd_this->pd_systime); }
 
     /* elapsed time in milliseconds since the given system time */
 double clock_gettimesince(double prevsystime)
 {
-    return ((sys_time - prevsystime)/sys_time_per_msec);
+    return ((pd_this->pd_systime - prevsystime)/TIMEUNITPERMSEC);
+}
+
+    /* elapsed time in units, ala clock_setunit(), since given system time */
+double clock_gettimesincewithunits(double prevsystime,
+    double units, int sampflag)
+{
+            /* If in samples, divide TIMEUNITPERSECOND/sys_dacsr first (at
+            cost of an extra division) since it's probably an integer and if
+            units == 1 and (sys_time - prevsystime) is an integer number of
+            DSP ticks, the result will be exact. */
+    if (sampflag)
+        return ((pd_this->pd_systime - prevsystime)/
+            ((TIMEUNITPERSECOND/STUFF->st_dacsr)*units));
+    else return ((pd_this->pd_systime - prevsystime)/(TIMEUNITPERMSEC*units));
 }
 
     /* what value the system clock will have after a delay */
 double clock_getsystimeafter(double delaytime)
 {
-    return (sys_time + sys_time_per_msec * delaytime);
+    return (pd_this->pd_systime + TIMEUNITPERMSEC * delaytime);
 }
 
 void clock_free(t_clock *x)
@@ -184,7 +217,7 @@ int sys_addhist(int phase)
     int msec = (newtime - sys_histtime) * 1000.;
     for (j = NBIN-1; j >= 0; j--)
     {
-        if (msec >= sys_bin[j]) 
+        if (msec >= sys_bin[j])
         {
             sys_histogram[phasewas][j]++;
             break;
@@ -231,10 +264,10 @@ void glob_audiostatus(void)
         errtype = oss_resync[nresyncphase].r_error;
         if (errtype < 0 || errtype > 4)
             errtype = 0;
-        
+
         post("%9.2f\t%s",
             (sched_diddsp - oss_resync[nresyncphase].r_ntick)
-                * ((double)sys_schedblocksize) / sys_dacsr,
+                * ((double)STUFF->st_schedblocksize) / STUFF->st_dacsr,
             oss_errornames[errtype]);
         nresyncphase--;
     }
@@ -257,7 +290,7 @@ void sys_log_error(int type)
         sched_diored = 1;
     }
     sched_dioredtime =
-        sched_diddsp + (int)(sys_dacsr /(double)sys_schedblocksize);
+        sched_diddsp + (int)(STUFF->st_dacsr /(double)STUFF->st_schedblocksize);
 }
 
 static int sched_lastinclip, sched_lastoutclip,
@@ -273,12 +306,13 @@ static void sched_pollformeters( void)
         /* if there's no GUI but we're running in "realtime", here is
         where we arrange to ping the watchdog every 2 seconds. */
 #if defined(__linux__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__GNU__)
-    if (sys_nogui && sys_hipriority && (sched_diddsp - sched_nextpingtime > 0))
+    if (!sys_havegui() && sys_hipriority &&
+        (sched_diddsp - sched_nextpingtime > 0))
     {
         glob_watchdog(0);
             /* ping every 2 seconds */
         sched_nextpingtime = sched_diddsp +
-            2 * (int)(sys_dacsr /(double)sys_schedblocksize);
+            2 * (int)(STUFF->st_dacsr /(double)STUFF->st_schedblocksize);
     }
 #endif
 
@@ -313,7 +347,7 @@ static void sched_pollformeters( void)
         sched_lastoutdb = outdb;
     }
     sched_nextmeterpolltime =
-        sched_diddsp + (int)(sys_dacsr /(double)sys_schedblocksize);
+        sched_diddsp + (int)(STUFF->st_dacsr /(double)STUFF->st_schedblocksize);
 }
 
 void glob_meters(void *dummy, t_float f)
@@ -335,9 +369,13 @@ void glob_foo(void *dummy, t_symbol *s, int argc, t_atom *argv)
 
 void dsp_tick(void);
 
-static int sched_useaudio = SCHED_AUDIO_POLL;
+static int sched_useaudio = SCHED_AUDIO_NONE;
 static double sched_referencerealtime, sched_referencelogicaltime;
-double sys_time_per_dsp_tick;
+
+void sched_reopenmeplease(void)   /* request from s_audio for deferred reopen */
+{
+    sys_quit = SYS_QUIT_RESTART;
+}
 
 void sched_set_using_audio(int flag)
 {
@@ -354,20 +392,22 @@ void sched_set_using_audio(int flag)
             sched_useaudio == SCHED_AUDIO_CALLBACK)
                 post("sorry, can't turn off callbacks yet; restart Pd");
                     /* not right yet! */
-        
-    sys_time_per_dsp_tick = (TIMEUNITPERSEC) *
-        ((double)sys_schedblocksize) / sys_dacsr;
+
+    sys_vgui("pdtk_pd_audio %s\n", flag ? "on" : "off");
 }
 
     /* take the scheduler forward one DSP tick, also handling clock timeouts */
-void sched_tick(double next_sys_time)
+void sched_tick( void)
 {
+    double next_sys_time = pd_this->pd_systime +
+        (STUFF->st_schedblocksize/STUFF->st_dacsr) * TIMEUNITPERSECOND;
     int countdown = 5000;
-    while (clock_setlist && clock_setlist->c_settime < next_sys_time)
+    while (pd_this->pd_clock_setlist &&
+        pd_this->pd_clock_setlist->c_settime < next_sys_time)
     {
-        t_clock *c = clock_setlist;
-        sys_time = c->c_settime;
-        clock_unset(clock_setlist);
+        t_clock *c = pd_this->pd_clock_setlist;
+        pd_this->pd_systime = c->c_settime;
+        clock_unset(pd_this->pd_clock_setlist);
         outlet_setstacklim();
         (*c->c_fn)(c->c_owner);
         if (!countdown--)
@@ -378,7 +418,7 @@ void sched_tick(double next_sys_time)
         if (sys_quit)
             return;
     }
-    sys_time = next_sys_time;
+    pd_this->pd_systime = next_sys_time;
     dsp_tick();
     sched_diddsp++;
 }
@@ -405,13 +445,11 @@ int (*sys_idlehook)(void);
 static void m_pollingscheduler( void)
 {
     int idlecount = 0;
-    sys_time_per_dsp_tick = (TIMEUNITPERSEC) *
-        ((double)sys_schedblocksize) / sys_dacsr;
 
-#ifdef THREAD_LOCKING
-        sys_lock();
-#endif
-
+        /* delete this when I'm sure it's not needed for back compatibilty? */
+    STUFF->st_time_per_dsp_tick = (TIMEUNITPERSECOND) *
+        ((double)STUFF->st_schedblocksize) / STUFF->st_dacsr;
+    sys_lock();
     sys_clearhist();
     if (sys_sleepgrain < 100)
         sys_sleepgrain = sys_schedadvance/4;
@@ -429,18 +467,14 @@ static void m_pollingscheduler( void)
     waitfortick:
         if (sched_useaudio != SCHED_AUDIO_NONE)
         {
-#ifdef THREAD_LOCKING
-            /* T.Grill - send_dacs may sleep -> 
-                unlock thread lock make that time available 
-                - could messaging do any harm while sys_send_dacs is running?
-            */
             sys_unlock();
-#endif
             timeforward = sys_send_dacs();
-#ifdef THREAD_LOCKING
-            /* T.Grill - done */
             sys_lock();
-#endif
+#if 0   /* in linux and windoes, sometimes audio devices would freeze, which
+               in turn would freeze Pd.  This code unfroze things by closing
+               audio in such cases.  But this seems no longer necessary, and
+               on Macs at least, this seems to cause audio to get dropped if
+               the machine sleeps.  */
                 /* if dacs remain "idle" for 1 sec, they're hung up. */
             if (timeforward != 0)
                 idlecount = 0;
@@ -468,6 +502,7 @@ static void m_pollingscheduler( void)
                     }
                 }
             }
+#endif /* 0 */
         }
         else
         {
@@ -479,7 +514,7 @@ static void m_pollingscheduler( void)
         sys_setmiditimediff(0, 1e-6 * sys_schedadvance);
         sys_addhist(1);
         if (timeforward != SENDDACS_NO)
-            sched_tick(sys_time + sys_time_per_dsp_tick);
+            sched_tick();
         if (timeforward == SENDDACS_YES)
             didsomething = 1;
 
@@ -497,9 +532,7 @@ static void m_pollingscheduler( void)
         {
             sched_pollformeters();
             sys_reportidle();
-#ifdef THREAD_LOCKING
             sys_unlock();   /* unlock while we idle */
-#endif
                 /* call externally installed idle function if any. */
             if (!sys_idlehook || !sys_idlehook())
             {
@@ -507,17 +540,12 @@ static void m_pollingscheduler( void)
                 if (timeforward != SENDDACS_SLEPT)
                     sys_microsleep(sys_sleepgrain);
             }
-#ifdef THREAD_LOCKING
             sys_lock();
-#endif
             sys_addhist(5);
             sched_didnothing++;
         }
     }
-
-#ifdef THREAD_LOCKING
     sys_unlock();
-#endif
 }
 
 void sched_audio_callbackfn(void)
@@ -525,7 +553,7 @@ void sched_audio_callbackfn(void)
     sys_lock();
     sys_setmiditimediff(0, 1e-6 * sys_schedadvance);
     sys_addhist(1);
-    sched_tick(sys_time + sys_time_per_dsp_tick);
+    sched_tick();
     sys_addhist(2);
     sys_pollmidiqueue();
     sys_addhist(3);
@@ -541,17 +569,17 @@ static void m_callbackscheduler(void)
     sys_initmidiqueue();
     while (!sys_quit)
     {
-        double timewas = sys_time;
+        double timewas = pd_this->pd_systime;
 #ifdef _WIN32
         Sleep(1000);
 #else
         sleep(1);
 #endif
-        if (sys_time == timewas)
+        if (pd_this->pd_systime == timewas)
         {
             sys_lock();
             sys_pollgui();
-            sched_tick(sys_time + sys_time_per_dsp_tick);
+            sched_tick();
             sys_unlock();
         }
         if (sys_idlehook)
@@ -569,8 +597,11 @@ int m_mainloop(void)
         if (sys_quit == SYS_QUIT_RESTART)
         {
             sys_quit = 0;
-            sys_close_audio();
-            sys_reopen_audio();
+            if (audio_isopen())
+            {
+                sys_close_audio();
+                sys_reopen_audio();
+            }
         }
     }
     return (0);
@@ -578,40 +609,10 @@ int m_mainloop(void)
 
 int m_batchmain(void)
 {
-    sys_time_per_dsp_tick = (TIMEUNITPERSEC) *
-        ((double)sys_schedblocksize) / sys_dacsr;
     while (sys_quit != SYS_QUIT_QUIT)
-        sched_tick(sys_time + sys_time_per_dsp_tick);
+        sched_tick();
     return (0);
 }
-
-/* ------------ thread locking ------------------- */
-
-#ifdef THREAD_LOCKING
-static pthread_mutex_t sys_mutex = PTHREAD_MUTEX_INITIALIZER;
-
-void sys_lock(void)
-{
-    pthread_mutex_lock(&sys_mutex);
-}
-
-void sys_unlock(void)
-{
-    pthread_mutex_unlock(&sys_mutex);
-}
-
-int sys_trylock(void)
-{
-    return pthread_mutex_trylock(&sys_mutex);
-}
-
-#else
-
-void sys_lock(void) {}
-void sys_unlock(void) {}
-int sys_trylock(void) {}
-
-#endif
 
 void sys_exit(void)
 {

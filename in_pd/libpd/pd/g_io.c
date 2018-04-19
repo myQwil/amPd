@@ -84,6 +84,8 @@ static void vinlet_anything(t_vinlet *x, t_symbol *s, int argc, t_atom *argv)
 static void vinlet_free(t_vinlet *x)
 {
     canvas_rminlet(x->x_canvas, x->x_inlet);
+    if (x->x_buf)
+        t_freebytes(x->x_buf, x->x_bufsize * sizeof(*x->x_buf));
     resample_free(&x->x_updown);
 }
 
@@ -99,19 +101,12 @@ int vinlet_issignal(t_vinlet *x)
     return (x->x_buf != 0);
 }
 
-static int tot;
-
 t_int *vinlet_perform(t_int *w)
 {
     t_vinlet *x = (t_vinlet *)(w[1]);
     t_float *out = (t_float *)(w[2]);
     int n = (int)(w[3]);
     t_float *in = x->x_read;
-#if 0
-    if (tot < 5) post("-in %lx out %lx n %d", in, out, n);
-    if (tot < 5) post("-buf %lx endbuf %lx", x->x_buf, x->x_endbuf);
-    if (tot < 5) post("in[0] %f in[1] %f in[2] %f", in[0], in[1], in[2]);
-#endif
     while (n--) *out++ = *in++;
     if (in == x->x_endbuf) in = x->x_buf;
     x->x_read = in;
@@ -150,10 +145,6 @@ t_int *vinlet_doprolog(t_int *w)
         out -= x->x_hop;
         while (nshift--) *f1++ = *f2++;
     }
-#if 0
-    if (tot < 5) post("in %lx out %lx n %lx", in, out, n), tot++;
-    if (tot < 5) post("in[0] %f in[1] %f in[2] %f", in[0], in[1], in[2]);
-#endif
 
     while (n--) *out++ = *in++;
     x->x_fill = out;
@@ -223,8 +214,10 @@ void vinlet_dspprolog(struct _vinlet *x, t_signal **parentsigs,
                     dsp_add(vinlet_doprolog, 3, x, insig->s_vec,
                         re_parentvecsize);
             else {
+              int method = (x->x_updown.method == 3?
+                (pd_compatibilitylevel < 44 ? 0 : 1) : x->x_updown.method);
               resamplefrom_dsp(&x->x_updown, insig->s_vec, parentvecsize,
-                re_parentvecsize, x->x_updown.method);
+                re_parentvecsize, method);
               dsp_add(vinlet_doprolog, 3, x, x->x_updown.s_vec,
                 re_parentvecsize);
         }
@@ -257,15 +250,19 @@ static void *vinlet_newsig(t_symbol *s)
 
     resample_init(&x->x_updown);
 
-    /* this should be though over: 
+    /* this should be though over:
      * it might prove hard to provide consistency between labeled up- & downsampling methods
      * maybe indeces would be better...
      *
      * up till now we provide several upsampling methods and 1 single downsampling method (no filtering !)
      */
-    if (s == gensym("hold"))x->x_updown.method=1;     /* up: sample and hold */
-    else if (s == gensym("lin"))x->x_updown.method=2; /* up: linear interpolation */
-    else x->x_updown.method=0;                        /* up: zero-padding */
+    if (s == gensym("hold"))
+        x->x_updown.method=1;       /* up: sample and hold */
+    else if (s == gensym("lin") || s == gensym("linear"))
+        x->x_updown.method=2;       /* up: linear interpolation */
+    else if (s == gensym("pad"))
+        x->x_updown.method=0;       /* up: zero-padding */
+    else x->x_updown.method=3;      /* sample/hold unless version<0.44 */
 
     return (x);
 }
@@ -281,7 +278,8 @@ static void vinlet_setup(void)
     class_addsymbol(vinlet_class, vinlet_symbol);
     class_addlist(vinlet_class, vinlet_list);
     class_addanything(vinlet_class, vinlet_anything);
-    class_addmethod(vinlet_class, (t_method)vinlet_dsp, gensym("dsp"), 0);
+    class_addmethod(vinlet_class, (t_method)vinlet_dsp,
+        gensym("dsp"), A_CANT, 0);
     class_sethelpsymbol(vinlet_class, gensym("pd"));
 }
 
@@ -354,6 +352,8 @@ static void voutlet_anything(t_voutlet *x, t_symbol *s, int argc, t_atom *argv)
 static void voutlet_free(t_voutlet *x)
 {
     canvas_rmoutlet(x->x_canvas, x->x_parentoutlet);
+    if (x->x_buf)
+        t_freebytes(x->x_buf, x->x_bufsize * sizeof(*x->x_buf));
     resample_free(&x->x_updown);
 }
 
@@ -377,10 +377,6 @@ t_int *voutlet_perform(t_int *w)
     t_float *in = (t_float *)(w[2]);
     int n = (int)(w[3]);
     t_sample *out = x->x_write, *outwas = out;
-#if 0
-    if (tot < 5) post("-in %lx out %lx n %d", in, out, n);
-    if (tot < 5) post("-buf %lx endbuf %lx", x->x_buf, x->x_endbuf);
-#endif
     while (n--)
     {
         *out++ += *in++;
@@ -402,10 +398,6 @@ static t_int *voutlet_doepilog(t_int *w)
     t_sample *in = x->x_empty;
     if (x->x_updown.downsample != x->x_updown.upsample)
         out = x->x_updown.s_vec;
-
-#if 0
-    if (tot < 5) post("outlet in %lx out %lx n %lx", in, out, n), tot++;
-#endif
     for (; n--; in++) *out++ = *in, *in = 0;
     if (in == x->x_endbuf) in = x->x_buf;
     x->x_empty = in;
@@ -418,10 +410,6 @@ static t_int *voutlet_doepilog_resampling(t_int *w)
     int n = (int)(w[2]);
     t_sample *in  = x->x_empty;
     t_sample *out = x->x_updown.s_vec;
-
-#if 0
-    if (tot < 5) post("outlet in %lx out %lx n %lx", in, out, n), tot++;
-#endif
     for (; n--; in++) *out++ = *in, *in = 0;
     if (in == x->x_endbuf) in = x->x_buf;
     x->x_empty = in;
@@ -535,9 +523,11 @@ void voutlet_dspepilog(struct _voutlet *x, t_signal **parentsigs,
                     re_parentvecsize);
             else
             {
+                int method = (x->x_updown.method == 3?
+                    (pd_compatibilitylevel < 44 ? 0 : 1) : x->x_updown.method);
                 dsp_add(voutlet_doepilog_resampling, 2, x, re_parentvecsize);
                 resampleto_dsp(&x->x_updown, outsig->s_vec, re_parentvecsize,
-                    parentvecsize, x->x_updown.method);
+                    parentvecsize, method);
             }
         }
     }
@@ -567,7 +557,7 @@ static void *voutlet_newsig(t_symbol *s)
 
     resample_init(&x->x_updown);
 
-    /* this should be though over: 
+    /* this should be though over:
      * it might prove hard to provide consistency between labeled up- & downsampling methods
      * maybe indeces would be better...
      *
@@ -576,7 +566,8 @@ static void *voutlet_newsig(t_symbol *s)
     if (s == gensym("hold"))x->x_updown.method=1;        /* up: sample and hold */
     else if (s == gensym("lin"))x->x_updown.method=2;    /* up: linear interpolation */
     else if (s == gensym("linear"))x->x_updown.method=2; /* up: linear interpolation */
-    else x->x_updown.method=0;                           /* up: zero-padding; down: ignore samples inbetween */
+    else if (s == gensym("pad"))x->x_updown.method=0;    /* up: zero pad */
+    else x->x_updown.method=3;                           /* up: zero-padding; down: ignore samples inbetween */
 
     return (x);
 }
@@ -593,7 +584,8 @@ static void voutlet_setup(void)
     class_addsymbol(voutlet_class, voutlet_symbol);
     class_addlist(voutlet_class, voutlet_list);
     class_addanything(voutlet_class, voutlet_anything);
-    class_addmethod(voutlet_class, (t_method)voutlet_dsp, gensym("dsp"), 0);
+    class_addmethod(voutlet_class, (t_method)voutlet_dsp,
+        gensym("dsp"), A_CANT, 0);
     class_sethelpsymbol(voutlet_class, gensym("pd"));
 }
 

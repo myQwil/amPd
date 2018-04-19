@@ -3,15 +3,17 @@
 * WARRANTIES, see the file, "LICENSE.txt," in this distribution.  */
 
 #include <stdlib.h>
+#include <string.h>
 #include "m_pd.h"
 #include "m_imp.h"
+#include "g_canvas.h"   /* just for LB_LOAD */
 
     /* FIXME no out-of-memory testing yet! */
 
 t_pd *pd_new(t_class *c)
 {
     t_pd *x;
-    if (!c) 
+    if (!c)
         bug ("pd_new: apparently called before setup routine");
     x = (t_pd *)t_getbytes(c->c_size);
     *x = c;
@@ -164,7 +166,7 @@ void pd_unbind(t_pd *x, t_symbol *s)
             b->b_list = e->e_next;
             freebytes(e, sizeof(t_bindelem));
         }
-        else for (e = b->b_list; e2 = e->e_next; e = e2)
+        else for (e = b->b_list; (e2 = e->e_next); e = e2)
             if (e2->e_who == x)
         {
             e->e_next = e2->e_next;
@@ -181,12 +183,10 @@ void pd_unbind(t_pd *x, t_symbol *s)
     else pd_error(x, "%s: couldn't unbind", s->s_name);
 }
 
-void zz(void) {}
-
 t_pd *pd_findbyclass(t_symbol *s, t_class *c)
 {
     t_pd *x = 0;
-    
+
     if (!s->s_thing) return (0);
     if (*s->s_thing == c) return (s->s_thing);
     if (*s->s_thing == bindlist_class)
@@ -199,7 +199,6 @@ t_pd *pd_findbyclass(t_symbol *s, t_class *c)
         {
             if (x && !warned)
             {
-                zz();
                 post("warning: %s: multiply defined", s->s_name);
                 warned = 1;
             }
@@ -257,10 +256,10 @@ void pd_popsym(t_pd *x)
     }
 }
 
-void pd_doloadbang(void)
+void pd_doloadbang( void)
 {
     if (lastpopped)
-        pd_vmess(lastpopped, gensym("loadbang"), "");
+        pd_vmess(lastpopped, gensym("loadbang"), "f", LB_LOAD);
     lastpopped = 0;
 }
 
@@ -297,10 +296,26 @@ void garray_init(void);
 
 void pd_init(void)
 {
+    static int initted = 0;
+    if (initted)
+        return;
+    initted = 1;
+#ifdef PDINSTANCE
+    pd_instances = (t_pdinstance **)getbytes(sizeof(*pd_instances));
+    pd_instances[0] = &pd_maininstance;
+    pd_ninstances = 1;
+#endif
     mess_init();
+    sys_lock();
     obj_init();
     conf_init();
     glob_init();
     garray_init();
+    sys_unlock();
+}
+
+EXTERN t_canvas *pd_getcanvaslist(void)
+{
+    return (pd_this->pd_canvaslist);
 }
 

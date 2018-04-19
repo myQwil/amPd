@@ -103,14 +103,14 @@ void About(HWND hwndParent) {
 }
 
 int InfoBox(const char *file, HWND hwndParent) {
-	Message msg = libpd.nextMessage();
-	string text = "";
-	for (int i = 0; i < 50 && msg.type != NONE; i++) {
-		text += msg.symbol + "\n";
-		msg = libpd.nextMessage();
-	}
-	MessageBox(hwndParent,text.c_str(),"Message",MB_OK);
-	return INFOBOX_UNCHANGED;
+//	Message msg = libpd.nextMessage();
+//	string text = "";
+//	for (int i = 0; i < 50 && msg.type != NONE; i++) {
+//		text += msg.symbol + "\n";
+//		msg = libpd.nextMessage();
+//	}
+//	MessageBox(hwndParent,text.c_str(),"Message",MB_OK);
+//	return INFOBOX_UNCHANGED;
 }
 
 int GetLength()
@@ -282,13 +282,7 @@ void EQSet(int on, char data[10], int preamp) {
 
 In_Module mod = {
 	IN_VER,	// defined in IN2.H
-	(char*)"amPd v0.0 "
-#ifdef __alpha
-	"(AXP)"
-#else
-	"(x86)"
-#endif
-	,
+	(char*)"amPd v0.0 ",
 	0,	// hMainWindow (filled in by winamp)
 	0,  // hDllInstance (filled in by winamp)
 	(char*)"PD\0Pure Data Files (*.pd)\0",	// double-null limited list

@@ -18,14 +18,14 @@ static t_int *sigfft_swap(t_int *w)
 {
     t_sample *in1 = (t_sample *)(w[1]);
     t_sample *in2 = (t_sample *)(w[2]);
-    int n = w[3];
+    int n = (int)w[3];
     for (;n--; in1++, in2++)
-    {   
+    {
         t_sample f = *in1;
         *in1 = *in2;
         *in2 = f;
     }
-    return (w+4);    
+    return (w+4);
 }
 
     /* take array1 (supply a pointer to beginning) and copy it,
@@ -36,7 +36,7 @@ static t_int *sigrfft_flip(t_int *w)
 {
     t_sample *in = (t_sample *)(w[1]);
     t_sample *out = (t_sample *)(w[2]);
-    int n = w[3];
+    int n = (int)w[3];
     while (n--)
         *(--out) = - *in++;
     return (w+4);
@@ -75,7 +75,7 @@ static t_int *sigfft_perform(t_int *w)
 {
     t_sample *in1 = (t_sample *)(w[1]);
     t_sample *in2 = (t_sample *)(w[2]);
-    int n = w[3];
+    int n = (int)w[3];
     mayer_fft(n, in1, in2);
     return (w+4);
 }
@@ -84,7 +84,7 @@ static t_int *sigifft_perform(t_int *w)
 {
     t_sample *in1 = (t_sample *)(w[1]);
     t_sample *in2 = (t_sample *)(w[2]);
-    int n = w[3];
+    int n = (int)w[3];
     mayer_ifft(n, in1, in2);
     return (w+4);
 }
@@ -126,12 +126,14 @@ static void sigfft_setup(void)
     sigfft_class = class_new(gensym("fft~"), sigfft_new, 0,
         sizeof(t_sigfft), 0, 0);
     CLASS_MAINSIGNALIN(sigfft_class, t_sigfft, x_f);
-    class_addmethod(sigfft_class, (t_method)sigfft_dsp, gensym("dsp"), 0);
+    class_addmethod(sigfft_class, (t_method)sigfft_dsp,
+        gensym("dsp"), A_CANT, 0);
 
     sigifft_class = class_new(gensym("ifft~"), sigifft_new, 0,
         sizeof(t_sigfft), 0, 0);
     CLASS_MAINSIGNALIN(sigifft_class, t_sigfft, x_f);
-    class_addmethod(sigifft_class, (t_method)sigifft_dsp, gensym("dsp"), 0);
+    class_addmethod(sigifft_class, (t_method)sigifft_dsp,
+        gensym("dsp"), A_CANT, 0);
     class_sethelpsymbol(sigifft_class, gensym("fft~"));
 }
 
@@ -157,7 +159,7 @@ static void *sigrfft_new(void)
 static t_int *sigrfft_perform(t_int *w)
 {
     t_sample *in = (t_sample *)(w[1]);
-    int n = w[2];
+    int n = (int)w[2];
     mayer_realfft(n, in);
     return (w+3);
 }
@@ -188,7 +190,8 @@ static void sigrfft_setup(void)
     sigrfft_class = class_new(gensym("rfft~"), sigrfft_new, 0,
         sizeof(t_sigrfft), 0, 0);
     CLASS_MAINSIGNALIN(sigrfft_class, t_sigrfft, x_f);
-    class_addmethod(sigrfft_class, (t_method)sigrfft_dsp, gensym("dsp"), 0);
+    class_addmethod(sigrfft_class, (t_method)sigrfft_dsp,
+        gensym("dsp"), A_CANT, 0);
     class_sethelpsymbol(sigrfft_class, gensym("fft~"));
 }
 
@@ -214,7 +217,7 @@ static void *sigrifft_new(void)
 static t_int *sigrifft_perform(t_int *w)
 {
     t_sample *in = (t_sample *)(w[1]);
-    int n = w[2];
+    int n = (int)w[2];
     mayer_realifft(n, in);
     return (w+3);
 }
@@ -248,7 +251,8 @@ static void sigrifft_setup(void)
     sigrifft_class = class_new(gensym("rifft~"), sigrifft_new, 0,
         sizeof(t_sigrifft), 0, 0);
     CLASS_MAINSIGNALIN(sigrifft_class, t_sigrifft, x_f);
-    class_addmethod(sigrifft_class, (t_method)sigrifft_dsp, gensym("dsp"), 0);
+    class_addmethod(sigrifft_class, (t_method)sigrifft_dsp,
+        gensym("dsp"), A_CANT, 0);
     class_sethelpsymbol(sigrifft_class, gensym("fft~"));
 }
 
@@ -280,10 +284,10 @@ static t_int *sigframp_perform(t_int *w)
     t_sample *outamp = (t_sample *)(w[4]);
     t_sample lastreal = 0, currentreal = inreal[0], nextreal = inreal[1];
     t_sample lastimag = 0, currentimag = inimag[0], nextimag = inimag[1];
-    int n = w[5];
+    int n = (int)w[5];
     int m = n + 1;
     t_sample fbin = 1, oneovern2 = 1.f/((t_sample)n * (t_sample)n);
-    
+
     inreal += 2;
     inimag += 2;
     *outamp++ = *outfreq++ = 0;
@@ -336,7 +340,8 @@ static void sigframp_setup(void)
     sigframp_class = class_new(gensym("framp~"), sigframp_new, 0,
         sizeof(t_sigframp), 0, 0);
     CLASS_MAINSIGNALIN(sigframp_class, t_sigframp, x_f);
-    class_addmethod(sigframp_class, (t_method)sigframp_dsp, gensym("dsp"), 0);
+    class_addmethod(sigframp_class, (t_method)sigframp_dsp,
+        gensym("dsp"), A_CANT, 0);
 }
 
 /* ------------------------ global setup routine ------------------------- */
