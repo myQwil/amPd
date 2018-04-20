@@ -7,10 +7,6 @@ t_float fton(t_float f, double root, double semi) {
 	return (semi * log(root*f));
 }
 
-t_float ntof(t_float f, double root, double semi) {
-	return (root * exp(semi*f));
-}
-
 static t_class *fton_class;
 static t_class *fton_ref_class;
 static t_class *fton_tet_class;

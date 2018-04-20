@@ -3,6 +3,10 @@
 
 /* -------------------------- ntof -------------------------- */
 
+t_float ntof(t_float f, double root, double semi) {
+	return (root * exp(semi*f));
+}
+
 static t_class *ntof_class;
 static t_class *ntof_ref_class;
 static t_class *ntof_tet_class;
